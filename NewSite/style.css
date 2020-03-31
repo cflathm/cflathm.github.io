@@ -13,11 +13,12 @@ body{
       rgba(76, 20, 233, 0.2)
     ),
     /* bottom, image */
-    url(double_galaxy.jpg);
+    url(Tri_Back.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
 }
 
 #Name{
@@ -42,7 +43,7 @@ body{
 
 .box{
 		margin-top: 50px;
-    width: 80%;
+    width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 }
