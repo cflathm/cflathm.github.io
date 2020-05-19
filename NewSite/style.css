@@ -3,22 +3,23 @@ html{
 }
 
 body{
+
 	font-family: "Arial";
 	font-size: 1em;
     margin: 0px;
     background: 
     /* top, transparent red, faked with gradient */ 
     linear-gradient(
-      rgba(76, 20, 233, 0.2), 
-      rgba(76, 20, 233, 0.2)
+      rgba(76, 20, 233, 0.3), 
+      rgba(76, 20, 233, 0.3)
     ),
     /* bottom, image */
-    url(Tri_Back.jpg);
+    url(double_galaxy.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
+    
 }
 
 #Name{
@@ -32,16 +33,109 @@ body{
   max-width: 100%;
   max-height:100%;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.NameCon{
+background: 
+  /* top, transparent red, faked with gradient */ 
+  linear-gradient(
+    rgba(76, 20, 233, 0.2), 
+    rgba(76, 20, 233, 0.2)
+  ),
+  /* bottom, image */
+  url(galaxy.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
-#NameCon{
+/* Style the links inside the navigation bar */
+.NameCon a {
 
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 #About{
-  background-color:White
+  height:460px;
+  background: 
+  /* bottom, image */
+  url(grid-01.png);
+  background-size:     cover;                
+  background-repeat:   no-repeat;
+  background-position: center center;    
+  padding:20;
+}
+
+.Information{
+height: 95%;
+width: 95%;
+padding: 10pt;
+margin:auto;
+  background-color:rgba(	59, 59, 59, 0.3);
+  border-radius: 25px;
+  border: 5px solid rgba(231, 231, 231, 0.3);
+
+}
+
+.Information p{
+  color: white;
+}
+
+.Information h2{
+  margin-top:0;
+  margin-bottom: 0;
+  text-align:center;
+  color:white;
+}
+.Information h3{
+  margin-top:0;
+  margin-bottom: 0;
+  text-align:center;
+  color:white;
+}
+#headshot{
+  float: left;
+  max-width: 100%;
+  max-height: 260px;
+  border-radius: 25px;
+  padding-right: 10px;
+  }
+
+#link{
+  margin:auto;
+  background-color:rgba(	59, 59, 59, 0.3);
+  border-radius: 25px;
+  border: 5px solid rgba(231, 231, 231, 0.3);
+}
+
+li{
+  padding:5px;
+}
+
+a {
+  background-color: #FF25CF;
+  border: 2px solid white;
+  border-radius:50px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0px 0px 10px 1px #FF25CF;
 }
 
 .box{
+  box-shadow: 0px 0px 40px 20px #0099ff;
 		margin-top: 50px;
     width: 800px;
 	margin-left: auto;
