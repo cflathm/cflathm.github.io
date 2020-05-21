@@ -1,5 +1,5 @@
 html{
-		overflow-y: scroll;
+  overflow: visible;
 }
 
 body{
@@ -65,18 +65,36 @@ background:
 }
 
 #About{
-  height:460px;
+  height:510px;
   background: 
   /* bottom, image */
   url(grid-01.png);
   background-size:     cover;                
   background-repeat:   no-repeat;
   background-position: center center;    
-  padding:20;
+  padding-top:15;
+  padding-left:10;
+  padding-right:10;
+}
+
+#experience{
+  background: 
+  /* bottom, image */
+  url(Tapes.jpg);
+  background-size:     cover;                
+  background-repeat:   no-repeat;
+  background-position: center center;    
+  padding-top:15;
+  padding-left:10;
+  padding-right:10;
+}
+
+#experience img{
+  
 }
 
 .Information{
-height: 95%;
+height: 90%;
 width: 95%;
 padding: 10pt;
 margin:auto;
