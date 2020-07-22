@@ -168,6 +168,11 @@ i{
   background-color: #F56600;
   border: none;
 }
+#Clemson-Blue hr{
+  height: 2px;
+  background-color: #7122FA;
+  border: none;
+}
 #Amazon hr{
   height: 2px;
   background-color: #FF9900;
@@ -179,9 +184,6 @@ i{
   border: none;
 }
 
-br{
-  line-height: 5px;
-}
 
 #experience ul{
   margin-bottom:1%;
@@ -271,7 +273,7 @@ margin:auto;
 }
 
 #Recents{
-  height:550px;
+  height:510px;
   background-image: url(train.jpg);
   text-align:center;
 }
@@ -353,7 +355,7 @@ margin:0;
 
 #contact{
   background-image: url(tracks.jpg);
-  height:120pt;
+  height:135pt;
 }
 
 #contact td{
