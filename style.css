@@ -14,7 +14,7 @@ body{
       rgba(76, 20, 233, 0.3)
     ),
     /* bottom, image */
-    url(double_galaxy.jpg);
+    url(gal-rot.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -33,7 +33,13 @@ body{
   max-width: 100%;
   max-height:100%;
 }
-ul {
+#About ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#experience ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -65,10 +71,10 @@ background:
 }
 
 #About{
-  height:510px;
+  height:530px;
   background: 
   /* bottom, image */
-  url(grid-01.png);
+  url(grid-01.jpg);
   background-size:     cover;                
   background-repeat:   no-repeat;
   background-position: center center;    
@@ -78,23 +84,124 @@ background:
 }
 
 #experience{
+  height: 800px;
   background: 
   /* bottom, image */
-  url(Tapes.jpg);
+  url(city.jpg);
   background-size:     cover;                
   background-repeat:   no-repeat;
   background-position: center center;    
-  padding-top:15;
+  padding-top:10;
   padding-left:10;
   padding-right:10;
 }
 
-#experience img{
-  
+ h2{
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 0;
+  margin-top:0;
+  text-align:center;
+  color:white;
+  box-shadow: 0px 0px 20px 5px #FF25CF;
+  background-color:black;
+  border: 2px solid #FF25CF;
+}
+
+#experience #Clemson{
+  text-align:left;
+  margin-left:2%;
+  margin-right:35%;
+  margin-top:0;
+  margin-bottom: 0;
+  color:white;
+  margin-top:2%;
+  box-shadow: 0px 0px 20px 5px #F56600;
+  background-color:black;
+  border: 2px solid #F56600;
+}
+
+#experience #Clemson-Blue{
+  text-align:left;
+  margin-left:2%;
+  margin-right:35%;
+  margin-top:0;
+  margin-bottom: 0;
+  color:white;
+  margin-top:2%;
+  box-shadow: 0px 0px 20px 5px #7122FA;
+  background-color:black;
+  border: 2px solid #7122FA;
+}
+
+i{
+  margin-left:2%;
+}
+
+#experience #Amazon{
+  margin-left:35%;
+  margin-right:2%;
+  margin-top:0;
+  margin-bottom: 0;
+  text-align:left;
+  color:white;
+  margin-top:2%;
+  box-shadow: 0px 0px 20px 5px #FF9900;
+  background-color:black;
+  border: 2px solid #FF9900;
+}
+
+#experience #Michelin{
+  margin-left:35%;
+  margin-right:2%;
+  margin-top:0;
+  margin-bottom: 0;
+  text-align:left;
+  color:white;
+  margin-top:2%;
+  box-shadow: 0px 0px 20px 5px #005B90;
+  background-color:black;
+  border: 2px solid #005B90;
+}
+#Clemson hr{
+  height: 2px;
+  background-color: #F56600;
+  border: none;
+}
+#Amazon hr{
+  height: 2px;
+  background-color: #FF9900;
+  border: none;
+}
+#Michelin hr{
+  height: 2px;
+  background-color: #005B90;
+  border: none;
+}
+
+br{
+  line-height: 5px;
+}
+
+#experience ul{
+  margin-bottom:1%;
+}
+
+#experience h4{
+  margin:0;
+  text-align:center;
+  margin-bottom:1%;
+}
+
+#experience h3{
+  margin:0;
+  margin-left:2%;
+  text-align:center;
+  padding:1pt;
 }
 
 .Information{
-height: 90%;
+height: 75%;
 width: 95%;
 padding: 10pt;
 margin:auto;
@@ -135,11 +242,14 @@ margin:auto;
   border: 5px solid rgba(231, 231, 231, 0.3);
 }
 
-li{
+#About li{
+  padding:5px;
+}
+#experience li{
   padding:5px;
 }
 
-a {
+#About a {
   background-color: #FF25CF;
   border: 2px solid white;
   border-radius:50px;
@@ -160,7 +270,92 @@ a {
 	margin-right: auto;
 }
 
+#Recents{
+  height:550px;
+  background-image: url(train.jpg);
+  text-align:center;
+}
 
+#Recents ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
+#Recents .left{
+  text-align:left;
+  margin-top:0;
+  margin-bottom: 0;
+  color:white;
+  margin-top:2%;
+  width:45%;
+}
 
+#Recents .right{
+  text-align:left;
+  margin-top:0;
+  margin-bottom: 0;
+  color:white;
+  margin-top:2%;
 
+  width:45%;
+}
+
+#Pink{
+  box-shadow: 0px 0px 20px 5px #FF25CF;
+  background-color:black;
+  border: 2px solid #FF25CF;
+}
+#Blue{
+  box-shadow: 0px 0px 20px 5px #7122FA;
+  background-color:black;
+  border: 2px solid #7122FA;
+}
+#Purple{
+  box-shadow: 0px 0px 20px 5px #560A86;
+  background-color:black;
+  border: 2px solid #560A86;
+}
+
+#Blue hr{
+  height: 2px;
+  background-color: #7122FA;
+  border: none;
+}
+#Pink hr{
+  height: 2px;
+  background-color: #FF25CF;
+  border: none;
+}
+
+#Recents h4{
+margin:0;
+}
+
+ table{
+   margin-top:0;
+   padding-top:0;
+   margin-left:auto;
+   margin-right:auto;
+   border-spacing: 25pt;
+  width:95%; 
+  text-align:center;
+}
+
+#Recents ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#Recents li{
+  padding:5pt;
+}
+
+#contact{
+  background-image: url(tracks.jpg);
+  height:120pt;
+}
+
+#contact td{
+  width:30%;
+}
