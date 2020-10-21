@@ -273,7 +273,7 @@ margin:auto;
 }
 
 #Recents{
-  height:510px;
+  height:650px;
   background-image: url(train.jpg);
   text-align:center;
 }
@@ -304,16 +304,19 @@ margin:auto;
 }
 
 #Pink{
+  padding:5pt;
   box-shadow: 0px 0px 20px 5px #FF25CF;
   background-color:black;
   border: 2px solid #FF25CF;
 }
 #Blue{
+  padding:5pt;
   box-shadow: 0px 0px 20px 5px #7122FA;
   background-color:black;
   border: 2px solid #7122FA;
 }
 #Purple{
+  padding:5pt;
   box-shadow: 0px 0px 20px 5px #560A86;
   background-color:black;
   border: 2px solid #560A86;
