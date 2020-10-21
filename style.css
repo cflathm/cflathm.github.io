@@ -40,6 +40,7 @@ body{
 }
 
 #experience ul {
+  padding:5pt;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -84,7 +85,7 @@ background:
 }
 
 #experience{
-  height: 800px;
+  height: 850px;
   background: 
   /* bottom, image */
   url(city.jpg);
@@ -109,6 +110,7 @@ background:
 }
 
 #experience #Clemson{
+  padding:5pt;
   text-align:left;
   margin-left:2%;
   margin-right:35%;
@@ -122,6 +124,7 @@ background:
 }
 
 #experience #Clemson-Blue{
+  padding:5pt;
   text-align:left;
   margin-left:2%;
   margin-right:35%;
@@ -139,6 +142,7 @@ i{
 }
 
 #experience #Amazon{
+  padding:5pt;
   margin-left:35%;
   margin-right:2%;
   margin-top:0;
@@ -152,6 +156,7 @@ i{
 }
 
 #experience #Michelin{
+  padding:5pt;
   margin-left:35%;
   margin-right:2%;
   margin-top:0;
