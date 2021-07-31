@@ -72,7 +72,7 @@ background:
 }
 
 #About{
-  height:580px;
+  height:550px;
   background: 
   /* bottom, image */
   url(grid-01.jpg);
@@ -85,7 +85,6 @@ background:
 }
 
 #experience{
-  height: 850px;
   background: 
   /* bottom, image */
   url(city.jpg);
@@ -95,6 +94,7 @@ background:
   padding-top:10;
   padding-left:10;
   padding-right:10;
+  padding-bottom: 10pt;
 }
 
  h2{
@@ -208,7 +208,7 @@ i{
 }
 
 .Information{
-height: 75%;
+height: 78%;
 width: 95%;
 padding: 10pt;
 margin:auto;
