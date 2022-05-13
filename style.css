@@ -158,7 +158,9 @@ body{
 }
 
 
-
+.logos > img{
+    width:30%;
+}
 
 
 /*TITLE*/
@@ -174,6 +176,75 @@ body{
 
 
 
+
+
+
+
+
+
+.wrap-clem{
+    box-shadow: 0 0 1vw 0.05vw #F56600;
+    border-radius: 1vw;
+    margin:2vw;
+}
+
+.block-clem > h4{
+    background: #522D80;
+    color:white;
+    transform: skew(-20deg);
+    padding:0.5vw;
+    margin:1vw;
+}
+.interest-clem{
+    background: #F56600;
+    color:white;
+    border-radius: 1vw 1vw 0 0;
+    padding:0.2vw;
+}
+
+
+.wrap-amaz{
+    box-shadow: 0 0 1vw 0.05vw #FF9900;
+    border-radius: 1vw;
+    margin:2vw;
+}
+
+.block-amaz > h4{
+    background: #000000;
+    color:white;
+    transform: skew(-20deg);
+    padding:0.5vw;
+    margin:1vw
+}
+.interest-amaz{
+    background: #FF9900;
+    color:white;
+    border-radius: 1vw 1vw 0 0;
+    padding:0.2vw;
+}
+
+
+.wrap-mich{
+    box-shadow: 0 0 1vw 0.05vw #0060AE;
+    border-radius: 1vw;
+    margin:2vw;
+}
+
+.block-mich > h4{
+    background: #FFE600;
+    color:black;
+    transform: skew(-20deg);
+    padding:0.5vw;
+    margin:1vw;
+}
+.interest-mich{
+    background: #0060AE;
+    color:white;
+    border-radius: 1vw 1vw 0 0;
+    padding:0.2vw;
+}
+
+
 /* Large screens */
 @media all and (min-width: 800px) {
     /* We invert order of first sidebar and main
@@ -184,6 +255,9 @@ body{
     .withtext{height: 100%;}
     .flex-container > div{width: 35vw}
     .content{width: 45vw}
+    .block-clem > h4{margin:0.2vw}
+    .block-amaz > h4{margin:0.2vw}
+    .block-mich > h4{margin:0.2vw}
 }
 
 @media all and (min-width: 50px)   {  .centered  { font-size:0.6em;  } }
@@ -205,67 +279,3 @@ body{
 @media all and (min-width: 1500px) {  .centered  { font-size:3.8em;  } }
 @media all and (min-width: 1600px) {  .centered  { font-size:3.6em;  } }
 @media all and (min-width: 1700px) {  .centered  { font-size:4.2em;  } }
-
-
-
-
-.wrap-clem{
-    box-shadow: 0 0 1vw 0.05vw #F56600;
-    border-radius: 1vw;
-    margin:2vw;
-}
-
-.block-clem > h4{
-    background: #522D80;
-    color:white;
-    transform: skew(-20deg);
-    padding:0.5vw;
-}
-.interest-clem{
-    background: #F56600;
-    color:white;
-    border-radius: 1vw 1vw 0 0;
-    padding:0.2vw;
-}
-
-
-.wrap-amaz{
-    box-shadow: 0 0 1vw 0.05vw #FF9900;
-    border-radius: 1vw;
-    margin:2vw;
-}
-
-.block-amaz > h4{
-    background: #000000;
-    color:white;
-    transform: skew(-20deg);
-    padding:0.5vw;
-    margin:0.5vw
-}
-.interest-amaz{
-    background: #FF9900;
-    color:white;
-    border-radius: 1vw 1vw 0 0;
-    padding:0.2vw;
-}
-
-
-.wrap-mich{
-    box-shadow: 0 0 1vw 0.05vw #0060AE;
-    border-radius: 1vw;
-    margin:2vw;
-}
-
-.block-mich > h4{
-    background: #FFE600;
-    color:black;
-    transform: skew(-20deg);
-    padding:0.5vw;
-    margin:0.5vw;
-}
-.interest-mich{
-    background: #0060AE;
-    color:white;
-    border-radius: 1vw 1vw 0 0;
-    padding:0.2vw;
-}
