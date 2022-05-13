@@ -107,8 +107,7 @@ body{
 }
 
 .flex-container > div {
-    width:30vw;
-    min-width:300px;
+    width:70vw;
 }
 
 .flex-container > h4 {
@@ -241,6 +240,7 @@ body{
     color:white;
     transform: skew(-20deg);
     padding:0.5vw;
+    margin:0.5vw
 }
 .interest-amaz{
     background: #FF9900;
@@ -261,6 +261,7 @@ body{
     color:black;
     transform: skew(-20deg);
     padding:0.5vw;
+    margin:0.5vw;
 }
 .interest-mich{
     background: #0060AE;
