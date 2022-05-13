@@ -1,0 +1,18 @@
+.flex-container {
+    display: flex;
+    background-color: DodgerBlue;
+  }
+  
+.flex-container > div {
+    background-color: #f1f1f1;
+    margin: 0px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.flex-container > h4 {
+    background-color: #f1f1f1;
+    margin: 0px;
+    padding: 20px;
+    font-size: 30px;
+}
