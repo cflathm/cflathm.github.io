@@ -149,6 +149,7 @@ body{
     border-radius: 50vw;
 }
 
+/*
 .grow { 
     transition: all .2s ease-in-out; 
     }
@@ -156,7 +157,7 @@ body{
 .grow:hover { 
     transform: scale(1.1); 
 }
-
+*/
 
 .logos > img{
     width:30%;
