@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCOM Bingo Collection</title>
+    <style>
+        /* DCOM Bingo Index Page Styling */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gold-gradient: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            --background-color: #0f0f23;
+            --text-color: #ffffff;
+            --card-bg: #1a1a2e;
+            --hover-glow: #00d4ff;
+            --border-color: #4a4a6a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--background-color);
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(74, 172, 254, 0.3) 0%, transparent 50%);
+            min-height: 100vh;
+            padding: 2rem;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Header styling */
+        .header {
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        /* DCOM letters styling */
+        .dcom-letters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .letter {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--gold-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #1a1a2e;
+            box-shadow: 
+                0 10px 20px rgba(255, 215, 0, 0.4),
+                0 0 0 3px rgba(255, 237, 78, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .letter::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            transition: all 0.6s ease;
+        }
+
+        .letter:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 
+                0 15px 30px rgba(255, 215, 0, 0.6),
+                0 0 0 5px rgba(255, 237, 78, 0.5);
+        }
+
+        .letter:hover::before {
+            transform: translateX(100%) translateY(100%) rotate(45deg);
+        }
+
+        /* Story section styling */
+        .story-section {
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .story-content {
+            background: rgba(26, 26, 46, 0.6);
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--primary-gradient);
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        .story-content h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .story-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+
+        .story-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .story-content em {
+            color: var(--hover-glow);
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .note {
+            background: rgba(74, 172, 254, 0.1);
+            border: 1px solid rgba(74, 172, 254, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1.5rem !important;
+            font-size: 1rem !important;
+        }
+
+        .note strong {
+            color: var(--hover-glow);
+        }
+
+        /* Random button styling */
+        .random-section {
+            margin-bottom: 4rem;
+        }
+
+        .random-btn {
+            background: var(--secondary-gradient);
+            border: none;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 
+                0 10px 20px rgba(240, 147, 251, 0.4),
+                0 0 0 2px rgba(245, 87, 108, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .random-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .random-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                0 15px 30px rgba(240, 147, 251, 0.6),
+                0 0 0 4px rgba(245, 87, 108, 0.5);
+        }
+
+        .random-btn:hover::before {
+            left: 100%;
+        }
+
+        .random-btn:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        /* Card grid styling */
+        .cards-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card-item {
+            background: rgba(26, 26, 46, 0.8);
+            border: 2px solid var(--border-color);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .card-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .card-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: var(--hover-glow);
+            box-shadow: 
+                0 15px 30px rgba(0, 212, 255, 0.4),
+                0 0 0 3px rgba(0, 212, 255, 0.3);
+        }
+
+        .card-item:hover::before {
+            opacity: 0.1;
+        }
+
+        .card-number {
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .dcom-letters {
+                gap: 0.5rem;
+            }
+
+            .letter {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .story-content {
+                padding: 1.5rem;
+            }
+
+            .story-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .story-content p {
+                font-size: 1rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .random-btn {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Animation for page load */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header,
+        .story-section,
+        .random-section,
+        .cards-section {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .story-section {
+            animation-delay: 0.2s;
+        }
+
+        .random-section {
+            animation-delay: 0.4s;
+        }
+
+        .cards-section {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>DCOM BINGO</h1>
+            <p class="subtitle">Disney Channel Original Movie Bingo Collection</p>
+            
+            <!-- DCOM Letters -->
+            <div class="dcom-letters">
+                <div class="letter">D</div>
+                <div class="letter">C</div>
+                <div class="letter">O</div>
+                <div class="letter">M</div>
+            </div>
+        </div>
+
+        <!-- Project Story Section -->
+        <div class="story-section">
+            <div class="story-content">
+                <h3>The Story Behind DCOM Bingo</h3>
+                <p>My friend and I embarked on the ultimate Disney Channel journey—we watched <em>every single DCOM</em>. Through this epic marathon, we conducted a thematic analysis on a large number of these beloved movies to identify common TV tropes and recurring themes that make DCOMs so wonderfully predictable.</p>
+                
+                <p>Based on our research, we created these bingo cards to enhance your DCOM-watching experience. Each square represents a trope, character type, or situation that frequently appears across the Disney Channel Original Movie universe.</p>
+                
+                <p class="note">📝 <strong>Note:</strong> Some squares are biased toward older DCOMs, so feel free to adapt the nature of any square as the DCOM landscape continues to evolve!</p>
+            </div>
+        </div>
+
+        <!-- Random Card Section -->
+        <div class="random-section">
+            <button class="random-btn" onclick="goToRandomCard()">
+                🎲 Play Random Card
+            </button>
+        </div>
+
+        <!-- Cards List Section -->
+        <div class="cards-section">
+            <h2>Choose Your Bingo Card</h2>
+            <div class="cards-grid">
+                <a href="Card_0.html" class="card-item">
+                    <div class="card-number">01</div>
+                    <div class="card-title">Bingo Card #1</div>
+                    <div class="card-subtitle">Classic DCOM Experience</div>
+                </a>
+                
+                <a href="Card_1.html" class="card-item">
+                    <div class="card-number">02</div>
+                    <div class="card-title">Bingo Card #2</div>
+                    <div class="card-subtitle">Musical Mayhem</div>
+                </a>
+                
+                <a href="Card_2.html" class="card-item">
+                    <div class="card-number">03</div>
+                    <div class="card-title">Bingo Card #3</div>
+                    <div class="card-subtitle">High School Drama</div>
+                </a>
+                
+                <a href="Card_3.html" class="card-item">
+                    <div class="card-number">04</div>
+                    <div class="card-title">Bingo Card #4</div>
+                    <div class="card-subtitle">Sports & Competition</div>
+                </a>
+                
+                <a href="Card_4.html" class="card-item">
+                    <div class="card-number">05</div>
+                    <div class="card-title">Bingo Card #5</div>
+                    <div class="card-subtitle">Family Fun</div>
+                </a>
+                
+                <a href="Card_5.html" class="card-item">
+                    <div class="card-number">06</div>
+                    <div class="card-title">Bingo Card #6</div>
+                    <div class="card-subtitle">Teen Romance</div>
+                </a>
+                
+                <a href="Card_6.html" class="card-item">
+                    <div class="card-number">07</div>
+                    <div class="card-title">Bingo Card #7</div>
+                    <div class="card-subtitle">Adventure Time</div>
+                </a>
+                
+                <a href="Card_7.html" class="card-item">
+                    <div class="card-number">08</div>
+                    <div class="card-title">Bingo Card #8</div>
+                    <div class="card-subtitle">Comedy Central</div>
+                </a>
+                
+                <a href="Card_8.html" class="card-item">
+                    <div class="card-number">09</div>
+                    <div class="card-title">Bingo Card #9</div>
+                    <div class="card-subtitle">Magic & Fantasy</div>
+                </a>
+                
+                <a href="Card_9.html" class="card-item">
+                    <div class="card-number">10</div>
+                    <div class="card-title">Bingo Card #10</div>
+                    <div class="card-subtitle">Ultimate Challenge</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Random card functionality
+        function goToRandomCard() {
+            const totalCards = 10; // Cards 0-9
+            const randomCard = Math.floor(Math.random() * totalCards);
+            window.location.href = `Card_${randomCard}.html`;
+        }
+
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover sound effect simulation (visual feedback)
+            const cardItems = document.querySelectorAll('.card-item');
+            cardItems.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Random button pulse effect
+            const randomBtn = document.querySelector('.random-btn');
+            setInterval(() => {
+                randomBtn.style.transform = 'scale(1.02)';
+                setTimeout(() => {
+                    randomBtn.style.transform = 'scale(1)';
+                }, 200);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
