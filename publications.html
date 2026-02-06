@@ -3,201 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | Dr. Christopher Flathmann - Academic Portfolio</title>
+    <title>Publications | Dr. Christopher Flathmann</title>
+    <meta name="description" content="Selected publications by Dr. Christopher Flathmann in human-AI interaction, collaboration, and teaming.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="newstyle.css">
-    <style>
-        /* Academic Impact Panel Styling (purple gradient, matches modified_academic_portfolio.html) */
-        .impact-panel {
-            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-            border-left: 6px solid #9b59b6;
-            color: #fff;
-            padding: 2rem 2.5rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 2px 12px rgba(155,89,182,0.07);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 2.5rem;
-            flex-wrap: wrap;
-        }
-        .impact-panel .impact-icon {
-            font-size: 2.5rem;
-            color: #fff;
-            margin-right: 1.5rem;
-        }
-        .impact-panel .impact-details {
-            flex: 1;
-        }
-        .impact-panel h3 {
-            color: #fff;
-            margin: 0 0 0.5rem 0;
-        }
-        .impact-panel ul {
-            list-style: none;
-            padding-left: 0;
-            margin: 0.5rem 0 0 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2.5rem;
-        }
-        .impact-panel li {
-            margin-bottom: 0.2rem;
-            font-size: 1.15rem;
-            color: #f5eafc;
-            min-width: 160px;
-        }
-        .impact-panel a {
-            color: #ffe082;
-            text-decoration: underline;
-            font-weight: 500;
-        }
-        .impact-panel a:hover {
-            color: #fffde7;
-        }
-        @media (max-width: 700px) {
-            .impact-panel {
-                flex-direction: column;
-                gap: 1.2rem;
-                padding: 1.2rem 1rem;
-            }
-            .impact-panel ul {
-                flex-direction: column;
-                gap: 0.7rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="newstyle.css?v=2">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-content" style="padding: 1.2rem 0;">
-                <h1 class="header-title" style="font-size:2rem; margin-bottom:0.3rem;">Dr. Christopher Flathmann</h1>
-                <p class="header-subtitle" style="font-size:1.05rem; margin-bottom:0.5rem;">Assistant Professor, Human-Centered Computing, Clemson University</p>
-                <a href="contact.html" class="header-cta" style="font-size:1rem; padding:0.4rem 1.1rem;">Get In Touch</a>
-            </div>
-        </header>
-        <nav>
-            <div class="nav-container">
-                <a href="index.html" class="nav-logo">Academic Portfolio</a>
-                <button class="mobile-menu-btn" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</button>
+    <div class="page">
+        <header class="site-header">
+            <nav class="nav">
+                <a href="index.html" class="logo">Christopher Flathmann</a>
+                <button class="nav-toggle" onclick="var nav=document.getElementById('navLinks'); nav.classList.toggle('active'); this.setAttribute('aria-expanded', nav.classList.contains('active'))" aria-controls="navLinks" aria-expanded="false">Menu</button>
                 <div class="nav-links" id="navLinks">
-                    <a href="index.html" class="nav-btn">Home</a>
-                    <a href="publications.html" class="nav-btn active">Publications</a>
-                    <a href="funding.html" class="nav-btn">Funding</a>
-                    <a href="contact.html" class="nav-btn">Contact</a>
+                    <a href="index.html">Home</a>
+                    <a href="publications.html" class="active">Publications</a>
+                    <a href="funding.html">Funding</a>
+                    <a href="contact.html">Contact</a>
                 </div>
-            </div>
-        </nav>
-        <div id="page-content">
-            <div class="section-heading">
-                <h1>Publications</h1>
-                <p>Selected peer-reviewed publications and academic contributions</p>
-            </div>
+            </nav>
 
-            <!-- Academic Impact Summary Panel -->
-                <div class="stats-widget">
-                    <h3>Publication Impact</h3>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <div class="stat-label">Publications</div>
+            <section class="hero hero-compact">
+                <div class="hero-content">
+                    <div class="eyebrow">Selected peer-reviewed work</div>
+                    <h1>Publications</h1>
+                    <p class="lead">Selected peer-reviewed publications and academic contributions spanning human-AI interaction, teaming, and collaboration.</p>
+                    <div class="stat-grid">
+                        <div class="stat-card">
+                            <span>50+</span>
+                            <small>Publications</small>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">1000+</span>
-                            <div class="stat-label">Citations</div>
+                        <div class="stat-card">
+                            <span>Communities</span>
+                            <small>HCI · CSCW · Human Factors · Human-AI Teaming</small>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">18</span>
-                            <div class="stat-label">H-Index</div>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">26</span>
-                            <div class="stat-label">i10-Index</div>
-                        </div>
+                        <a class="stat-card stat-card-link" href="https://scholar.google.com/citations?user=b2dlWbwAAAAJ" target="_blank" rel="noopener">
+                            <span>Google Scholar <i class="fas fa-arrow-up-right-from-square mini-icon" aria-hidden="true"></i></span>
+                            <small>Up to date metrics</small>
+                        </a>
                     </div>
                 </div>
+            </section>
+        </header>
 
-            <div class="card">
-                <h3>Dissertation</h3>
-                <ul>
+        <main>
+            <section class="section">
+                <div class="section-title">
+                    <h2>Dissertation</h2>
+                </div>
+                <ul class="publication-list">
                     <li><strong>Flathmann, C.</strong> (February 2023). How to Make Agents and Influence Teammates: Understanding the Social Influence AI Teammates Have in Human-AI Teams. Committee: Nathan McNeese, Brian Dean, Eileen Kraemer, Brygg Ullmer, Laine Mears</li>
                 </ul>
-            </div>
+            </section>
 
-            <div class="card">
-                <h3>Peer Reviewed Journal Articles</h3>
-                <ul>
+            <section class="section">
+                <div class="section-title">
+                    <h2>Peer Reviewed Journal Articles</h2>
+                </div>
+                <ul class="publication-list">
                     <li>Lancaster, C., <strong>Flathmann, C.</strong>, O'Neill, T., Salas, E., &amp; McNeese, N.J. (2025). Preparing for Tomorrow's Teamwork: Insights from eSports on How Human Expertise Shapes Training Needs for AI-Integrated Work. <em>Journal of Organizational Behavior</em>.</li>
                     <li>Kot, S., Engineer, M., Gilman, E., <strong>Flathmann, C.</strong>, Pradham, A., Dixon, E., Exploring The Role of Generative AI in Dementia Resilience Building Activities: Uncovering Opportunities and Challenges. <em>ACM Transactions on Computer-Human Interaction</em>.</li>
                     <li><strong>Flathmann, C.</strong>, McNeese, N.J., Sengupta, S., &amp; Johnson, E. (2025). Exploring Trust, Acceptance, and Behavioral Differences When Humans Collaborate with Large Language Models as Tools and Teammates. <em>ACM Transactions on Interactive Intelligent Systems</em>.</li>
                     <li>Hauptman, A.I., Schelble, B.G., <strong>Flathmann, C.</strong>, Mallick, R. &amp; McNeese, N.J.(2025). Ethical Adaptation: Exploring the Use of Adaptive Autonomy in the Design of Ethical AI Teammates in Healthcare. <em>AI and Ethics</em>.</li>
-                    <li><strong>Flathmann, C.</strong>, McNeese, N. J., &amp; O'Neill, T. A. (2025). Designing High-Impact Experiments for Human–Autonomy/AI Teaming. <em>Journal of Cognitive Engineering and Decision Making</em>, 15553434251327697. <a href="https://doi.org/10.1177/15553434251327697" target="_blank">https://doi.org/10.1177/15553434251327697</a></li>
-                    <li>Zhang, R., Duan, W., <strong>Flathmann, C.</strong>, McNeese, N., Knijnenburg, B., &amp; Freeman, G. (2024). Verbal vs. Visual: How Humans Perceive and Collaborate with AI Teammates Using Different Communication Modalities in Various Human-AI Team Compositions. <em>Proceedings of the ACM on Human-Computer Interaction</em>, 8(CSCW2), 1-34. <a href="https://doi.org/10.1145/3686976" target="_blank">https://doi.org/10.1145/3686976</a></li>
-                    <li>Sengupta, S., <strong>Flathmann, C.</strong>, Schelble, B., Lyons, J. B., &amp; McNeese, N. (2024). An analysis of ethical rationales and their impact on the perceived moral persona of AI teammates. <em>AI and Ethics</em>, 1-13. <a href="https://doi.org/10.1007/s43681-024-00515-5" target="_blank">https://doi.org/10.1007/s43681-024-00515-5</a></li>
-                    <li>Schelble, B. G., <strong>Flathmann, C.</strong>, Macdonald, J. P., Knijnenburg, B., Brady, C., &amp; McNeese, N. J. (2024). Modeling perceived information needs in human-AI teams: improving AI teammate utility and driving team cognition. <em>Behaviour &amp; Information Technology</em>, 1–24. <a href="https://doi.org/10.1080/0144929X.2024.2396476" target="_blank">https://doi.org/10.1080/0144929X.2024.2396476</a></li>
-                    <li>Mallick, R., <strong>Flathmann, C.</strong>, Duan, W., Schelble, B. G., &amp; McNeese, N. J. (2024). What you say vs what you do: Utilizing positive emotional expressions to relay AI teammate intent within human-AI teams. <em>International Journal of Human-Computer Studies</em>, 103355. <a href="https://doi.org/10.1016/j.ijhcs.2024.103355" target="_blank">https://doi.org/10.1016/j.ijhcs.2024.103355</a></li>
-                    <li>Hauptman, A. I., Mallick, R., <strong>Flathmann, C.</strong>, &amp; McNeese, N. J. (2024). Human factors considerations for the context-aware design of adaptive autonomous teammates. <em>Ergonomics</em>, 1-17. <a href="https://doi.org/10.1080/00140139.2024.2380341" target="_blank">https://doi.org/10.1080/00140139.2024.2380341</a></li>
-                    <li>Hauptman, A. I., <strong>Flathmann, C.</strong>, &amp; McNeese, N. J. (2024). Adapting to the human: A systematic review of a decade of human factors research on adaptive autonomy. <em>Applied Ergonomics</em>, 120, 104336. <a href="https://doi.org/10.1016/j.apergo.2024.104336" target="_blank">https://doi.org/10.1016/j.apergo.2024.104336</a></li>
-                    <li>Hauptman, A. I., Schelble, B. G., Duan, W., <strong>Flathmann, C.</strong>, &amp; McNeese, N. J. (2024). Understanding the influence of AI autonomy on AI explainability levels in human-AI teams using a mixed methods approach. <em>Cognition, Technology &amp; Work</em>, 1-21. <a href="https://doi.org/10.1007/s10111-024-00765-7" target="_blank">https://doi.org/10.1007/s10111-024-00765-7</a></li>
-                    <li><strong>Flathmann, C.</strong>, Duan, W., McNeese, N., Hauptman, A., &amp; Zhang, R. (2024). Empirically Understanding the Potential Impacts and Process of Social Influence in Human-AI Teams. <em>Proceedings of the ACM on Human-Computer Interaction</em> (CSCW). <a href="https://doi.org/10.1145/3637326" target="_blank">https://doi.org/10.1145/3637326</a></li>
-                    <li><strong>Feature Paper:</strong> Zhang, R., <strong>Flathmann, C.</strong>, Duan. W., Schelble, B.G., McNeese, N.J., &amp; Knijnenberg, B. (2024). I Know This Looks Bad, But I Can Explain: Understanding When AI Should Explain Actions In Human-AI Teams. <em>ACM Transactions on Interactive Intelligent Systems</em>. <a href="http://dx.doi.org/10.1145/3635474" target="_blank">http://dx.doi.org/10.1145/3635474</a></li>
-                    <li>O'Neill, T. A., <strong>Flathmann, C.</strong>, McNeese, N. J., Jones, S. K., &amp; Schelble, B. (2024). A comment on "Can you Outsmart the Robot? An Unexpected Path to Work Meaningfulness" by Bernadeta Goštautaitė, Irina Liubertė, Sharon K. Parker, and Ilona Bučiūnienė: Calling for a different path for the future of human-robot teaming. <em>Academy of Management Discoveries</em>. <a href="https://doi.org/10.5465/amd.2024.0009" target="_blank">https://doi.org/10.5465/amd.2024.0009</a></li>
-                    <li>Musick, G., Duan, W., Sengupta, S., <strong>Flathmann, C.</strong>, Knijnenburg, B., &amp; McNeese, N.J., (2024). To share or not to share: Understanding and modeling individual disclosure preferences in recommender systems for the workplace. <em>ACM GROUP</em>. <a href="https://doi.org/10.1145/3633074" target="_blank">https://doi.org/10.1145/3633074</a></li>
-                    <li>Lancaster, C., Schulenberg, K., <strong>Flathmann, C.</strong>, McNeese, N.J., &amp; Freeman, G., (2024). "It's Everybody's Role to Speak Up... But Not Everyone Will": Understanding AI Professionals' Perceptions of Accountability for AI Bias Mitigation. <em>ACM Responsible Computing</em>. <a href="https://doi.org/10.1145/3632121" target="_blank">https://doi.org/10.1145/3632121</a></li>
-                    <li>Musick, G., Hauptman, A. I., <strong>Flathmann, C.</strong>, McNeese, N. J., &amp; Knijnenburg, B. P. (2023). Recommendations with Benefits: Exploring Explanations in Information Sharing Recommender Systems for Temporary Teams. <em>International Journal of Human-Computer Interaction</em>. <a href="https://doi.org/10.1080/10447318.2023.2278933" target="_blank">https://doi.org/10.1080/10447318.2023.2278933</a></li>
-                    <li>Mallick, R., <strong>Flathmann, C.</strong>, Lancaster, C., Hauptman, A., McNeese, N.J., &amp; Freeman, G., (2023). The pursuit of happiness: the power and influence of AI teammate emotion in human-AI teamwork. <em>Behavior and Information Technology</em>. <a href="https://doi.org/10.1080/0144929X.2023.2277909" target="_blank">https://doi.org/10.1080/0144929X.2023.2277909</a></li>
-                    <li><strong>Flathmann, C.</strong>, Schelble, B.G., McNeese, N.J., Knijnenberg, B., Gramopadhye, A., &amp; Madathil K.C. (2023). The Purposeful Presentation of AI Teammates: Impacts on Human Acceptance and Perception. <em>International Journal of Human-Computer Interaction</em>. <a href="https://doi.org/10.1080/10447318.2023.2254984" target="_blank">https://doi.org/10.1080/10447318.2023.2254984</a></li>
-                    <li>Mcneese, N.J., <strong>Flathmann, C.</strong>, O'Neill, T., &amp; Salas, E., (2023). Stepping out of the shadow of human-human teaming: Crafting a unique identity for human-autonomy teams. <em>Computers in Human Behavior</em>. <a href="https://doi.org/10.1016/j.chb.2023.107874" target="_blank">https://doi.org/10.1016/j.chb.2023.107874</a></li>
-                    <li>O'Neill, T., <strong>Flathmann, C.</strong>, McNeese, N.J., &amp; Salas, E., (2023). 21st Century teaming and beyond: Advances in human-autonomy teamwork. <em>Computers in Human Behavior</em>. <a href="https://doi.org/10.1016/j.chb.2023.107865" target="_blank">https://doi.org/10.1016/j.chb.2023.107865</a></li>
-                    <li><strong>Flathmann, C.</strong>, Schelble, B. G., Rosopa, P. J., McNeese, N. J., Mallick, R., &amp; Madathil, K. C. (2023). Examining the impact of varying levels of AI teammate influence on human-AI teams. <em>International Journal of Human-Computer Studies</em>, 177, 103061. <a href="https://doi.org/10.1016/j.ijhcs.2023.103061" target="_blank">https://doi.org/10.1016/j.ijhcs.2023.103061</a></li>
-                    <li>O'Neill, T., <strong>Flathmann, C.</strong>, McNeese, N.J., &amp; Salas, E., (2023). Human-autonomy Teaming: Need for a guiding team-based framework? <em>Computers in Human Behavior</em>. <a href="https://doi.org/10.1016/j.chb.2023.107762" target="_blank">https://doi.org/10.1016/j.chb.2023.107762</a></li>
-                    <li>Zhang, R., Wen, D., <strong>Flathmann, C.</strong>, Freeman, G., &amp; McNeese, N.J. (2023). Investigating AI Teammate's Communication Strategies and Their Impact in Human-AI Teams For Effective Teamwork. <em>Proceedings of the ACM on Human-Computer Interaction</em> (CSCW). <a href="https://doi.org/10.1145/3610072" target="_blank">https://doi.org/10.1145/3610072</a></li>
-                    <li><strong>Flathmann, C.</strong>, McNeese, N.J., Schelble, B.G., Knijnenburg, B., &amp; Freeman, G. (2023). Understanding the Impact and Design of AI Teammate Etiquette. <em>Human-Computer Interaction</em>. <a href="https://doi.org/10.1080/07370024.2023.2189595" target="_blank">https://doi.org/10.1080/07370024.2023.2189595</a></li>
-                    <li>Schelble, B., <strong>Flathmann, C.</strong>, McNeese, N.J., O'Neill, T., Pak, R., &amp; Namara, M. (2022). Investigating the Effects of Perceived Teammate Artificiality on Human Performance and Cognition. <em>International Journal of Human-Computer Interaction</em>. <a href="https://doi.org/10.1080/10447318.2022.2085191" target="_blank">https://doi.org/10.1080/10447318.2022.2085191</a></li>
-                    <li>Schelble, B.G., <strong>Flathmann, C.</strong>, Musick, G., McNeese, N.J., &amp; Freeman, G. (2022). I See You: Examining the Role of Spatial Information in Human-Agent Teams. <em>Proceedings of the ACM on Human-Computer Interaction</em> (CSCW), 1-27. <a href="https://doi.org/10.1145/3555099" target="_blank">https://doi.org/10.1145/3555099</a></li>
-                    <li><strong>Honorable Mention:</strong> Schelble, B.G., <strong>Flathmann, C.</strong>, McNeese, N.J., Freeman, G., &amp; Mallick, R. (2022). Let's Think Together! Assessing Shared Mental Models, Performance, and Trust in Human-Agent Teams. <em>Proceedings of the ACM on Human-Computer Interaction</em> 6(GROUP), 1-29. <a href="https://doi.org/10.1145/3492832" target="_blank">https://doi.org/10.1145/3492832</a></li>
+                    <li><strong>Flathmann, C.</strong>, McNeese, N. J., &amp; O'Neill, T. A. (2025). Designing High-Impact Experiments for Human–Autonomy/AI Teaming. <em>Journal of Cognitive Engineering and Decision Making</em>, 15553434251327697. <a href="https://doi.org/10.1177/15553434251327697" target="_blank" rel="noopener">https://doi.org/10.1177/15553434251327697</a></li>
+                    <li>Zhang, R., Duan, W., <strong>Flathmann, C.</strong>, McNeese, N., Knijnenburg, B., &amp; Freeman, G. (2024). Verbal vs. Visual: How Humans Perceive and Collaborate with AI Teammates Using Different Communication Modalities in Various Human-AI Team Compositions. <em>Proceedings of the ACM on Human-Computer Interaction</em>, 8(CSCW2), 1-34. <a href="https://doi.org/10.1145/3686976" target="_blank" rel="noopener">https://doi.org/10.1145/3686976</a></li>
+                    <li>Sengupta, S., <strong>Flathmann, C.</strong>, Schelble, B., Lyons, J. B., &amp; McNeese, N. (2024). An analysis of ethical rationales and their impact on the perceived moral persona of AI teammates. <em>AI and Ethics</em>, 1-13. <a href="https://doi.org/10.1007/s43681-024-00515-5" target="_blank" rel="noopener">https://doi.org/10.1007/s43681-024-00515-5</a></li>
+                    <li>Schelble, B. G., <strong>Flathmann, C.</strong>, Macdonald, J. P., Knijnenburg, B., Brady, C., &amp; McNeese, N. J. (2024). Modeling perceived information needs in human-AI teams: improving AI teammate utility and driving team cognition. <em>Behaviour &amp; Information Technology</em>, 1–24. <a href="https://doi.org/10.1080/0144929X.2024.2396476" target="_blank" rel="noopener">https://doi.org/10.1080/0144929X.2024.2396476</a></li>
+                    <li>Mallick, R., <strong>Flathmann, C.</strong>, Duan, W., Schelble, B. G., &amp; McNeese, N. J. (2024). What you say vs what you do: Utilizing positive emotional expressions to relay AI teammate intent within human-AI teams. <em>International Journal of Human-Computer Studies</em>, 103355. <a href="https://doi.org/10.1016/j.ijhcs.2024.103355" target="_blank" rel="noopener">https://doi.org/10.1016/j.ijhcs.2024.103355</a></li>
+                    <li>Hauptman, A. I., Mallick, R., <strong>Flathmann, C.</strong>, &amp; McNeese, N. J. (2024). Human factors considerations for the context-aware design of adaptive autonomous teammates. <em>Ergonomics</em>, 1-17. <a href="https://doi.org/10.1080/00140139.2024.2380341" target="_blank" rel="noopener">https://doi.org/10.1080/00140139.2024.2380341</a></li>
+                    <li>Hauptman, A. I., <strong>Flathmann, C.</strong>, &amp; McNeese, N. J. (2024). Adapting to the human: A systematic review of a decade of human factors research on adaptive autonomy. <em>Applied Ergonomics</em>, 120, 104336. <a href="https://doi.org/10.1016/j.apergo.2024.104336" target="_blank" rel="noopener">https://doi.org/10.1016/j.apergo.2024.104336</a></li>
+                    <li>Hauptman, A. I., Schelble, B. G., Duan, W., <strong>Flathmann, C.</strong>, &amp; McNeese, N. J. (2024). Understanding the influence of AI autonomy on AI explainability levels in human-AI teams using a mixed methods approach. <em>Cognition, Technology &amp; Work</em>, 1-21. <a href="https://doi.org/10.1007/s10111-024-00765-7" target="_blank" rel="noopener">https://doi.org/10.1007/s10111-024-00765-7</a></li>
+                    <li><strong>Flathmann, C.</strong>, Duan, W., McNeese, N., Hauptman, A., &amp; Zhang, R. (2024). Empirically Understanding the Potential Impacts and Process of Social Influence in Human-AI Teams. <em>Proceedings of the ACM on Human-Computer Interaction</em> (CSCW). <a href="https://doi.org/10.1145/3637326" target="_blank" rel="noopener">https://doi.org/10.1145/3637326</a></li>
+                    <li><strong>Feature Paper:</strong> Zhang, R., <strong>Flathmann, C.</strong>, Duan. W., Schelble, B.G., McNeese, N.J., &amp; Knijnenberg, B. (2024). I Know This Looks Bad, But I Can Explain: Understanding When AI Should Explain Actions In Human-AI Teams. <em>ACM Transactions on Interactive Intelligent Systems</em>. <a href="http://dx.doi.org/10.1145/3635474" target="_blank" rel="noopener">http://dx.doi.org/10.1145/3635474</a></li>
+                    <li>O'Neill, T. A., <strong>Flathmann, C.</strong>, McNeese, N. J., Jones, S. K., &amp; Schelble, B. (2024). A comment on "Can you Outsmart the Robot? An Unexpected Path to Work Meaningfulness" by Bernadeta Goštautaitė, Irina Liubertė, Sharon K. Parker, and Ilona Bučiūnienė: Calling for a different path for the future of human-robot teaming. <em>Academy of Management Discoveries</em>. <a href="https://doi.org/10.5465/amd.2024.0009" target="_blank" rel="noopener">https://doi.org/10.5465/amd.2024.0009</a></li>
+                    <li>Musick, G., Duan, W., Sengupta, S., <strong>Flathmann, C.</strong>, Knijnenburg, B., &amp; McNeese, N.J., (2024). To share or not to share: Understanding and modeling individual disclosure preferences in recommender systems for the workplace. <em>ACM GROUP</em>. <a href="https://doi.org/10.1145/3633074" target="_blank" rel="noopener">https://doi.org/10.1145/3633074</a></li>
+                    <li>Lancaster, C., Schulenberg, K., <strong>Flathmann, C.</strong>, McNeese, N.J., &amp; Freeman, G., (2024). "It's Everybody's Role to Speak Up... But Not Everyone Will": Understanding AI Professionals' Perceptions of Accountability for AI Bias Mitigation. <em>ACM Responsible Computing</em>. <a href="https://doi.org/10.1145/3632121" target="_blank" rel="noopener">https://doi.org/10.1145/3632121</a></li>
+                    <li>Musick, G., Hauptman, A. I., <strong>Flathmann, C.</strong>, McNeese, N. J., &amp; Knijnenburg, B. P. (2023). Recommendations with Benefits: Exploring Explanations in Information Sharing Recommender Systems for Temporary Teams. <em>International Journal of Human-Computer Interaction</em>. <a href="https://doi.org/10.1080/10447318.2023.2278933" target="_blank" rel="noopener">https://doi.org/10.1080/10447318.2023.2278933</a></li>
+                    <li>Mallick, R., <strong>Flathmann, C.</strong>, Lancaster, C., Hauptman, A., McNeese, N.J., &amp; Freeman, G., (2023). The pursuit of happiness: the power and influence of AI teammate emotion in human-AI teamwork. <em>Behavior and Information Technology</em>. <a href="https://doi.org/10.1080/0144929X.2023.2277909" target="_blank" rel="noopener">https://doi.org/10.1080/0144929X.2023.2277909</a></li>
+                    <li><strong>Flathmann, C.</strong>, Schelble, B.G., McNeese, N.J., Knijnenberg, B., Gramopadhye, A., &amp; Madathil K.C. (2023). The Purposeful Presentation of AI Teammates: Impacts on Human Acceptance and Perception. <em>International Journal of Human-Computer Interaction</em>. <a href="https://doi.org/10.1080/10447318.2023.2254984" target="_blank" rel="noopener">https://doi.org/10.1080/10447318.2023.2254984</a></li>
+                    <li>Mcneese, N.J., <strong>Flathmann, C.</strong>, O'Neill, T., &amp; Salas, E., (2023). Stepping out of the shadow of human-human teaming: Crafting a unique identity for human-autonomy teams. <em>Computers in Human Behavior</em>. <a href="https://doi.org/10.1016/j.chb.2023.107874" target="_blank" rel="noopener">https://doi.org/10.1016/j.chb.2023.107874</a></li>
+                    <li>O'Neill, T., <strong>Flathmann, C.</strong>, McNeese, N.J., &amp; Salas, E., (2023). 21st Century teaming and beyond: Advances in human-autonomy teamwork. <em>Computers in Human Behavior</em>. <a href="https://doi.org/10.1016/j.chb.2023.107865" target="_blank" rel="noopener">https://doi.org/10.1016/j.chb.2023.107865</a></li>
+                    <li><strong>Flathmann, C.</strong>, Schelble, B. G., Rosopa, P. J., McNeese, N. J., Mallick, R., &amp; Madathil, K. C. (2023). Examining the impact of varying levels of AI teammate influence on human-AI teams. <em>International Journal of Human-Computer Studies</em>, 177, 103061. <a href="https://doi.org/10.1016/j.ijhcs.2023.103061" target="_blank" rel="noopener">https://doi.org/10.1016/j.ijhcs.2023.103061</a></li>
+                    <li>O'Neill, T., <strong>Flathmann, C.</strong>, McNeese, N.J., &amp; Salas, E., (2023). Human-autonomy Teaming: Need for a guiding team-based framework? <em>Computers in Human Behavior</em>. <a href="https://doi.org/10.1016/j.chb.2023.107762" target="_blank" rel="noopener">https://doi.org/10.1016/j.chb.2023.107762</a></li>
+                    <li>Zhang, R., Wen, D., <strong>Flathmann, C.</strong>, Freeman, G., &amp; McNeese, N.J. (2023). Investigating AI Teammate's Communication Strategies and Their Impact in Human-AI Teams For Effective Teamwork. <em>Proceedings of the ACM on Human-Computer Interaction</em> (CSCW). <a href="https://doi.org/10.1145/3610072" target="_blank" rel="noopener">https://doi.org/10.1145/3610072</a></li>
+                    <li><strong>Flathmann, C.</strong>, McNeese, N.J., Schelble, B.G., Knijnenberg, B., &amp; Freeman, G. (2023). Understanding the Impact and Design of AI Teammate Etiquette. <em>Human-Computer Interaction</em>. <a href="https://doi.org/10.1080/07370024.2023.2189595" target="_blank" rel="noopener">https://doi.org/10.1080/07370024.2023.2189595</a></li>
+                    <li>Schelble, B., <strong>Flathmann, C.</strong>, McNeese, N.J., O'Neill, T., Pak, R., &amp; Namara, M. (2022). Investigating the Effects of Perceived Teammate Artificiality on Human Performance and Cognition. <em>International Journal of Human-Computer Interaction</em>. <a href="https://doi.org/10.1080/10447318.2022.2085191" target="_blank" rel="noopener">https://doi.org/10.1080/10447318.2022.2085191</a></li>
+                    <li>Schelble, B.G., <strong>Flathmann, C.</strong>, Musick, G., McNeese, N.J., &amp; Freeman, G. (2022). I See You: Examining the Role of Spatial Information in Human-Agent Teams. <em>Proceedings of the ACM on Human-Computer Interaction</em> (CSCW), 1-27. <a href="https://doi.org/10.1145/3555099" target="_blank" rel="noopener">https://doi.org/10.1145/3555099</a></li>
+                    <li><strong>Honorable Mention:</strong> Schelble, B.G., <strong>Flathmann, C.</strong>, McNeese, N.J., Freeman, G., &amp; Mallick, R. (2022). Let's Think Together! Assessing Shared Mental Models, Performance, and Trust in Human-Agent Teams. <em>Proceedings of the ACM on Human-Computer Interaction</em> 6(GROUP), 1-29. <a href="https://doi.org/10.1145/3492832" target="_blank" rel="noopener">https://doi.org/10.1145/3492832</a></li>
                 </ul>
-            </div>
+            </section>
 
-            <div class="card">
-                <h3>Book Chapters</h3>
-                <ul>
+            <section class="section">
+                <div class="section-title">
+                    <h2>Book Chapters</h2>
+                </div>
+                <ul class="publication-list">
                     <li>Sengupta, S., Wen, D., <strong>Flathmann, C.</strong>, &amp; McNeese, N. J. (in press). Sustaining human-AI collaboration: Exploring the interplay between ethics and trust. In T. Reimer, L. van Swol., &amp; A. Florack (Eds.), <em>The Routledge Handbook of Communication and Social Cognition</em>. Routledge/Taylor and Francis.</li>
-                    <li><strong>Flathmann, C.</strong>, Schelble, B.G., &amp; McNeese, N.J. (2023). Refocusing Human-AI Interaction Through a Teamwork Lens. Book Chapter in <em>Handbook on Virtual Work</em>. Edward Elgar Publishing. <a href="https://doi.org/10.4337/9781802200508.00013" target="_blank">https://doi.org/10.4337/9781802200508.00013</a></li>
-                    <li>Rapa, L. J., Marshall, J. C., Madison, S. M., <strong>Flathmann, C.</strong>, Knijnenburg, B. P., &amp; McNeese, N. J. (2022). Clemson University's Teacher Learning Progression Program: Personalized Advanced Credentials for Teachers. In <em>Handbook of Research on Credential Innovations for Inclusive Pathways to Professions</em> (pp. 313-334). IGI Global. <a href="http://doi.org/10.4018/978-1-7998-3820-3.ch016" target="_blank">http://doi.org/10.4018/978-1-7998-3820-3.ch016</a></li>
+                    <li><strong>Flathmann, C.</strong>, Schelble, B.G., &amp; McNeese, N.J. (2023). Refocusing Human-AI Interaction Through a Teamwork Lens. Book Chapter in <em>Handbook on Virtual Work</em>. Edward Elgar Publishing. <a href="https://doi.org/10.4337/9781802200508.00013" target="_blank" rel="noopener">https://doi.org/10.4337/9781802200508.00013</a></li>
+                    <li>Rapa, L. J., Marshall, J. C., Madison, S. M., <strong>Flathmann, C.</strong>, Knijnenburg, B. P., &amp; McNeese, N. J. (2022). Clemson University's Teacher Learning Progression Program: Personalized Advanced Credentials for Teachers. In <em>Handbook of Research on Credential Innovations for Inclusive Pathways to Professions</em> (pp. 313-334). IGI Global. <a href="http://doi.org/10.4018/978-1-7998-3820-3.ch016" target="_blank" rel="noopener">http://doi.org/10.4018/978-1-7998-3820-3.ch016</a></li>
                 </ul>
-            </div>
+            </section>
 
-            <div class="card">
-                <h3>Peer Reviewed Conference Papers</h3>
-                <ul>
+            <section class="section">
+                <div class="section-title">
+                    <h2>Peer Reviewed Conference Papers</h2>
+                </div>
+                <ul class="publication-list">
                     <li>Duan, W., <strong>Flathmann, C.</strong>, McNeese, N., Scalia, M. J., Zhang, R., Gorman, J., ... &amp; Yin, X. (2025, April). Trusting Autonomous Teammates in Human-AI Teams-A Literature Review. In <em>Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems</em> (pp. 1-23).</li>
-                    <li>Schelble, B. G., Filer, G., <strong>Flathmann, C.</strong>, &amp; Chalil Madathil, K. (2025). Examining the Role of AI Information-Sharing on Trust in Human-AI Teams. <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, 0(0). <a href="https://doi.org/10.1177/10711813251367726" target="_blank">https://doi.org/10.1177/10711813251367726</a></li>
+                    <li>Schelble, B. G., Filer, G., <strong>Flathmann, C.</strong>, &amp; Chalil Madathil, K. (2025). Examining the Role of AI Information-Sharing on Trust in Human-AI Teams. <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, 0(0). <a href="https://doi.org/10.1177/10711813251367726" target="_blank" rel="noopener">https://doi.org/10.1177/10711813251367726</a></li>
                     <li>Wang, Y., Nguyen, H., Mallick, R., Andre, K., Duan, W., McNeese, N., &amp; <strong>Flathmann, C.</strong> (2025). A Framework Considering the Cross-Effects of Human and AI Collaboration on Team Resilience. In <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em> (p. 10711813251358241). Sage CA: Los Angeles, CA: SAGE Publications.</li>
-                    <li>Basappa, R., Lancaster, C., Mallick, R., <strong>Flathmann, C.</strong>, &amp; McNeese, N. (2025). Mind the Gaps: How AI Shortcomings and Human Concerns May Disrupt Team Cognition in Human-AI Teams (HATs). <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, 0(0). <a href="https://doi.org/10.1177/10711813251361002" target="_blank">https://doi.org/10.1177/10711813251361002</a></li>
-                    <li><strong>Flathmann, C.</strong>, Schelble, B., &amp; Ihekweazu, C. (2025). Leveraging Generative AI to Create Lightweight Simulations for Far-Future Autonomous Teammates. <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, 0(0). <a href="https://doi.org/10.1177/10711813251357885" target="_blank">https://doi.org/10.1177/10711813251357885</a></li>
-                    <li>Nguyen, H., Wang, Y., André, K., Duan, W., <strong>Flathmann, C.</strong>, &amp; McNeese, N. (2025). Modeling Adaptive Autonomy at the Team Level: Understanding Team-Wide Autonomy and its Impact on Situation Awareness in Human-Autonomy Teams. <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, 0(0). <a href="https://doi.org/10.1177/10711813251358809" target="_blank">https://doi.org/10.1177/10711813251358809</a></li>
-                    <li>Guynup, C., Sawant, S., Delgado Solorzano, C., Arnold, E., Poe, A., <strong>Flathmann, C.</strong>, McNeese, N., Chalil Madathil, K., Toxtli Hernandez, C., &amp; Gramopadhye, A. (2025). Working in a Heartbeat: Considerations for AI Teammates in Search and Rescue Teams. <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, 0(0). <a href="https://doi.org/10.1177/10711813251358806" target="_blank">https://doi.org/10.1177/10711813251358806</a></li>
-                    <li>Basappa, R., Mallick, R., <strong>Flathmann, C.</strong>, &amp; McNeese, N. (2025). Unlocking Collective Potential: Modeling Creativity in Human-AI Teams. <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, 0(0). <a href="https://doi.org/10.1177/10711813251358795" target="_blank">https://doi.org/10.1177/10711813251358795</a></li>
+                    <li>Basappa, R., Lancaster, C., Mallick, R., <strong>Flathmann, C.</strong>, &amp; McNeese, N. (2025). Mind the Gaps: How AI Shortcomings and Human Concerns May Disrupt Team Cognition in Human-AI Teams (HATs). <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, 0(0). <a href="https://doi.org/10.1177/10711813251361002" target="_blank" rel="noopener">https://doi.org/10.1177/10711813251361002</a></li>
+                    <li><strong>Flathmann, C.</strong>, Schelble, B., &amp; Ihekweazu, C. (2025). Leveraging Generative AI to Create Lightweight Simulations for Far-Future Autonomous Teammates. <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, 0(0). <a href="https://doi.org/10.1177/10711813251357885" target="_blank" rel="noopener">https://doi.org/10.1177/10711813251357885</a></li>
+                    <li>Nguyen, H., Wang, Y., André, K., Duan, W., <strong>Flathmann, C.</strong>, &amp; McNeese, N. (2025). Modeling Adaptive Autonomy at the Team Level: Understanding Team-Wide Autonomy and its Impact on Situation Awareness in Human-Autonomy Teams. <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, 0(0). <a href="https://doi.org/10.1177/10711813251358809" target="_blank" rel="noopener">https://doi.org/10.1177/10711813251358809</a></li>
+                    <li>Guynup, C., Sawant, S., Delgado Solorzano, C., Arnold, E., Poe, A., <strong>Flathmann, C.</strong>, McNeese, N., Chalil Madathil, K., Toxtli Hernandez, C., &amp; Gramopadhye, A. (2025). Working in a Heartbeat: Considerations for AI Teammates in Search and Rescue Teams. <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, 0(0). <a href="https://doi.org/10.1177/10711813251358806" target="_blank" rel="noopener">https://doi.org/10.1177/10711813251358806</a></li>
+                    <li>Basappa, R., Mallick, R., <strong>Flathmann, C.</strong>, &amp; McNeese, N. (2025). Unlocking Collective Potential: Modeling Creativity in Human-AI Teams. <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em>, 0(0). <a href="https://doi.org/10.1177/10711813251358795" target="_blank" rel="noopener">https://doi.org/10.1177/10711813251358795</a></li>
                     <li>Hauptman, A. I., Schelble, B. G., <strong>Flathmann, C.</strong>, &amp; McNeese, N. J. (2024, May). The Role of Autonomy Levels and Contextual Risk in Designing Safer AI Teammates. In <em>2024 IEEE 4th International Conference on Human-Machine Systems (ICHMS)</em> (pp. 1-7). IEEE.</li>
                     <li><strong>Flathmann, C.</strong>, Schelble, B. G., &amp; Galeano, A. (2024, August). Empirical Impacts of Independent and Collaborative Training on Task Performance and Improvement in Human-AI Teams. In <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em> (p. 10711813241274425). Sage CA: Los Angeles, CA: SAGE Publications.</li>
-                    <li>Guo, L., <strong>Flathmann, C.</strong>, Anaraky, R., McNeese, N., &amp; Knijnenburg, B. (2022). The Effect of Recommendation Source and Justification on Professional Development Recommendations for High School Teachers. <em>HT'22: 33rd ACM Conference on Hypertext and Social Media</em>. <a href="https://doi.org/10.1145/3511095.3531280" target="_blank">https://doi.org/10.1145/3511095.3531280</a></li>
-                    <li><strong>Flathmann, C.</strong>, Schelble, B. G., &amp; McNeese, N. J. (2021, September). Fostering Human-Agent Team Leadership by Leveraging Human Teaming Principles. In <em>2021 IEEE 2nd International Conference on Human-Machine Systems (ICHMS)</em> (pp. 1-6). IEEE. <a href="https://doi.org/10.1109/ICHMS53169.2021.9582649" target="_blank">https://doi.org/10.1109/ICHMS53169.2021.9582649</a></li>
-                    <li><strong>Flathmann, C.</strong>, Schelble, B. G., Zhang, R., &amp; McNeese, N. J. (2021, July). Modeling and Guiding the Creation of Ethical Human-AI Teams. In <em>Proceedings of the 2021 AAAI/ACM Conference on AI, Ethics, and Society</em> (pp. 469-479). <a href="https://doi.org/10.1145/3461702.3462573" target="_blank">https://doi.org/10.1145/3461702.3462573</a></li>
-                    <li><strong>Best Paper Nominee:</strong> Schelble, B., <strong>Flathmann, C.</strong>, Canonico, L. B., &amp; Mcneese, N. (2021, January). Understanding human-AI cooperation through game-theory and reinforcement learning models. In <em>Proceedings of the Annual Hawaii International Conference on System Sciences</em>. <a href="http://dx.doi.org/10.24251/HICSS.2021.041" target="_blank">http://dx.doi.org/10.24251/HICSS.2021.041</a></li>
-                    <li><strong>Best Paper Award:</strong> <strong>Flathmann, C.</strong>, Schelble, B., Tubre, B., McNeese, N., &amp; Rodeghero, P. (2020, November). Invoking Principles of Groupware to Develop and Evaluate Present and Future Human-Agent Teams. In <em>Proceedings of the 8th International Conference on Human-Agent Interaction</em> (pp. 15-24). <a href="https://doi.org/10.1145/3406499.3415072" target="_blank">https://doi.org/10.1145/3406499.3415072</a></li>
-                    <li>Schelble, B. G., <strong>Flathmann, C.</strong>, &amp; McNeese, N. (2020, November). Towards meaningfully integrating human-autonomy teaming in applied settings. In <em>Proceedings of the 8th International Conference on Human-Agent Interaction</em> (pp. 149-156). <a href="https://doi.org/10.1145/3406499.3415077" target="_blank">https://doi.org/10.1145/3406499.3415077</a></li>
-                    <li>Musick, G., Maloney, D., <strong>Flathmann, C.</strong>, McNeese, N. J., &amp; Walton, J. (2020, December). Differentiated Instruction further Realized through Teacher-Agent Teaming. In <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em> (Vol. 64, No. 1, pp. 1318-1322). Sage CA: Los Angeles, CA: SAGE Publications. <a href="https://doi.org/10.1177%2F1071181320641315" target="_blank">https://doi.org/10.1177/1071181320641315</a></li>
-                    <li><strong>Flathmann, C.</strong>, McNeese, N., &amp; Canonico, L. B. (2019, November). Using human-agent teams to purposefully design multi-agent systems. In <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em> (Vol. 63, No. 1, pp. 1425-1429). Sage CA: Los Angeles, CA: SAGE Publications. <a href="https://doi.org/10.1177%2F1071181319631238" target="_blank">https://doi.org/10.1177/1071181319631238</a></li>
-                    <li>Canonico, L. B., <strong>Flathmann, C.</strong>, &amp; McNeese, N. (2019, November). Collectively intelligent teams: Integrating team cognition, collective intelligence, and ai for future teaming. In <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em> (Vol. 63, No. 1, pp. 1466-1470). Sage CA: Los Angeles, CA: SAGE Publications. <a href="https://doi.org/10.1177%2F1071181319631278" target="_blank">https://doi.org/10.1177/1071181319631278</a></li>
-                    <li>Canonico, L. B., <strong>Flathmann, C.</strong>, &amp; McNeese, N. (2019, November). The wisdom of the market: Using human factors to design prediction markets for collective intelligence. In <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em> (Vol. 63, No. 1, pp. 1471-1475). Sage CA: Los Angeles, CA: SAGE Publications. <a href="https://doi.org/10.1177%2F1071181319631282" target="_blank">https://doi.org/10.1177/1071181319631282</a></li>
+                    <li>Guo, L., <strong>Flathmann, C.</strong>, Anaraky, R., McNeese, N., &amp; Knijnenburg, B. (2022). The Effect of Recommendation Source and Justification on Professional Development Recommendations for High School Teachers. <em>HT'22: 33rd ACM Conference on Hypertext and Social Media</em>. <a href="https://doi.org/10.1145/3511095.3531280" target="_blank" rel="noopener">https://doi.org/10.1145/3511095.3531280</a></li>
+                    <li><strong>Flathmann, C.</strong>, Schelble, B. G., &amp; McNeese, N. J. (2021, September). Fostering Human-Agent Team Leadership by Leveraging Human Teaming Principles. In <em>2021 IEEE 2nd International Conference on Human-Machine Systems (ICHMS)</em> (pp. 1-6). IEEE. <a href="https://doi.org/10.1109/ICHMS53169.2021.9582649" target="_blank" rel="noopener">https://doi.org/10.1109/ICHMS53169.2021.9582649</a></li>
+                    <li><strong>Flathmann, C.</strong>, Schelble, B. G., Zhang, R., &amp; McNeese, N. J. (2021, July). Modeling and Guiding the Creation of Ethical Human-AI Teams. In <em>Proceedings of the 2021 AAAI/ACM Conference on AI, Ethics, and Society</em> (pp. 469-479). <a href="https://doi.org/10.1145/3461702.3462573" target="_blank" rel="noopener">https://doi.org/10.1145/3461702.3462573</a></li>
+                    <li><strong>Best Paper Nominee:</strong> Schelble, B., <strong>Flathmann, C.</strong>, Canonico, L. B., &amp; Mcneese, N. (2021, January). Understanding human-AI cooperation through game-theory and reinforcement learning models. In <em>Proceedings of the Annual Hawaii International Conference on System Sciences</em>. <a href="http://dx.doi.org/10.24251/HICSS.2021.041" target="_blank" rel="noopener">http://dx.doi.org/10.24251/HICSS.2021.041</a></li>
+                    <li><strong>Best Paper Award:</strong> <strong>Flathmann, C.</strong>, Schelble, B., Tubre, B., McNeese, N., &amp; Rodeghero, P. (2020, November). Invoking Principles of Groupware to Develop and Evaluate Present and Future Human-Agent Teams. In <em>Proceedings of the 8th International Conference on Human-Agent Interaction</em> (pp. 15-24). <a href="https://doi.org/10.1145/3406499.3415072" target="_blank" rel="noopener">https://doi.org/10.1145/3406499.3415072</a></li>
+                    <li>Schelble, B. G., <strong>Flathmann, C.</strong>, &amp; McNeese, N. (2020, November). Towards meaningfully integrating human-autonomy teaming in applied settings. In <em>Proceedings of the 8th International Conference on Human-Agent Interaction</em> (pp. 149-156). <a href="https://doi.org/10.1145/3406499.3415077" target="_blank" rel="noopener">https://doi.org/10.1145/3406499.3415077</a></li>
+                    <li>Musick, G., Maloney, D., <strong>Flathmann, C.</strong>, McNeese, N. J., &amp; Walton, J. (2020, December). Differentiated Instruction further Realized through Teacher-Agent Teaming. In <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em> (Vol. 64, No. 1, pp. 1318-1322). Sage CA: Los Angeles, CA: SAGE Publications. <a href="https://doi.org/10.1177%2F1071181320641315" target="_blank" rel="noopener">https://doi.org/10.1177/1071181320641315</a></li>
+                    <li><strong>Flathmann, C.</strong>, McNeese, N., &amp; Canonico, L. B. (2019, November). Using human-agent teams to purposefully design multi-agent systems. In <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em> (Vol. 63, No. 1, pp. 1425-1429). Sage CA: Los Angeles, CA: SAGE Publications. <a href="https://doi.org/10.1177%2F1071181319631238" target="_blank" rel="noopener">https://doi.org/10.1177/1071181319631238</a></li>
+                    <li>Canonico, L. B., <strong>Flathmann, C.</strong>, &amp; McNeese, N. (2019, November). Collectively intelligent teams: Integrating team cognition, collective intelligence, and ai for future teaming. In <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em> (Vol. 63, No. 1, pp. 1466-1470). Sage CA: Los Angeles, CA: SAGE Publications. <a href="https://doi.org/10.1177%2F1071181319631278" target="_blank" rel="noopener">https://doi.org/10.1177/1071181319631278</a></li>
+                    <li>Canonico, L. B., <strong>Flathmann, C.</strong>, &amp; McNeese, N. (2019, November). The wisdom of the market: Using human factors to design prediction markets for collective intelligence. In <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting</em> (Vol. 63, No. 1, pp. 1471-1475). Sage CA: Los Angeles, CA: SAGE Publications. <a href="https://doi.org/10.1177%2F1071181319631282" target="_blank" rel="noopener">https://doi.org/10.1177/1071181319631282</a></li>
                 </ul>
-            </div>
-        </div>
+            </section>
+        </main>
 
-        <footer>
-            <p>&copy; 2025 Dr. Christopher Flathmann. All rights reserved.</p>
+        <footer class="site-footer">
+            <p>&copy; 2026 Dr. Christopher Flathmann. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="mailto:cflathm@clemson.edu">Email</a>
+                <a href="https://scholar.google.com/citations?user=b2dlWbwAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+                <a href="https://github.com/cflathm" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/feed/?trk=homepage-basic_signin-form_submit" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
         </footer>
     </div>
 </body>

@@ -3,85 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Christopher Flathmann - Academic Portfolio</title>
+    <title>Dr. Christopher Flathmann | Human-AI Teaming</title>
+    <meta name="description" content="Dr. Christopher Flathmann is an Assistant Professor at Clemson University specializing in human-AI interaction, collaboration, and teaming.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" href="newstyle.css?v=2">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-content" style="padding: 1.2rem 0;">
-                <h1 class="header-title" style="font-size:2rem; margin-bottom:0.3rem;">Dr. Christopher Flathmann</h1>
-                <p class="header-subtitle" style="font-size:1.05rem; margin-bottom:0.5rem;">Assistant Professor, Human-Centered Computing, Clemson University</p>
-                <a href="contact.html" class="header-cta" style="font-size:1rem; padding:0.4rem 1.1rem;">Get In Touch</a>
-            </div>
-        </header>
-        <nav>
-            <div class="nav-container">
-                <a href="index.html" class="nav-logo">Academic Portfolio</a>
-                <button class="mobile-menu-btn" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</button>
+    <div class="page">
+        <header class="site-header">
+            <nav class="nav">
+                <a href="index.html" class="logo">Christopher Flathmann</a>
+                <button class="nav-toggle" onclick="var nav=document.getElementById('navLinks'); nav.classList.toggle('active'); this.setAttribute('aria-expanded', nav.classList.contains('active'))" aria-controls="navLinks" aria-expanded="false">Menu</button>
                 <div class="nav-links" id="navLinks">
-                    <a href="index.html" class="nav-btn active">Home</a>
-                    <a href="publications.html" class="nav-btn">Publications</a>
-                    <a href="funding.html" class="nav-btn">Funding</a>
-                    <a href="contact.html" class="nav-btn">Contact</a>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="publications.html">Publications</a>
+                    <a href="funding.html">Funding</a>
+                    <a href="contact.html">Contact</a>
                 </div>
-            </div>
-        </nav>
-        <div id="page-content">
-            <!-- Home page content -->
-            <!-- Paste your index.html content here -->
-            <div class="profile-section">
-    <div class="profile-image">
-        <img src="square.jpg" alt="Christopher Flathmann" width="221" height="331">
-        <div class="profile-links">
-            <a href="https://bigcat-rg.github.io/" class="profile-card-link" target="_blank">
-                <div class="profile-card">
-                    <i class="fas fa-users"></i>
-                    <span>BIG CAT Research Group</span>
-                    <small>Learn more about my Clemson University Team</small>
-                </div>
-            </a>
-            <a href="CV.pdf" class="profile-card-link" target="_blank">
-                <div class="profile-card">
-                    <i class="fas fa-file-alt"></i>
-                    <span>View my latest CV</span>
-                    <small>Learn more about my research and teaching</small>
-                </div>
-            </a>
-            <a href="https://cfjord.com/" class="profile-card-link" target="_blank">
-                <div class="profile-card">
-                    <i class="fas fa-robot"></i>
-                    <span>C Fjord Consulting</span>
-                    <small>Learn How to Use AI in Your Organization</small>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="profile-info">
-        <h2>About Me</h2>
-        <p>
-            Hello! I am an Assistant Professor within the Human-Centered Computing Division of the School of Computing in Clemson's College of Engineering, Computing, and Applied Science. I am also the director of the Building Intelligent Goals for Collaborative AI Technologies (BIG CAT) Research Group. I received both a B.S. degree in Computer Science and a PhD in Human-Centered Computing from Clemson University, with Nathan McNeese serving as my advisor for the latter degree.
-        </p>
-        <p>
-            Broadly speaking, my research interests focus on the intersection between humans and novel computational systems, such as Artificial Intelligence. I often conduct interdisciplinary research in the fields of Human Computer Interaction, Computer Supported Cooperative Work, Human-Centered Computing, and Human Factors.
-        </p>
-        <p>
-            More specifically, my core research topic for the past 5 years has been on the topic of human-AI Teamwork. Specific research interests within this field include:
-        </p>
-        <ul class="research-interests">
-            <li><i class="fas fa-check-circle"></i> How to design AI and train Humans to promote adoption</li>
-            <li><i class="fas fa-check-circle"></i> How humans adapt around AI teammates</li>
-            <li><i class="fas fa-check-circle"></i> How to ensure AI teammates are ethical</li>
-        </ul>
-    </div>
-</div>
+            </nav>
 
-        </div>
-        <footer>
-            <p>
-                &copy; 2025 Dr. Christopher Flathmann. All rights reserved.
-            </p>
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="eyebrow">Assistant Professor, Human-Centered Computing · Clemson University</div>
+                    <h1>Dr. Christopher Flathmann</h1>
+                    <p class="lead">I specialize in human-AI interaction, collaboration, and teaming—designing AI teammates, training practices, and systems that help people work with intelligence in the loop.</p>
+                    <p class="lead">I lead the Building Intelligent Goals for Collaborative AI Technologies (BIG CAT) Research Group, where we study how people coordinate with AI in real-world, high-stakes settings.</p>
+                    <p class="lead">My work blends human-centered computing, HCI, CSCW, and human factors to understand the social and organizational dynamics that make human-AI teams trustworthy, resilient, and effective.</p>
+                    <p class="lead">Across my research and teaching, I focus on practical guidance for designing AI teammates, training humans for adoption, and building systems that align with human values and team goals.</p>
+                    <p class="secondary-role">Also founder of C Fjord Consulting, helping organizations apply evidence-based human-AI teaming practices.</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="contact.html">Get In Touch</a>
+                        <a class="btn ghost" href="CV.pdf" target="_blank" rel="noopener">View CV</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div class="portrait-frame">
+                        <img src="square.jpg" alt="Christopher Flathmann">
+                    </div>
+                    <div class="hero-links">
+                        <a href="https://bigcat-rg.github.io/" class="mini-card" target="_blank" rel="noopener">
+                            <span>BIG CAT Research Group <i class="fas fa-arrow-up-right-from-square mini-icon" aria-hidden="true"></i></span>
+                            <small>Clemson University lab</small>
+                        </a>
+                        <a href="https://cfjord.com/" class="mini-card" target="_blank" rel="noopener">
+                            <span>C Fjord Consulting <i class="fas fa-arrow-up-right-from-square mini-icon" aria-hidden="true"></i></span>
+                            <small>Human-AI teaming in practice</small>
+                        </a>
+                        <a href="CV.pdf" class="mini-card" target="_blank" rel="noopener">
+                            <span>Curriculum Vitae <i class="fas fa-arrow-up-right-from-square mini-icon" aria-hidden="true"></i></span>
+                            <small>Research, teaching, service</small>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <section class="section">
+                <div class="section-title stacked">
+                    <h2>Research Focus</h2>
+                    <p>My work studies how humans and AI collaborate in real settings and how to design teams, systems, and training that make those collaborations effective.</p>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Human-AI Interaction</h3>
+                        <p>Designing interactions that make AI teammates understandable, usable, and aligned with human goals.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Collaboration &amp; Teaming</h3>
+                        <p>Understanding how people adapt around AI teammates and how to build high-performing mixed teams.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Trust, Transparency, Ethics</h3>
+                        <p>Creating AI teammates that are ethical, transparent, and worthy of human reliance in consequential contexts.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title">
+                    <h2>Academic Leadership &amp; Practice</h2>
+                    <p>I bridge research and application, bringing evidence-based human-AI teaming guidance to both academic and organizational settings.</p>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Professor &amp; Lab Director</h3>
+                        <p>I lead the Building Intelligent Goals for Collaborative AI Technologies (BIG CAT) Research Group at Clemson University.</p>
+                    </article>
+                    <article class="card">
+                        <h3>C Fjord Consulting</h3>
+                        <p>I advise organizations on human-AI collaboration and teaming strategy, translating research into practice.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title stacked">
+                    <h2>Current Research Themes</h2>
+                    <p>Ongoing questions guiding my scholarship and collaborations.</p>
+                </div>
+                <ul class="clean-list">
+                    <li>How to design AI teammates that complement human expertise and decision-making.</li>
+                    <li>How people develop trust, reliance, and shared mental models with AI partners.</li>
+                    <li>How to train teams for adoption, ethical use, and effective collaboration with AI.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 Dr. Christopher Flathmann. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="mailto:cflathm@clemson.edu">Email</a>
+                <a href="https://scholar.google.com/citations?user=b2dlWbwAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+                <a href="https://github.com/cflathm" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/feed/?trk=homepage-basic_signin-form_submit" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
         </footer>
     </div>
 </body>
