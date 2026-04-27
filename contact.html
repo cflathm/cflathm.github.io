@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Dr. Christopher Flathmann</title>
-    <meta name="description" content="Contact Dr. Christopher Flathmann for research collaboration, speaking, and consulting in human-AI teaming.">
+    <title>Contact | Christopher Flathmann</title>
+    <meta name="description" content="Contact Christopher Flathmann about research collaboration, speaking, student opportunities, and human-centered AI work.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="newstyle.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="newstyle.css?v=6">
 </head>
 <body>
     <div class="page">
         <header class="site-header">
             <nav class="nav">
-                <a href="index.html" class="logo">Christopher Flathmann</a>
+                <a href="index.html" class="logo-lockup">
+                    <span class="logo">Christopher Flathmann</span>
+                    <span class="logo-subtitle">Human-Centered AI</span>
+                </a>
                 <button class="nav-toggle" onclick="var nav=document.getElementById('navLinks'); nav.classList.toggle('active'); this.setAttribute('aria-expanded', nav.classList.contains('active'))" aria-controls="navLinks" aria-expanded="false">Menu</button>
                 <div class="nav-links" id="navLinks">
                     <a href="index.html">Home</a>
@@ -27,63 +29,56 @@
 
             <section class="hero hero-compact">
                 <div class="hero-content">
-                    <div class="eyebrow">Let’s connect</div>
-                    <h1>Contact</h1>
-                    <p class="lead">Reach out for academic collaborations, speaking, or consulting on human-AI interaction, collaboration, and teaming.</p>
+                    <p class="eyebrow">Contact</p>
+                    <h1>Get in touch.</h1>
+                    <div class="hero-intro">
+                        <p class="lead">I welcome research collaborations, speaking invitations, student inquiries, and conversations about human-centered AI and human-AI teaming.</p>
+                    </div>
                 </div>
             </section>
         </header>
 
         <main>
-            <section class="section">
-                <div class="section-title">
-                    <h2>Get In Touch</h2>
-                    <p>Use the contact option that best matches your inquiry.</p>
+            <section class="section tight">
+                <div class="contact-lede">
+                    <p>Email is the best place to start for research collaboration, speaking, student opportunities, and other inquiries. You can also find applied organizational work through C Fjord.</p>
                 </div>
                 <div class="contact-grid">
                     <a href="mailto:cflathm@clemson.edu" class="contact-card">
-                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-                        <div>
-                            <h3>Academic Contact</h3>
-                            <p>Research collaborations, student opportunities, and university matters.</p>
-                            <p><strong>cflathm@clemson.edu</strong></p>
-                        </div>
-                    </a>
-                    <a href="https://cfjord.com/contact.html" class="contact-card" target="_blank" rel="noopener">
-                        <span class="contact-icon"><i class="fas fa-briefcase"></i></span>
-                        <div>
-                            <h3>Industry &amp; Consulting</h3>
-                            <p>Organizational training, teaming strategy, and applied projects.</p>
-                            <p><strong>cfjord.com/contact</strong></p>
-                        </div>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=b2dlWbwAAAAJ" class="contact-card" target="_blank" rel="noopener">
-                        <span class="contact-icon"><i class="fas fa-book"></i></span>
-                        <div>
-                            <h3>Google Scholar</h3>
-                            <p>Browse publications and citation metrics.</p>
-                            <p><strong>Christopher Flathmann</strong></p>
-                        </div>
+                        <span class="contact-label">Email</span>
+                        <h3>Academic Contact</h3>
+                        <p>Research collaboration, student mentorship, invited talks, and university matters.</p>
+                        <span class="contact-strong">cflathm@clemson.edu</span>
                     </a>
                     <a href="https://bigcat-rg.github.io/" class="contact-card" target="_blank" rel="noopener">
-                        <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
-                        <div>
-                            <h3>Visit the BIG CAT Lab</h3>
-                            <p>Learn more about lab projects and current research.</p>
-                            <p><strong>bigcat-rg.github.io</strong></p>
-                        </div>
+                        <span class="contact-label">Lab</span>
+                        <h3>BIG CAT Research Group</h3>
+                        <p>Current projects, collaborators, and research directions.</p>
+                        <span class="contact-strong">bigcat-rg.github.io</span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=b2dlWbwAAAAJ" class="contact-card" target="_blank" rel="noopener">
+                        <span class="contact-label">Scholarship</span>
+                        <h3>Google Scholar</h3>
+                        <p>Publications, citations, and related academic output.</p>
+                        <span class="contact-strong">Christopher Flathmann</span>
+                    </a>
+                    <a href="https://cfjord.com/" class="contact-card" target="_blank" rel="noopener">
+                        <span class="contact-label">Consulting</span>
+                        <h3>C Fjord</h3>
+                        <p>Applied human-AI collaboration and teaming work for organizations.</p>
+                        <span class="contact-strong">cfjord.com</span>
                     </a>
                 </div>
             </section>
         </main>
 
         <footer class="site-footer">
-            <p>&copy; 2026 Dr. Christopher Flathmann. All rights reserved.</p>
+            <p>&copy; 2026 Christopher Flathmann</p>
             <div class="footer-links">
                 <a href="mailto:cflathm@clemson.edu">Email</a>
                 <a href="https://scholar.google.com/citations?user=b2dlWbwAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
                 <a href="https://github.com/cflathm" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://www.linkedin.com/feed/?trk=homepage-basic_signin-form_submit" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/christopher-flathmann/" target="_blank" rel="noopener">LinkedIn</a>
             </div>
         </footer>
     </div>
