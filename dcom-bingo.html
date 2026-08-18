@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCOM Bingo | Christopher Flathmann</title>
+    <meta name="description" content="An interactive DCOM Bingo card generator.">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="newstyle.css?v=6">
+</head>
+<body>
+    <div class="page">
+        <header class="site-header">
+            <nav class="nav"><a href="index.html" class="logo-lockup"><span class="logo">Christopher Flathmann</span><span class="logo-subtitle">Human-Centered AI</span></a><button class="nav-toggle" onclick="var nav=document.getElementById('navLinks'); nav.classList.toggle('active'); this.setAttribute('aria-expanded', nav.classList.contains('active'))" aria-controls="navLinks" aria-expanded="false">Menu</button><div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="publications.html">Publications</a><a href="funding.html">Funding</a><a href="fun-tools.html" class="active">Fun Tools</a><a href="contact.html">Contact</a></div></nav>
+            <section class="hero hero-compact"><div class="hero-content"><p class="eyebrow"><a class="quiet-link" href="fun-tools.html">Fun Tools</a> / Tool 01</p><h1>DCOM Bingo</h1><div class="hero-intro"><p class="lead">Generate a new card, then tap a square whenever it appears in the movie. The center square is always free.</p></div></div></section>
+        </header>
+        <main>
+            <section class="section tight bingo-story">
+                <div class="section-title"><h2>Why this exists</h2></div>
+                <div class="story-copy"><p>I watched every Disney Channel Original Movie with a friend, and we started compiling a list of the tropes we kept seeing along the way.</p><p>DCOM Bingo grew out of that list. It makes watching old, cliché-filled movies even more fun—and gives you something to look for when the plot starts feeling familiar.</p></div>
+            </section>
+            <section class="section tight fun-tool-section" aria-labelledby="dcom-bingo-title"><div class="tool-heading"><div class="section-title"><h2 id="dcom-bingo-title">Your card</h2></div><div class="tool-actions"><button class="btn primary" id="new-card" type="button">Create a new card</button><button class="btn ghost" id="clear-card" type="button">Clear marks</button></div></div><div class="bingo-wrap"><div class="bingo-labels" aria-hidden="true"><span>D</span><span>C</span><span>O</span><span>M</span><span>S</span></div><div class="bingo-card" id="bingo-card" role="grid" aria-label="Interactive DCOM Bingo card"></div><p class="bingo-status" id="bingo-status" role="status" aria-live="polite">Fresh card ready.</p></div></section>
+        </main>
+        <footer class="site-footer"><p>&copy; 2026 Christopher Flathmann</p><div class="footer-links"><a href="mailto:cflathm@clemson.edu">Email</a><a href="https://scholar.google.com/citations?user=b2dlWbwAAAAJ" target="_blank" rel="noopener">Google Scholar</a><a href="https://github.com/cflathm" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/christopher-flathmann/" target="_blank" rel="noopener">LinkedIn</a></div></footer>
+    </div>
+    <script>
+        const prompts = ["Dead Mom or Dad", "It's Your Dream Dad!", "Pointlessly Gendered Activity", "Ending Concert", "Ending Competition", "Even Stevens Dad or Brenda Song", "Flight 29 Down Cast Member", "Seasonal Movie", "Made-Up Slang", "Black Best Friend", "Non Standard or Unpopular Sport", "High School Musical Prophecy", "Very Bad Slow Motion", "Narration", "Suspiciously Large House", "Bully", "Mentioning Someone's Social Status", "Step-Parent", "Talking to the Camera", "Annoying Sibling", "Part of Other Movies or TV shows", "Actor or Actress in Another DCOM", "Based on a Book or True Story", "Better Than Halloween Town", "Takes Place at a High School", "Anger Over Great Opportunity", "Homoerotic Tension", "Joke Doesn't Age Well", "Bad Green Screen"];
+        const card = document.getElementById("bingo-card"); const status = document.getElementById("bingo-status");
+        function shuffled(values) { const result = [...values]; for (let i = result.length - 1; i > 0; i -= 1) { const j = Math.floor(Math.random() * (i + 1)); [result[i], result[j]] = [result[j], result[i]]; } return result; }
+        function createCard() { const values = shuffled(prompts).slice(0, 24); values.splice(12, 0, "Free Space"); card.innerHTML = ""; values.forEach((value, index) => { const square = document.createElement("button"); square.type = "button"; square.className = "bingo-square"; square.textContent = value; square.setAttribute("role", "gridcell"); square.setAttribute("aria-pressed", index === 12 ? "true" : "false"); if (index === 12) square.classList.add("free-space", "marked"); square.addEventListener("click", () => { if (index === 12) return; square.classList.toggle("marked"); square.setAttribute("aria-pressed", square.classList.contains("marked") ? "true" : "false"); }); card.appendChild(square); }); status.textContent = "Fresh card ready. Tap squares as you spot them."; }
+        document.getElementById("new-card").addEventListener("click", createCard); document.getElementById("clear-card").addEventListener("click", () => { card.querySelectorAll(".bingo-square:not(.free-space)").forEach((square) => { square.classList.remove("marked"); square.setAttribute("aria-pressed", "false"); }); status.textContent = "Marks cleared. Free Space stays selected."; }); createCard();
+    </script>
+</body>
+</html>
