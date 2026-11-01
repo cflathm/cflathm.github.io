@@ -357,6 +357,11 @@ verify(
   'Custom domain changed',
 );
 verify(await exists(path.join(dist, 'sitemap-index.xml')), 'Missing sitemap');
+verify(
+  (await readFile(path.join(root, 'CNAME'), 'utf8')).trim() ===
+    'chrisflathmann.com',
+  'Preserve the repository-level Pages custom-domain binding',
+);
 verify(await exists(path.join(dist, '.nojekyll')), 'Missing .nojekyll');
 
 const outputFiles = await filesIn(dist);

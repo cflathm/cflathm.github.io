@@ -110,6 +110,10 @@ remain public resources. Retired catalog addresses forward into Research.
 
 ## Launch
 
+Keep `CNAME` at the repository root and `public/CNAME` in the built output. Both
+contain `chrisflathmann.com`. Removing the root file can clear the existing
+GitHub Pages custom-domain binding during a source migration.
+
 1. Review the current resume and academic CV.
 2. Run the checks above and review desktop and phone layouts.
 3. In GitHub **Settings → Pages**, select **GitHub Actions** as the build source.

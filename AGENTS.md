@@ -68,6 +68,8 @@ disruptive transformation of AI.
 - Keep consulting branding and offers out of published content. The sole permitted
   company-domain reference is the nonacademic email address in the site data.
 - CV.pdf and Resume.pdf are independent files. Never synchronize them during builds.
+- Preserve `CNAME` at the repository root as well as `public/CNAME`. Both must
+  contain `chrisflathmann.com`; moving the root file can remove the Pages domain binding.
 - The three figures explain knowledge networks, proactive cognitive protection,
   and human-human coordination. They are conceptual, not claimed architectures.
 - Shared knowledge is collective and cyclical. Show people exchanging experience,
