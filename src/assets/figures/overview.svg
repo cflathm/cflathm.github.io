@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none" role="img" aria-labelledby="FIGURE-title" aria-describedby="FIGURE-desc" class="system-diagram work-figure technical-figure" data-figure="overview">
+  <title id="FIGURE-title">AI helps with the work between people</title>
+  <desc id="FIGURE-desc">Three people are directly connected by curved, two-way routes. Three blue AI callouts sit beside the work on those routes: find shared knowledge, notice cognitive risk, and coordinate handoffs. A document represents knowledge passed between people, a red warning triangle with an exclamation mark identifies cognitive risk, and a handoff sheet shows coordination. AI assists these activities without becoming the route through which every person communicates. This is an overview of design goals, not a system architecture or a claim of measured results.</desc>
+  <defs>
+    <symbol id="FIGURE-person" viewBox="0 0 52 64"><circle cx="26" cy="16" r="9" fill="var(--f-paper,#f5f6f3)" stroke="var(--f-ink,#283b50)" stroke-width="2.1"/><path d="M8 59V48c0-11 7-17 18-17s18 6 18 17v11H8Z" fill="var(--f-paper,#f5f6f3)" stroke="var(--f-ink,#283b50)" stroke-width="2.1" stroke-linejoin="round"/></symbol>
+    <marker id="FIGURE-arrow" viewBox="0 0 14 14" refX="10" refY="7" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="m3 2 7 5-7 5" stroke="var(--f-line,#426355)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <g class="cf-connection" marker-start="url(#FIGURE-arrow)" marker-end="url(#FIGURE-arrow)">
+    <path d="M99 124c111 55 291 55 402 0"/>
+    <path d="M65 166c0 125 80 225 192 277"/>
+    <path d="M535 166c0 125-80 225-192 277"/>
+  </g>
+  <use href="#FIGURE-person" x="34" y="79" width="58" height="72"/><use href="#FIGURE-person" x="508" y="79" width="58" height="72"/><use href="#FIGURE-person" x="271" y="414" width="58" height="72"/>
+  <text x="300" y="48" text-anchor="middle" class="cf-action-label">Find shared knowledge</text>
+  <rect x="278" y="66" width="44" height="31" rx="5" class="cf-ai-badge"/><text x="300" y="88" class="cf-ai-token">AI</text>
+  <path d="M300 100v49" class="cf-ai-link"/>
+  <path d="M286 149h19l9 9v24h-28v-33Z" class="cf-work"/><path d="M305 149v9h9m-22 7h15m-15 8h11" class="cf-connection"/>
+  <path d="M280 151c-8 9-7 27 4 35 10 7 27 5 34-5 8-11 7-27-5-34-12-8-27-5-33 4" class="cf-play-ring"/>
+  <text x="173" y="236" text-anchor="middle" class="cf-action-label"><tspan x="173">Notice cognitive</tspan><tspan x="173" dy="26">risk early</tspan></text>
+  <rect x="151" y="279" width="44" height="31" rx="5" class="cf-ai-badge"/><text x="173" y="301" class="cf-ai-token">AI</text>
+  <path d="M148 298q-13 5-26 6" class="cf-ai-link"/>
+  <path d="m102 290 15 27H87l15-27Z" class="cf-risk-card"/><text x="102" y="312" text-anchor="middle" class="cf-risk-text" style="font-size:19px">!</text>
+  <path d="M87 287c-11 9-12 28-1 39 12 11 29 8 37-5 7-11 3-26-9-34" class="cf-play-ring"/>
+  <text x="427" y="236" text-anchor="middle" class="cf-action-label"><tspan x="427">Coordinate</tspan><tspan x="427" dy="26">handoffs</tspan></text>
+  <rect x="405" y="279" width="44" height="31" rx="5" class="cf-ai-badge"/><text x="427" y="301" class="cf-ai-token">AI</text>
+  <path d="M452 298h17" class="cf-ai-link"/>
+  <rect x="475" y="288" width="25" height="33" rx="3" class="cf-work"/><path d="M481 299h13m-13 7h13m-13 7h9" class="cf-connection"/>
+  <path d="M471 285c-10 9-10 29 1 39 10 9 28 10 37-1 9-10 10-29-1-38-10-9-28-10-37 0" class="cf-play-ring"/>
+  <text x="300" y="383" text-anchor="middle" class="cf-note">People stay connected</text>
+</svg>

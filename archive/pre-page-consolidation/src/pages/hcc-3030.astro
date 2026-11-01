@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import AcademicNav from '../components/AcademicNav.astro';
+import Arrow from '../components/Arrow.astro';
+import decks from '../data/course-decks.json';
+---
+
+<Base
+  title="HCC 3030: AI Integrations"
+  active="Research"
+  description="Weekly lecture decks for Christopher Flathmann’s HCC 3030: AI Integrations course at Clemson University."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">
+        <a href="/teaching.html">Teaching</a> / HCC 3030
+      </p>
+      <h1>AI Integrations.</h1>
+      <p class="page-lead">
+        Human-centered AI in disciplinary contexts. Open a deck to view the
+        presentation in your browser.
+      </p>
+    </div>
+  </section>
+  <AcademicNav active="Teaching" />
+  <section class="section">
+    <div class="container">
+      <div class="course-decks">
+        {decks.map((deck) => (
+          <a class="directory-card" href={deck.href}>
+            <p class="eyebrow">{deck.week}</p>
+            <h2>{deck.title}</h2>
+            <span class="text-link">
+              Open deck
+              <Arrow diagonal />
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

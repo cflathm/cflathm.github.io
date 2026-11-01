@@ -1,0 +1,99 @@
+---
+import Base from '../layouts/Base.astro';
+import Arrow from '../components/Arrow.astro';
+import ContactBand from '../components/ContactBand.astro';
+import ResearchHighlights from '../components/ResearchHighlights.astro';
+import type { MarkdownInstance } from 'astro';
+type Project = {
+  title: string;
+  label: string;
+  anchor: string;
+  number: string;
+  tags: string[];
+  system: string;
+  question: string;
+  related: { label: string; href: string };
+};
+const projects = Object.values(
+  import.meta.glob<MarkdownInstance<Project>>('../content/projects/*.md', {
+    eager: true,
+  }),
+).sort((a, b) => a.frontmatter.number.localeCompare(b.frontmatter.number));
+---
+
+<Base
+  title="Work"
+  active="Work"
+  description="AI systems developed by Christopher Flathmann and his teams: organizational knowledge networks, adaptive AI, educator coaching, and cognitive protection."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">Research + development</p>
+      <h1>What we’re building.</h1>
+      <p class="page-lead">
+        My teams and I build AI agents, adaptive systems, and AI coaches. I lead
+        the research and development, with hands-on contributions to building
+        systems and studying how people work with them.
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <nav class="project-index" aria-label="Project areas">
+        {projects.map((p) => (
+          <a href={`#${p.frontmatter.anchor}`}>
+            <span>{p.frontmatter.number}</span>
+            {p.frontmatter.label}
+            <Arrow />
+          </a>
+        ))}
+      </nav>
+      <div class="project-list">
+        {projects.map((p) => (
+          <article class="project-detail" id={p.frontmatter.anchor}>
+            <div class="project-heading">
+              <p class="eyebrow">
+                {p.frontmatter.number} / {p.frontmatter.label}
+              </p>
+              <h2>{p.frontmatter.title}</h2>
+              <ul class="tag-list">
+                {p.frontmatter.tags.map((tag) => (
+                  <li>{tag}</li>
+                ))}
+              </ul>
+            </div>
+            <div class="prose">
+              <dl class="project-system">
+                <dt>What we’ve built</dt>
+                <dd>{p.frontmatter.system}</dd>
+              </dl>
+              <p.Content />
+              <div class="project-question">
+                <h3>The practical question</h3>
+                <p>{p.frontmatter.question}</p>
+              </div>
+              <a class="related-research" href={p.frontmatter.related.href}>
+                <span>Related research</span>
+                {p.frontmatter.related.label}
+                <Arrow diagonal />
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+      <ResearchHighlights />
+      <div class="work-research-link">
+        <p>
+          The papers and funded projects behind my research are collected in the
+          academic record.
+        </p>
+        <a class="text-link" href="/research.html">
+          Explore the research
+          <Arrow />
+        </a>
+      </div>
+    </div>
+  </section>
+  <ContactBand />
+</Base>

@@ -1,0 +1,112 @@
+---
+import prompts from '../data/bingo.json';
+
+const initialCard = prompts.slice(0, 24);
+initialCard.splice(12, 0, 'Free Space');
+---
+
+<noscript>
+  <p class="inline-note">
+    Here’s a card you can use as it is. Turn on JavaScript to generate new cards
+    and mark squares.
+  </p>
+</noscript>
+<div class="tool-toolbar" id="bingo-controls" hidden>
+  <button class="button button-blue" id="new-card" type="button">
+    Create a new card
+  </button>
+  <button class="button button-outline" id="clear-card" type="button">
+    Clear marks
+  </button>
+</div>
+<div class="bingo-wrap">
+  <div class="bingo-labels" aria-hidden="true">
+    <span>D</span>
+    <span>C</span>
+    <span>O</span>
+    <span>M</span>
+    <span>S</span>
+  </div>
+  <div
+    class="bingo-card"
+    id="bingo-card"
+    role="group"
+    aria-label="DCOM Bingo card"
+  >
+    {initialCard.map((value, index) => (
+      <button
+        type="button"
+        class:list={[
+          'bingo-square',
+          { 'free-space': index === 12, marked: index === 12 },
+        ]}
+        aria-pressed={index === 12 ? 'true' : 'false'}
+        disabled
+      >
+        {value}
+      </button>
+    ))}
+  </div>
+  <p
+    class="bingo-status"
+    id="bingo-status"
+    role="status"
+    aria-live="polite"
+  ></p>
+</div>
+
+<script>
+  import prompts from '../data/bingo.json';
+  const card = document.querySelector<HTMLElement>('#bingo-card');
+  const status = document.querySelector('#bingo-status');
+
+  function createCard() {
+    if (!card) return;
+    const values = [...prompts];
+    for (let i = values.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [values[i], values[j]] = [values[j]!, values[i]!];
+    }
+    const selected = values.slice(0, 24);
+    selected.splice(12, 0, 'Free Space');
+    card.replaceChildren();
+    selected.forEach((value, index) => {
+      const square = document.createElement('button');
+      square.type = 'button';
+      square.className = 'bingo-square';
+      square.textContent = value;
+      square.setAttribute('aria-pressed', String(index === 12));
+      if (index === 12) {
+        square.classList.add('free-space', 'marked');
+        square.setAttribute('aria-disabled', 'true');
+      }
+      square.addEventListener('click', () => {
+        if (index === 12) return;
+        square.classList.toggle('marked');
+        square.setAttribute(
+          'aria-pressed',
+          String(square.classList.contains('marked')),
+        );
+      });
+      card.append(square);
+    });
+    if (status)
+      status.textContent = 'Fresh card ready. Tap squares as you spot them.';
+  }
+
+  document.querySelector('#new-card')?.addEventListener('click', createCard);
+  document.querySelector('#clear-card')?.addEventListener('click', () => {
+    card
+      ?.querySelectorAll('.bingo-square:not(.free-space)')
+      .forEach((square) => {
+        square.classList.remove('marked');
+        square.setAttribute('aria-pressed', 'false');
+      });
+    if (status)
+      status.textContent = 'Marks cleared. Free Space stays selected.';
+  });
+  document
+    .querySelector<HTMLElement>('#bingo-controls')
+    ?.removeAttribute('hidden');
+  createCard();
+</script>

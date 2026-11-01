@@ -1,0 +1,96 @@
+---
+import Base from '../layouts/Base.astro';
+import AcademicNav from '../components/AcademicNav.astro';
+import Arrow from '../components/Arrow.astro';
+import { site } from '../data/site';
+const records = [
+  {
+    title: 'Publications',
+    label: 'Papers + scholarship',
+    href: '/publications.html',
+    text: 'The complete publication record, including journal articles, conference papers, book chapters, workshops, posters, and my dissertation.',
+  },
+  {
+    title: 'Funded research',
+    label: 'Research support',
+    href: '/funding.html',
+    text: 'Research awards and gifts, with my roles and allocations listed separately from the total project awards.',
+  },
+  {
+    title: 'Teaching',
+    label: 'Courses + materials',
+    href: '/teaching.html',
+    text: 'Courses in AI integration and human-AI collaboration, including browser-based lecture decks.',
+  },
+  {
+    title: 'BIG CAT Research Group',
+    label: 'People + projects',
+    href: site.lab,
+    text: 'The research group I lead at Clemson University. Find our team and more about the work we do together.',
+  },
+];
+---
+
+<Base
+  title="Research"
+  active="Research"
+  description="Christopher Flathmann’s academic research on human-AI collaboration, teaming, trust, and adaptive autonomy. Publications, funded work, and teaching."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">Academic work</p>
+      <h1>
+        Research on AI
+        <br />
+        <em>and working together.</em>
+      </h1>
+      <p class="page-lead">
+        I study how AI changes communication, trust, and coordination, then use
+        that understanding to build systems and train teams.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-blue" href="/publications.html">
+          Browse publications
+          <Arrow />
+        </a>
+        <a class="hero-contact" href="/CV.pdf">
+          Academic CV <span class="file-label">PDF</span>
+          <Arrow diagonal />
+        </a>
+      </div>
+    </div>
+  </section>
+  <AcademicNav active="Overview" />
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">The academic record</p>
+          <h2>
+            Papers, projects,
+            <br />
+            and people.
+          </h2>
+        </div>
+        <p>
+          I’m an Assistant Professor in Human-Centered Computing at Clemson
+          University.
+        </p>
+      </div>
+      <div class="directory-grid">
+        {records.map((record) => (
+          <a class="directory-card" href={record.href}>
+            <p class="eyebrow">{record.label}</p>
+            <h2>{record.title}</h2>
+            <p>{record.text}</p>
+            <span class="text-link">
+              Explore
+              <Arrow diagonal />
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

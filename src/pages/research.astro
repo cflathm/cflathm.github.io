@@ -1,0 +1,106 @@
+---
+import Base from '../layouts/Base.astro';
+import Arrow from '../components/Arrow.astro';
+import FundingRecord from '../components/FundingRecord.astro';
+import TeachingRecord from '../components/TeachingRecord.astro';
+import { site } from '../data/site';
+import '../styles/research.css';
+---
+
+<Base
+  title="Research"
+  active="Research"
+  description="My research funding and teaching materials, with a link to my CV for the full list of publications."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">Academic work</p>
+      <h1>
+        Research on AI
+        <br />
+        <em>and working together.</em>
+      </h1>
+      <p class="page-lead">
+        I study how AI changes communication, trust, and coordination, then use
+        that understanding to build systems and train teams.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-blue" href="/CV.pdf">
+          Academic CV <span class="file-label">PDF</span>
+          <Arrow diagonal />
+        </a>
+        <a class="hero-contact" href={site.lab}>
+          BIG CAT Research Group <Arrow diagonal />
+        </a>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <nav class="research-jumps" aria-label="Research sections">
+      <a href="#funding">Funding</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching + materials</a>
+    </nav>
+  </div>
+  <div class="container narrow research-records">
+    <section
+      class="research-section"
+      id="funding"
+      aria-labelledby="funding-title"
+    >
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Research support</p>
+          <h2 id="funding-title">Funding and roles.</h2>
+        </div>
+      </div>
+      <div class="prose funding-context">
+        <p>
+          My funded research explores how human–AI teams stay coordinated when
+          the work changes or something goes wrong. That includes adaptive
+          autonomy, maintaining shared knowledge, managing conflict, and
+          protecting teams from failures and adversarial influence. I’ve also
+          worked on teaming in underwater environments and AI-supported aviation
+          inspection.
+        </p>
+        <p>
+          Support has come from the Air Force Office of Scientific Research
+          (AFOSR), Army Research Laboratory (ARL), Office of Naval Research
+          (ONR), and National Science Foundation (NSF), as well as U.S. Air
+          Force research through a Mile2 subcontract. The shared-world-models
+          project is funded by ARL through a University of Tennessee, Knoxville
+          subcontract. The records below give my role and allocation for each
+          award.
+        </p>
+      </div>
+      <FundingRecord />
+    </section>
+    <section
+      class="research-section"
+      id="publications"
+      aria-labelledby="publications-title"
+    >
+      <div class="section-heading">
+        <h2 id="publications-title">Publications.</h2>
+      </div>
+      <p>
+        For a full list of my publications, see my{' '}
+        <a href="/CV.pdf">CV (PDF)</a>.
+      </p>
+    </section>
+    <section
+      class="research-section"
+      id="teaching"
+      aria-labelledby="teaching-title"
+    >
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Courses + materials</p>
+          <h2 id="teaching-title">Teaching.</h2>
+        </div>
+      </div>
+      <TeachingRecord />
+    </section>
+  </div>
+</Base>

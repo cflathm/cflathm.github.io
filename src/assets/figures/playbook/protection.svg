@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 540" fill="none" role="img" aria-labelledby="FIGURE-title" aria-describedby="FIGURE-desc" class="system-diagram work-figure technical-figure playbook-figure" data-figure="protection" data-figure-option="playbook">
+  <title id="FIGURE-title">AI blocks cognitive risks and protects the team formation</title>
+  <desc id="FIGURE-desc">Two coral routes start below Overload and above Manipulation. Their vertical segments share the same horizontal position, centered on Overload. They bend toward each other, then continue as two separate parallel arrows toward the blue AI block and shield. A gap separates both arrowheads from the block. Three circled human teammates remain directly connected in a triangular formation behind the shield. This coach's board presents proactive cognitive protection as a design goal, not a guarantee of total prevention or a particular implementation.</desc>
+  <defs>
+    <symbol id="FIGURE-player" viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="var(--pb-board,#15372e)" stroke="var(--pb-chalk,#f1f0dc)" stroke-width="2.5"/><circle cx="32" cy="23" r="6" stroke="var(--pb-chalk,#f1f0dc)" stroke-width="1.8"/><path d="M21 46v-5c0-7 4-11 11-11s11 4 11 11v5H21Z" stroke="var(--pb-chalk,#f1f0dc)" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <marker id="FIGURE-risk-arrow" viewBox="0 0 14 14" refX="11" refY="7" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="m3 2 8 5-8 5" stroke="var(--pb-risk,#ffa68f)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <path d="M22 8H602l30 30v480l-14 14H8V22Z" class="pb-board"/><path d="M28 74h584" class="pb-rule"/>
+  <path d="M30 102v370m580-370v370M30 112h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m562-350h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9" class="pb-field"/>
+  <circle cx="43" cy="41" r="17" class="pb-index"/><text x="43" y="46" class="pb-number">02</text><text x="77" y="51" class="pb-title">Protect the team</text><text x="592" y="46" class="pb-tag">THE BLOCK</text>
+  <text x="133" y="127" text-anchor="middle" class="pb-heading">Cognitive risks</text><text x="493" y="127" text-anchor="middle" class="pb-heading">Team formation</text>
+  <g transform="translate(0 20)">
+    <path d="m50 187 18 18m0-18-18 18m0 90 18 18m0-18-18 18" class="pb-risk"/><text x="90" y="204" class="pb-label">Overload</text><text x="90" y="312" class="pb-label">Manipulation</text>
+    <g class="pb-risk-route" marker-end="url(#FIGURE-risk-arrow)"><path d="M134 222v7q0 14 14 14h100"/><path d="M134 280v-9q0-14 14-14h100"/></g>
+    <path d="M250 215h12v70h-12" class="pb-block"/>
+    <path d="m320 178 45 17v43c0 34-20 59-45 75-25-16-45-41-45-75v-43l45-17Z" class="pb-badge" style="stroke-width:2.5px"/><text x="320" y="233" class="pb-ai">AI</text><path d="m302 258 13 14 26-31" class="pb-block"/>
+    <path d="M493 148c58 0 102 44 102 99s-44 100-102 100c-57 0-104-44-104-100s47-99 104-99Z" class="pb-team"/>
+    <path d="m459 232 43-27m-43 57 43 27m32-64v44" class="pb-route"/>
+    <use href="#FIGURE-player" x="397" y="215" width="64" height="64"/><use href="#FIGURE-player" x="502" y="160" width="64" height="64"/><use href="#FIGURE-player" x="502" y="270" width="64" height="64"/>
+    <text x="493" y="385" text-anchor="middle" class="pb-label">Team relationships</text>
+  </g>
+  <text x="320" y="455" text-anchor="middle" class="pb-note">Protect the people doing the work.</text><path d="M137 465q183 7 366-2" class="pb-return"/>
+</svg>

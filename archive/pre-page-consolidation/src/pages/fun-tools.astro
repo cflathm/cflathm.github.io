@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import Arrow from '../components/Arrow.astro';
+---
+
+<Base
+  title="Fun tools"
+  description="A few things Christopher Flathmann built for his hobbies: Disney Channel Original Movie bingo and a wood tile image planner."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">Away from the research</p>
+      <h1>
+        A few things
+        <br />
+        <em>I made for fun.</em>
+      </h1>
+      <p class="page-lead">
+        Small tools for watching movies and making things.
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="directory-grid">
+        <a class="directory-card" href="/dcom-bingo.html">
+          <p class="eyebrow">Movies</p>
+          <h2>DCOM Bingo</h2>
+          <p>
+            I watched every Disney Channel Original Movie with a friend. We kept
+            a list of the tropes. This is what happened next.
+          </p>
+          <span class="text-link">
+            Make a bingo card
+            <Arrow />
+          </span>
+        </a>
+        <a class="directory-card" href="/wood-tile-studio.html">
+          <p class="eyebrow">Making things</p>
+          <h2>Wood Tile Studio</h2>
+          <p>
+            Turn an image into square tiles you can print, paint, and assemble.
+          </p>
+          <span class="text-link">
+            Plan your tiles
+            <Arrow />
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>

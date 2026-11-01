@@ -1,0 +1,124 @@
+---
+import publications from '../data/publications.json';
+const count = publications.reduce((sum, group) => sum + group.items.length, 0);
+const years = [
+  ...new Set(
+    publications.flatMap((group) => group.items.map((item) => item.year)),
+  ),
+].sort((a, b) => b.localeCompare(a));
+const order = [
+  'Journal Articles',
+  'Conference Full Papers',
+  'Book Chapters',
+  'Workshop Papers and Organization',
+  'Research Posters',
+  'Dissertation',
+];
+const groups = [...publications].sort(
+  (a, b) => order.indexOf(a.title) - order.indexOf(b.title),
+);
+---
+
+<form class="search-controls" role="search" onsubmit="return false">
+  <div>
+    <label class="field-label" for="publication-search">
+      Search publications
+    </label>
+    <input
+      id="publication-search"
+      type="search"
+      placeholder="Title, author, topic, or venue"
+      autocomplete="off"
+    />
+  </div>
+  <div>
+    <label class="field-label" for="publication-year">
+      Year / status
+    </label>
+    <select id="publication-year">
+      <option value="">All years</option>
+      {years.map((year) => (
+        <option value={year}>{year}</option>
+      ))}
+    </select>
+  </div>
+</form>
+<p
+  class="search-status"
+  id="publication-status"
+  role="status"
+  aria-live="polite"
+>
+  {count} entries. Open a section to read the citations.
+</p>
+<div class="no-results" id="no-results" hidden>
+  No publications match. Try another search or select all years.
+</div>
+<div class="record-groups">
+  {groups.map((group) => (
+    <details class="record-group publication-group">
+      <summary>
+        <span>{group.title}</span>
+        <span class="record-count">{group.items.length}</span>
+      </summary>
+      <ul class="publication-list">
+        {group.items.map((item) => (
+          <li
+            data-publication
+            data-year={item.year}
+            data-search={item.text.toLowerCase()}
+            set:html={item.citationHtml}
+          />
+        ))}
+      </ul>
+    </details>
+  ))}
+</div>
+<script>
+  const search = document.querySelector<HTMLInputElement>(
+    '#publication-search',
+  );
+  const year = document.querySelector<HTMLSelectElement>('#publication-year');
+  const status = document.querySelector('#publication-status');
+  const empty = document.querySelector<HTMLElement>('#no-results');
+  const entries = [
+    ...document.querySelectorAll<HTMLElement>('[data-publication]'),
+  ];
+  const groups = [
+    ...document.querySelectorAll<HTMLDetailsElement>('.publication-group'),
+  ];
+  const previousOpen = new Map<HTMLDetailsElement, boolean>();
+  let filtering = false;
+  function filterPublications() {
+    const terms = (search?.value.trim().toLowerCase() ?? '')
+      .split(/\s+/)
+      .filter(Boolean);
+    const active = terms.length > 0 || !!year?.value;
+    if (active && !filtering)
+      groups.forEach((group) => previousOpen.set(group, group.open));
+    let visible = 0;
+    entries.forEach((entry) => {
+      const matches =
+        terms.every((term) => entry.dataset.search?.includes(term)) &&
+        (!year?.value || entry.dataset.year === year.value);
+      entry.hidden = !matches;
+      if (matches) visible++;
+    });
+    groups.forEach((group) => {
+      const matches = !!group.querySelector('[data-publication]:not([hidden])');
+      group.hidden = !matches;
+      if (active) group.open = matches;
+      else if (filtering) group.open = previousOpen.get(group) ?? false;
+    });
+    if (!active) previousOpen.clear();
+    filtering = active;
+    if (status)
+      status.textContent = active
+        ? `${visible} of ${entries.length} entries shown.`
+        : `${entries.length} entries. Open a section to read the citations.`;
+    if (empty) empty.hidden = visible !== 0;
+  }
+  search?.addEventListener('input', filterPublications);
+  year?.addEventListener('change', filterPublications);
+  document.querySelector('.search-controls')?.classList.add('ready');
+</script>

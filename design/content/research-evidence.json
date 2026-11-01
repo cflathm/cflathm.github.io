@@ -1,0 +1,57 @@
+{
+  "reviewed": "2026-10-31",
+  "framing": "Human-AI teamwork is the umbrella. AI design and human training should account for effects across the whole team, including human-human relationships.",
+  "evidence": [
+    {
+      "url": "https://open.clemson.edu/all_dissertations/3339/",
+      "topic": "Social influence and behavioral adaptation across human-AI teams",
+      "use": "Broad agenda and the connection between AI influence and human-human relationships."
+    },
+    {
+      "url": "https://doi.org/10.1145/3637326",
+      "topic": "Social influence in human-AI teams",
+      "use": "First-author mixed-methods study. Participants adapted behavior to complement AI teammates. Do not imply a production deployment or universal causal finding."
+    },
+    {
+      "url": "https://www.beauschelble.com/papers/schelble-2024-perceived-information-needs",
+      "doi": "10.1080/0144929X.2024.2396476",
+      "topic": "Information sharing and perceived team cognition",
+      "use": "Co-author paper, reviewed through the first author’s abstract. Survey of hypothetical teams; describe perceived cognition, not measured organizational performance."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39056233/",
+      "doi": "10.1080/00140139.2024.2380341",
+      "topic": "Context-aware adaptive autonomy",
+      "use": "Co-author contextual inquiry with professionals. Supports attention to human needs and context when adapting AI autonomy."
+    },
+    {
+      "path": "public/application/Teammate-Divide.pdf",
+      "doi": "10.1145/3799452",
+      "topic": "Different approaches to human and AI teammates",
+      "use": "Existing verified research highlight. Link from the broader Work overview."
+    },
+    {
+      "path": "public/application/Experiment-Design.pdf",
+      "doi": "10.1177/15553434251327697",
+      "topic": "Human-AI team experiment design",
+      "use": "First-author methods contribution; no invented evaluation outcomes."
+    },
+    {
+      "path": "public/CV.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "topic": "Appointments, roles, recognition, and funded research",
+      "use": "Scope and named funders from complete grant entries. About has no funding numbers. Home shows awarded total, labeled as all grants and gifts, not individual allocation."
+    },
+    {
+      "source": "Christopher’s instructions in this conversation",
+      "topic": "Current systems and research direction",
+      "use": "Knowledge-network agents, cognitive protection agents, adaptation in cyber incident response and healthcare. State these as systems and goals, not proven deployments."
+    }
+  ],
+  "maintenance": "Evidence notes only; excluded from publication. Full publication list is maintained in CV.pdf, not duplicated on Research."
+}

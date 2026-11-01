@@ -1,0 +1,125 @@
+---
+import Base from '../layouts/Base.astro';
+import Arrow from '../components/Arrow.astro';
+import ContactBand from '../components/ContactBand.astro';
+import '../styles/research.css';
+
+const researchAreas = [
+  {
+    anchor: 'knowledge-networks',
+    label: 'Shared knowledge',
+    title: 'AI for shared knowledge.',
+    text: 'Knowing who knows what is only useful if a team can bring that knowledge into a decision. We build AI agents that maintain knowledge networks across teams. I study what information an AI should share, when people need it, and how they use it to form a collective judgement.',
+    linkLabel: 'Related paper',
+    paper: 'Information needs in human-AI teams',
+    href: 'https://doi.org/10.1080/0144929X.2024.2396476',
+  },
+  {
+    anchor: 'social-influence',
+    label: 'Social influence',
+    title: 'The social influence of AI.',
+    text: 'In my studies, people changed their behavior to complement an AI teammate. I study how that influence develops and what it means for the relationships among human teammates. That work informs how I design AI’s role in a team, especially when people and AI disagree.',
+    linkLabel: 'Related paper',
+    paper: 'Social influence in human-AI teams',
+    href: 'https://doi.org/10.1145/3637326',
+  },
+  {
+    anchor: 'adaptive-ai',
+    label: 'Adaptive autonomy',
+    title: 'AI adaptation to dynamic contexts.',
+    text: 'An AI’s role may need to change as the situation changes. We build adaptive systems for settings including cyber incident response and healthcare. I study what an AI needs to consider before changing its behavior, so people can still understand the situation and coordinate a response.',
+    linkLabel: 'Related paper',
+    paper: 'Context-aware design of adaptive AI teammates',
+    href: 'https://doi.org/10.1080/00140139.2024.2380341',
+  },
+  {
+    anchor: 'cognitive-protection',
+    label: 'Cognitive protection',
+    title: 'AI that protects teammates.',
+    text: 'I want AI to catch and block cognitive risks before they damage teamwork. We build agents for offensive and defensive cognitive warfare research, studying how failures and adversarial influence can disrupt a team. I use that work to design AI support and training that protect how people think and work together.',
+    linkLabel: 'Related funded work',
+    paper: 'Team resilience and adversarial influence',
+    href: '/research.html#funding',
+  },
+];
+---
+
+<Base
+  title="Work"
+  active="Work"
+  description="My research on human-AI teamwork: shared knowledge, social influence, adaptation to dynamic contexts, and teammate protection."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">Research + development</p>
+      <h1>Human–AI teamwork.</h1>
+      <p class="page-lead">
+        I study how people and AI work together, then build systems and train
+        teams around what we learn. The goal is better teamwork, including
+        stronger relationships between people.
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container work-overviews">
+      <div class="work-agenda">
+        <div>
+          <p class="eyebrow">The bigger picture</p>
+          <h2>AI changes how people work together.</h2>
+        </div>
+        <div class="prose">
+          <p>
+            My research looks beyond a person’s interaction with a system. I
+            study what changes across the team when AI takes on a share of the
+            work, including how people coordinate with one another and whose
+            judgement they trust.
+          </p>
+          <p>
+            I lead research and development, and I build systems hands-on. We
+            use experiments and interviews to guide what we build, then evaluate
+            how people work with the AI and with one another.
+          </p>
+          <a class="related-research" href="/application/Teammate-Divide.pdf">
+            <span>Research on human and AI teammates</span>
+            The Teammate Divide <Arrow diagonal />
+          </a>
+        </div>
+      </div>
+      <div class="work-area-heading">
+        <p class="eyebrow">Research within human–AI teamwork</p>
+        <h2>Four areas I work on.</h2>
+      </div>
+      <div class="project-list">
+        {researchAreas.map((project, index) => (
+          <article class="project-detail" id={project.anchor}>
+            <div class="project-heading">
+              <p class="eyebrow">
+                {`0${index + 1}`} / {project.label}
+              </p>
+              <h2>{project.title}</h2>
+            </div>
+            <div class="prose">
+              <p>{project.text}</p>
+              <a class="related-research" href={project.href}>
+                <span>{project.linkLabel}</span>
+                {project.paper}
+                <Arrow diagonal />
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="work-research-link">
+        <p>
+          You can find my academic CV, research funding, and teaching materials
+          on Research.
+        </p>
+        <a class="text-link" href="/research.html">
+          Research and evidence <Arrow />
+        </a>
+      </div>
+    </div>
+  </section>
+  <ContactBand />
+</Base>

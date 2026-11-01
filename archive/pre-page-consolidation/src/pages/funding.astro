@@ -1,0 +1,67 @@
+---
+import Base from '../layouts/Base.astro';
+import AcademicNav from '../components/AcademicNav.astro';
+import funding from '../data/funding.json';
+const compactAmount = (value: number) =>
+  value >= 1_000_000
+    ? `$${(value / 1_000_000).toFixed(2)}M`
+    : `$${Math.round(value / 1_000)}K`;
+---
+
+<Base
+  title="Funding"
+  active="Research"
+  description="Research awards and gifts supporting Christopher Flathmann’s work, with total awards, PI roles, and personal allocations clearly distinguished."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">Academic record / Funding</p>
+      <h1>Support for the work.</h1>
+      <p class="page-lead">
+        Awards and gifts supporting research on human-AI collaboration, adaptive
+        autonomy, and team resilience.
+      </p>
+      <div class="stat-row">
+        <div>
+          <strong>{compactAmount(funding.totals.awarded)}</strong>
+          <span>Awarded across all grants and gifts</span>
+        </div>
+        <div>
+          <strong>{compactAmount(funding.totals.piProjects)}</strong>
+          <span>Flathmann PI projects</span>
+        </div>
+        <div>
+          <strong>{compactAmount(funding.totals.allocation)}</strong>
+          <span>Flathmann allocation at Clemson</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <AcademicNav active="Funding" />
+  <section class="section">
+    <div class="container narrow">
+      <p class="inline-note">
+        Total project awards include funding shared with collaborators. My
+        credited allocation and role are listed separately for each active
+        award. Summary figures follow the funding summary in my CV.
+      </p>
+      {funding.groups.map((group) => (
+        <section class="academic-section">
+          <h2>{group.title}</h2>
+          {group.title === 'Development and Writing Support' && (
+            <p>
+              Additional funded efforts where I contributed to proposal
+              development and writing.
+            </p>
+          )}
+          <ul class="funding-list">
+            {group.items.map((item) => (
+              <li set:html={item.citationHtml} />
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </section>
+</Base>

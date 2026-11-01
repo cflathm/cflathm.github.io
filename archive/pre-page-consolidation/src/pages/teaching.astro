@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import AcademicNav from '../components/AcademicNav.astro';
+import Arrow from '../components/Arrow.astro';
+---
+
+<Base
+  title="Teaching"
+  active="Research"
+  description="Courses and lecture materials taught by Christopher Flathmann at Clemson University: AI Integrations and Applications of Human-AI Interaction, Collaboration, and Teaming."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">Academic work / Teaching</p>
+      <h1>Learning to work with AI.</h1>
+      <p class="page-lead">
+        Courses on building AI, understanding its effects, and putting it to
+        work alongside people.
+      </p>
+    </div>
+  </section>
+  <AcademicNav active="Teaching" />
+  <section class="section">
+    <div class="container">
+      <div class="directory-grid">
+        <a class="directory-card" href="/hcc-3030.html">
+          <p class="eyebrow">HCC 3030</p>
+          <h2>AI Integrations</h2>
+          <p>
+            Human-centered AI across disciplinary contexts. Browse the weekly
+            lecture decks.
+          </p>
+          <span class="text-link">
+            Course materials
+            <Arrow />
+          </span>
+        </a>
+        <a class="directory-card" href="/hcc-8600.html">
+          <p class="eyebrow">HCC 8600</p>
+          <h2>
+            Applications of Human-AI Interaction, Collaboration, and Teaming
+          </h2>
+          <p>Graduate coursework on how people and AI work together.</p>
+          <span class="text-link">
+            Course page
+            <Arrow />
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,49 @@
+---
+import funding from '../data/funding.json';
+const amount = (value: number) =>
+  value >= 1_000_000
+    ? `$${(value / 1_000_000).toFixed(2)}M`
+    : `$${Math.round(value / 1_000)}K`;
+---
+
+<div class="funding-totals">
+  <div>
+    <strong>{amount(funding.totals.awarded)}</strong>
+    <span>Total awards across grants and gifts</span>
+  </div>
+  <div>
+    <strong>{amount(funding.totals.piProjects)}</strong>
+    <span>PI project funding credited in my CV</span>
+  </div>
+  <div>
+    <strong>{amount(funding.totals.allocation)}</strong>
+    <span>My allocation at Clemson</span>
+  </div>
+</div>
+<p class="inline-note">
+  Total project awards include funding shared with collaborators. My credited
+  allocation and role are listed separately for each active award. Summary
+  figures follow the funding summary in my CV. The ARL shared-world-models award
+  is $2.08M overall, with $816,211 awarded to Clemson under my sole-PI role.
+</p>
+<div class="record-groups">
+  {funding.groups.map((group) => (
+    <details class="record-group">
+      <summary>
+        <span>{group.title}</span>
+        <span class="record-count">{group.items.length}</span>
+      </summary>
+      {group.title === 'Development and Writing Support' && (
+        <p class="record-note">
+          Additional funded efforts where I contributed to proposal development
+          and writing.
+        </p>
+      )}
+      <ul class="funding-list">
+        {group.items.map((item) => (
+          <li data-funding-record set:html={item.citationHtml} />
+        ))}
+      </ul>
+    </details>
+  ))}
+</div>

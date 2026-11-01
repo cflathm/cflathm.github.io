@@ -1,0 +1,39 @@
+---
+import funding from '../data/funding.json';
+import { site } from '../data/site';
+import Arrow from './Arrow.astro';
+const totalAwards = `$${(funding.totals.awarded / 1_000_000).toFixed(2)}M`;
+---
+
+<section
+  class="leadership-evidence"
+  aria-label="Research and leadership experience"
+>
+  <div class="container leadership-evidence-grid">
+    <div>
+      <p class="eyebrow">Research leadership</p>
+      <a href="/about.html">
+        Director, BIG CAT
+        <br />
+        <span>Co-Director, CU-CHAI</span>
+        <Arrow diagonal />
+      </a>
+    </div>
+    <div>
+      <p class="eyebrow">Funded programs</p>
+      <a href="/research.html#funding">
+        <strong>{totalAwards}</strong>
+        <span>Total awards across grants and gifts</span>
+        <Arrow diagonal />
+      </a>
+    </div>
+    <div>
+      <p class="eyebrow">Published work</p>
+      <a href={site.scholar}>
+        <strong>50+</strong>
+        <span>Publications on human-AI collaboration</span>
+        <Arrow diagonal />
+      </a>
+    </div>
+  </div>
+</section>

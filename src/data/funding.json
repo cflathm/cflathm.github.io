@@ -1,0 +1,111 @@
+{
+  "totals": {
+    "awarded": 7880384,
+    "piProjects": 1556371,
+    "allocation": 2880881
+  },
+  "groups": [
+    {
+      "title": "Active External Awards",
+      "items": [
+        {
+          "year": 2026,
+          "award": "$2,077,811",
+          "clemsonPortion": "$816,211",
+          "allocation": "$816,211",
+          "role": "Clemson University sole PI (100%)",
+          "citationHtml": "<strong>2026</strong> - Formation, Drift, and Reconciliation of Shared World Models in Human-AI Teams Under Degraded Information Environments. ARL, subcontract through the University of Tennessee, Knoxville. <strong>$2,077,811</strong> total award; Clemson University portion: <strong>$816,211</strong>. Clemson University sole PI (100%). Flathmann funding based on percentage credit: <strong>$816,211</strong>."
+        },
+        {
+          "year": 2026,
+          "award": "$828,672",
+          "allocation": "$248,601",
+          "role": "Co-PI (30%)",
+          "citationHtml": "<strong>2026</strong> - An Offensive and Defensive Strategy to Human-AI Teaming: Addressing the Impacts of Failure and Adversarial Influence to Bolster Human-AI Team Resilience. AFOSR. <strong>$828,672</strong>. Co-PI (30%). Flathmann funding based on percentage credit: <strong>$248,601</strong>."
+        },
+        {
+          "year": 2025,
+          "award": "$754,300",
+          "allocation": "$264,005",
+          "role": "Co-PI (35%)",
+          "citationHtml": "<strong>2025</strong> - Enhancing Bidirectional Adaptive Autonomy to Improve the Situation Awareness and Shared Understanding of Human-Autonomy Teams. ARL. <strong>$754,300</strong>. Co-PI (35%). Flathmann funding based on percentage credit: <strong>$264,005</strong>."
+        },
+        {
+          "year": 2025,
+          "award": "$390,222",
+          "allocation": "$390,222",
+          "role": "PI (100%)",
+          "citationHtml": "<strong>2025</strong> - Leveraging Autonomous and Human Teammates to Manage Conflict in Human-Autonomy Teams, Ensuring Trust, Team Cohesion, and Resilience. AFOSR. <strong>$390,222</strong>. PI (100%). Flathmann funding based on percentage credit: <strong>$390,222</strong>."
+        },
+        {
+          "year": 2025,
+          "award": "$349,938",
+          "allocation": "$227,459",
+          "role": "PI (65%)",
+          "citationHtml": "<strong>2025</strong> - Project Rainfly: Exploring Offensive Attack Vectors in Human-AI Teams. Mile2 Subcontract for U.S. Air Force. <strong>$349,938</strong>. PI (65%). Flathmann funding based on percentage credit: <strong>$227,459</strong>."
+        },
+        {
+          "year": 2024,
+          "award": "$212,718",
+          "allocation": "$95,723",
+          "role": "Co-PI (45%)",
+          "citationHtml": "<strong>2024</strong> - Leveraging Adaptive Autonomous Teammates to Enable Resilience and Situational Awareness in Human-Autonomy Teams. ARL. <strong>$212,718</strong>. Co-PI (45%). Flathmann funding based on percentage credit: <strong>$95,723</strong>."
+        },
+        {
+          "year": 2023,
+          "award": "$1,095,901",
+          "allocation": "$328,770",
+          "role": "Co-PI (30%)",
+          "citationHtml": "<strong>2023</strong> - Minimizing the Impact of Cognitive and Physical Limitations from Humans and Autonomy Through the Development, Training, and Implementation of Human-Autonomy Teaming in Underwater Environments. ONR. <strong>$1,095,901</strong>. Co-PI (30%). Flathmann funding based on percentage credit: <strong>$328,770</strong>."
+        },
+        {
+          "year": 2023,
+          "award": "$1,558,433",
+          "allocation": "$264,933",
+          "role": "Senior Personnel (17%)",
+          "citationHtml": "<strong>2023</strong> - Collaborative Research: FW-HTF-RL: The Future of Aviation Inspection: Artificial Intelligence and Mixed Reality as Agents of Transformation. NSF. <strong>$1,558,433</strong>. Senior Personnel (17%). Flathmann funding based on percentage credit: <strong>$264,933</strong>."
+        },
+        {
+          "year": 2023,
+          "award": "$612,389",
+          "allocation": "$244,955",
+          "role": "Co-PI (40%)",
+          "citationHtml": "<strong>2023</strong> - Synchronizing Collaborations for Human-Autonomy Teaming and Ethical Autonomy Use. AFOSR DURIP. <strong>$612,389</strong>. Co-PI (40%). Flathmann funding based on percentage credit: <strong>$244,955</strong>."
+        }
+      ]
+    },
+    {
+      "title": "Development and Writing Support",
+      "items": [
+        {
+          "year": 2021,
+          "award": "$1,302,657",
+          "allocation": null,
+          "role": "Development and writing support",
+          "citationHtml": "<strong>2021</strong> - The Spread of Trust and Distrust in Distributed Human-Autonomy Teaming Constellations. AFOSR. <strong>$1,302,657</strong>."
+        },
+        {
+          "year": 2021,
+          "award": "$295,792",
+          "allocation": null,
+          "role": "Development and writing support",
+          "citationHtml": "<strong>2021</strong> - Connecting and Leveraging Physical and Digital Dimensions to Advance Human-Autonomy Teaming. ONR DURIP. <strong>$295,792</strong>."
+        },
+        {
+          "year": 2020,
+          "award": "$444,368",
+          "allocation": null,
+          "role": "Development and writing support",
+          "citationHtml": "<strong>2020</strong> - Promoting Human Interpretation and Interaction to Mitigate Bias in Artificial Intelligence Assisted Decision Aids. ONR. <strong>$444,368</strong>."
+        },
+        {
+          "year": 2020,
+          "award": "$586,538",
+          "allocation": null,
+          "role": "Development and writing support",
+          "citationHtml": "<strong>2020</strong> - Considerations of Ethical and Unethical Behavior on Trust in Human-Autonomy Teaming. AFOSR. <strong>$586,538</strong>."
+        }
+      ]
+    }
+  ]
+}

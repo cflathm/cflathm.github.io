@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import HobbyBingo from '../components/HobbyBingo.astro';
+import '../styles/tools.css';
+---
+
+<Base
+  title="DCOM Bingo"
+  active="Tools"
+  description="A bingo card for the tropes I kept seeing in Disney Channel Original Movies. Generate a card and mark squares as you watch."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">
+        <a href="/tools.html">Tools</a> / Movies
+      </p>
+      <h1>DCOM Bingo.</h1>
+      <p class="page-lead">
+        A bingo card for the tropes you can’t stop noticing.
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container hobby-bingo">
+      <div class="tool-story prose">
+        <p>
+          I watched every Disney Channel Original Movie with a friend, and we
+          started compiling a list of the tropes we kept seeing along the way.
+        </p>
+        <p>
+          Make a card, then tap a square when you spot a trope. The center is
+          always free.
+        </p>
+      </div>
+      <HobbyBingo />
+    </div>
+  </section>
+</Base>

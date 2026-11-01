@@ -1,0 +1,25 @@
+---
+interface Props {
+  active?: string;
+}
+const { active } = Astro.props;
+const links = [
+  { label: 'Overview', href: '/research.html' },
+  { label: 'Publications', href: '/publications.html' },
+  { label: 'Funding', href: '/funding.html' },
+  { label: 'Teaching', href: '/teaching.html' },
+];
+---
+
+<div class="container">
+  <nav class="academic-nav" aria-label="Academic pages">
+    {links.map((link) => (
+      <a
+        href={link.href}
+        aria-current={active === link.label ? 'page' : undefined}
+      >
+        {link.label}
+      </a>
+    ))}
+  </nav>
+</div>

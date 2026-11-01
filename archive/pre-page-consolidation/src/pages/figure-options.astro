@@ -1,0 +1,102 @@
+---
+import Base from '../layouts/Base.astro';
+import Diagram from '../components/Diagram.astro';
+import '../styles/figure-options.css';
+
+const studies = [
+  {
+    kind: 'overview' as const,
+    title: 'AI supports the work between people',
+    caption:
+      'Knowledge, cognitive protection, and coordination belong in the work between people.',
+  },
+  {
+    kind: 'knowledge' as const,
+    title: 'Shared knowledge',
+    caption:
+      'Who knows what, when it is needed, and how people use it to form a collective judgement.',
+  },
+  {
+    kind: 'protection' as const,
+    title: 'Cognitive protection',
+    caption: 'AI blocks cognitive risks while people stay connected as a team.',
+  },
+  {
+    kind: 'coordination' as const,
+    title: 'Coordination across teams',
+    caption: 'AI supports handoffs and a shared plan across teams.',
+  },
+];
+---
+
+<Base
+  title="Figure options"
+  description="Compare the selected sports playbook figures with the earlier SVG style."
+  noindex
+>
+  <div class="container figure-options">
+    <header class="figure-options-intro">
+      <p class="eyebrow">Figure study / A + B</p>
+      <h1>
+        Same work.
+        <br />
+        Two drawing styles.
+      </h1>
+      <p>
+        B is the selected style, now used on the homepage. A remains here for
+        reference. Both sets explain the same work.
+      </p>
+    </header>
+    <nav class="figure-option-links" aria-label="Homepage previews">
+      <a href="/figure-originals.html">
+        <strong>A / Earlier style</strong>
+        <span>Open diagrams, with a few playbook marks.</span>
+        <b>See the earlier figures in context ↗</b>
+      </a>
+      <a href="/">
+        <strong>B / Selected playbook style</strong>
+        <span>Coach’s boards, player formations, and drawn routes.</span>
+        <b>See the homepage ↗</b>
+      </a>
+    </nav>
+    <nav class="figure-options-index" aria-label="Compare figures">
+      {studies.map((study, index) => (
+        <a href={`#${study.kind}`}>
+          {`0${index}`} / {study.title}
+        </a>
+      ))}
+    </nav>
+    {studies.map((study, index) => (
+      <section class="figure-option-section" id={study.kind}>
+        <h2>
+          <span aria-hidden="true">{`0${index}`}</span>
+          {study.title}
+        </h2>
+        <p>{study.caption}</p>
+        <div class="figure-option-pair">
+          {(['current', 'playbook'] as const).map((option) => (
+            <figure
+              class:list={[
+                'figure-option-card',
+                { 'figure-option-card-dark': study.kind === 'overview' },
+              ]}
+            >
+              <figcaption>
+                <span>{option === 'current' ? 'A' : 'B'}</span>
+                {option === 'current' ? 'Earlier style' : 'Selected / Playbook'}
+              </figcaption>
+              <div class="figure-option-art">
+                <Diagram
+                  kind={study.kind}
+                  id={`option-${option}-${study.kind}`}
+                  option={option}
+                  hero={study.kind === 'overview'}
+                />
+              </div>
+            </figure>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</Base>

@@ -1,0 +1,27 @@
+---
+import { site } from '../data/site';
+import Arrow from './Arrow.astro';
+---
+
+<section class="contact-band">
+  <div class="container contact-band-inner">
+    <div>
+      <p class="eyebrow">Get in touch</p>
+      <h2>
+        Let’s talk about
+        <br />
+        what you’re building.
+      </h2>
+    </div>
+    <div class="contact-band-copy">
+      <p>
+        I’m interested in conversations about AI research and development,
+        leading technical teams, and how AI fits into an organization’s work.
+      </p>
+      <a class="text-link" href={`mailto:${site.email}`}>
+        {site.email}
+        <Arrow diagonal />
+      </a>
+    </div>
+  </div>
+</section>

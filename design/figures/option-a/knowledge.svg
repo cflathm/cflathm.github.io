@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none" role="img" aria-labelledby="FIGURE-title" aria-describedby="FIGURE-desc" class="system-diagram work-figure technical-figure" data-figure="knowledge">
+  <title id="FIGURE-title">Use shared knowledge to form collective judgement</title>
+  <desc id="FIGURE-desc">The drawing connects three questions: who knows what, when that knowledge is needed, and how collective judgement forms. People hold complementary experience, context, and evidence. Their knowledge is brought into a decision point, then people discuss and weigh those perspectives together. A return route shows learning from the outcome updating shared knowledge. AI supports linking expertise with the moment of need; the judgement remains a human, collective activity. This is a conceptual model, not a specified system architecture or fixed workflow.</desc>
+  <defs>
+    <symbol id="FIGURE-person" viewBox="0 0 52 64"><circle cx="26" cy="16" r="9" fill="var(--f-paper,#f5f6f3)" stroke="var(--f-ink,#283b50)" stroke-width="2.1"/><path d="M8 59V48c0-11 7-17 18-17s18 6 18 17v11H8Z" fill="var(--f-paper,#f5f6f3)" stroke="var(--f-ink,#283b50)" stroke-width="2.1" stroke-linejoin="round"/></symbol>
+    <marker id="FIGURE-arrow" viewBox="0 0 14 14" refX="10" refY="7" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="m3 2 7 5-7 5" stroke="var(--f-line,#426355)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="300" y="38" text-anchor="middle" class="cf-title">Shared knowledge in use</text>
+  <g class="cf-heading" text-anchor="middle"><text x="124" y="94"><tspan x="124">Who knows</tspan><tspan x="124" dy="28">what</tspan></text><text x="277" y="94"><tspan x="277">When it's</tspan><tspan x="277" dy="28">needed</tspan></text><text x="483" y="94"><tspan x="483">Collective</tspan><tspan x="483" dy="28">judgement</tspan></text></g>
+  <use href="#FIGURE-person" x="22" y="140" width="45" height="56"/><use href="#FIGURE-person" x="22" y="216" width="45" height="56"/><use href="#FIGURE-person" x="22" y="292" width="45" height="56"/>
+  <g class="cf-label"><text x="84" y="175">Experience</text><text x="84" y="251">Context</text><text x="84" y="327">Evidence</text></g>
+  <path d="M208 172h12q12 0 12 12v128q0 12-12 12h-12M208 248h49" class="cf-connection"/>
+  <circle cx="232" cy="248" r="2.4" fill="var(--f-line,#426355)"/>
+  <circle cx="277" cy="159" r="19" class="cf-work"/><path d="M277 147v13l10 5" class="cf-connection"/>
+  <text x="277" y="198" text-anchor="middle" class="cf-small"><tspan x="277">Decision</tspan><tspan x="277" dy="23">point</tspan></text>
+  <path d="M298 248h95" class="cf-connection" marker-end="url(#FIGURE-arrow)"/>
+  <circle cx="277" cy="248" r="4" class="cf-route-dot"/><path d="M277 230c10-1 19 8 19 18s-9 19-19 18c-10 1-18-8-18-18s8-18 18-18Z" class="cf-play-ring"/>
+  <use href="#FIGURE-person" x="402" y="220" width="44" height="54"/><use href="#FIGURE-person" x="462" y="183" width="44" height="54"/><use href="#FIGURE-person" x="522" y="220" width="44" height="54"/>
+  <path d="M442 232q8-12 18-14m48 0q10 2 18 14M448 272q36 21 72 0" class="cf-connection"/>
+  <path d="M465 290h45q8 0 8 8v18q0 8-8 8h-17l-11 11 1-11h-18q-8 0-8-8v-18q0-8 8-8Z" class="cf-bubble"/><path d="M468 303h39m-39 9h27" class="cf-connection"/>
+  <text x="484" y="366" text-anchor="middle" class="cf-note">Weigh perspectives</text>
+  <rect x="157" y="350" width="220" height="43" rx="6" class="cf-ai-badge"/><text x="267" y="378" class="cf-ai-label">AI links who + when</text><path d="M277 347v-77" class="cf-ai-link"/>
+  <path d="M483 377v48q0 18-23 18H68q-18 0-18-18v-64" class="cf-connection" marker-end="url(#FIGURE-arrow)"/>
+  <text x="268" y="429" text-anchor="middle" class="cf-note">Learn from the outcome</text>
+</svg>

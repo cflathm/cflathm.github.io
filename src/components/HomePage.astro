@@ -1,0 +1,233 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Diagram from '../components/Diagram.astro';
+import Arrow from '../components/Arrow.astro';
+import Downloads from '../components/Downloads.astro';
+import ContactBand from '../components/ContactBand.astro';
+import LeadershipEvidence from '../components/LeadershipEvidence.astro';
+import ResearchHighlights from '../components/ResearchHighlights.astro';
+import portrait from '../assets/portrait.webp';
+import { site } from '../data/site';
+const mechanisms = [
+  {
+    kind: 'knowledge' as const,
+    number: '01',
+    label: 'Knowledge networks',
+    title: 'Help teams use what they know.',
+    text: 'I build AI that maintains knowledge networks across people and teams. That means understanding who knows what and when that knowledge is needed, then helping people use it to form a collective judgement.',
+  },
+  {
+    kind: 'protection' as const,
+    number: '02',
+    label: 'Cognitive protection',
+    title: 'Protect the people doing the work.',
+    text: 'Cognitive vulnerabilities can undermine people and pull teams apart. My work builds AI that proactively protects against those vulnerabilities and supports team effectiveness.',
+  },
+  {
+    kind: 'coordination' as const,
+    number: '03',
+    label: 'Collaboration + coordination',
+    title: 'Help people work with each other.',
+    text: 'I build AI systems that directly support human-human collaboration and coordination, including the complicated work that happens across teams in an organization.',
+  },
+];
+---
+
+<Base
+  description="Christopher Flathmann leads AI research and development in human-AI collaboration, AI agents, knowledge networks, and adaptive systems. Director of BIG CAT at Clemson University."
+  dark
+  active="Home"
+>
+  <section class="home-hero dark">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>AI research +
+            development
+          </p>
+          <h1>
+            I build AI that helps people <em>work together.</em>
+          </h1>
+          <p class="hero-lead">
+            I lead research and development on AI systems and how people work
+            with them. I want AI to help organizations change while making their
+            teams stronger.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-blue" href="/work.html">
+              Explore my work
+              <Arrow />
+            </a>
+            <a class="hero-contact" href="/contact.html">
+              Get in touch
+              <Arrow diagonal />
+            </a>
+          </div>
+        </div>
+        <figure class="hero-visual">
+          <figcaption class="diagram-topline">
+            AI supports the work between people.
+          </figcaption>
+          <Diagram kind="overview" id="hero-overview" option="playbook" hero />
+        </figure>
+      </div>
+      <div class="hero-footnote">
+        <p>
+          Assistant Professor, Clemson University
+          <br />
+          <span>Director, BIG CAT · Co-Director, CU-CHAI</span>
+        </p>
+        <Downloads compact />
+      </div>
+    </div>
+  </section>
+  <LeadershipEvidence />
+  <section class="section manifesto">
+    <div class="container split-heading">
+      <p class="eyebrow">Why I do this</p>
+      <div>
+        <h2>
+          Disrupt the process.
+          <br />
+          Keep people connected.
+        </h2>
+        <div class="prose">
+          <p>
+            AI should disrupt the processes that need to change. But too much
+            human-human collaboration is getting caught in the crossfire.
+          </p>
+          <p>
+            My research shows how AI can worsen workplace relationships, make
+            knowledge harder to manage, and break down teams. I build AI systems
+            and train teams to preserve and improve those relationships while
+            helping organizations change.
+          </p>
+        </div>
+        <a class="text-link" href="/about.html">
+          More about my approach
+          <Arrow />
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section mechanisms">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Three ways I build AI to support people</p>
+          <h2>What I build AI to do.</h2>
+        </div>
+        <p>
+          My work connects the design of AI systems with the people and
+          organizations using them.
+        </p>
+      </div>
+      <div class="mechanism-list">
+        {mechanisms.map((m) => (
+          <article class="mechanism-row">
+            <div class="mechanism-copy">
+              <p class="eyebrow">
+                <span class="section-number">{m.number}</span>
+                {m.label}
+              </p>
+              <h3>{m.title}</h3>
+              <p>{m.text}</p>
+            </div>
+            <figure>
+              <Diagram kind={m.kind} id={`home-${m.kind}`} option="playbook" />
+            </figure>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section selected-work">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2>What that looks like.</h2>
+        </div>
+        <a class="text-link" href="/work.html">
+          All project areas
+          <Arrow />
+        </a>
+      </div>
+      <div class="project-preview-grid">
+        <a class="project-preview" href="/work.html#knowledge-networks">
+          <span class="eyebrow">Organizations</span>
+          <h3>AI agents for shared knowledge.</h3>
+          <p>
+            Capturing knowledge networks and helping people navigate what a
+            multi-team organization knows.
+          </p>
+          <span class="project-bottom">
+            Knowledge networks
+            <Arrow diagonal />
+          </span>
+        </a>
+        <a class="project-preview" href="/work.html#adaptive-ai">
+          <span class="eyebrow">Cyber incident response + healthcare</span>
+          <h3>AI that adapts as the situation changes.</h3>
+          <p>
+            Building adaptive systems for environments where people and teams
+            have to respond quickly.
+          </p>
+          <span class="project-bottom">
+            Adaptive AI
+            <Arrow diagonal />
+          </span>
+        </a>
+      </div>
+      <ResearchHighlights compact />
+    </div>
+  </section>
+  <section class="section about-preview">
+    <div class="container about-preview-grid">
+      <div class="portrait-wrap">
+        <Image
+          src={portrait}
+          alt="Christopher Flathmann"
+          widths={[360, 540, 900]}
+          sizes="(max-width: 700px) 85vw, 400px"
+          loading="lazy"
+          class="portrait"
+        />
+        <span class="portrait-note">Christopher Flathmann · Clemson, SC</span>
+      </div>
+      <div>
+        <p class="eyebrow">Research, development, and the team behind it</p>
+        <h2>
+          I lead the work.
+          <br />I build, too.
+        </h2>
+        <div class="prose">
+          <p>
+            I’m an Assistant Professor at Clemson University, where I direct the
+            BIG CAT Research Group and co-direct the Center for Human-AI
+            Interaction, Collaboration, and Teaming.
+          </p>
+          <p>
+            I lead research and development, and I’ve built systems hands-on.
+            That combination matters to me: understanding how people work should
+            shape the AI we build.
+          </p>
+        </div>
+        <div class="credential-line">
+          <span>2025 AFOSR Young Investigator</span>
+          <a href={site.lab}>
+            Meet the research group
+            <Arrow diagonal />
+          </a>
+        </div>
+        <a class="text-link" href="/about.html">
+          About me
+          <Arrow />
+        </a>
+      </div>
+    </div>
+  </section>
+  <ContactBand />
+</Base>
