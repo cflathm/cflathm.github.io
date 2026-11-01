@@ -1,0 +1,123 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="DCOM Bingo"
+  description="Generate an interactive bingo card for watching Disney Channel Original Movies, made by Christopher Flathmann."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">
+        <a href="/fun-tools.html">Fun tools</a> / Movies
+      </p>
+      <h1>DCOM Bingo.</h1>
+      <p class="page-lead">
+        A bingo card for the tropes you can’t stop noticing.
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="tool-story prose">
+        <h2>Why this exists.</h2>
+        <p>
+          I watched every Disney Channel Original Movie with a friend, and we
+          started compiling a list of the tropes we kept seeing along the way.
+        </p>
+        <p>
+          DCOM Bingo grew out of that list. Generate a card, then tap a square
+          when you spot a trope. The center is always free.
+        </p>
+      </div>
+      <noscript>
+        <p class="inline-note">
+          The interactive generator needs JavaScript. You can also use the{' '}
+          <a href="/Bingo_Cards/index.html">original bingo card collection</a>.
+        </p>
+      </noscript>
+      <div class="tool-toolbar">
+        <button class="button button-blue" id="new-card" type="button">
+          Create a new card
+        </button>
+        <button class="button button-outline" id="clear-card" type="button">
+          Clear marks
+        </button>
+      </div>
+      <div class="bingo-wrap">
+        <div class="bingo-labels" aria-hidden="true">
+          <span>D</span>
+          <span>C</span>
+          <span>O</span>
+          <span>M</span>
+          <span>S</span>
+        </div>
+        <div
+          class="bingo-card"
+          id="bingo-card"
+          role="group"
+          aria-label="Interactive DCOM Bingo card"
+        ></div>
+        <p
+          class="bingo-status"
+          id="bingo-status"
+          role="status"
+          aria-live="polite"
+        >
+          Choose a card to get started.
+        </p>
+      </div>
+    </div>
+  </section>
+  <script>
+    import prompts from '../data/bingo.json';
+    const card = document.querySelector<HTMLElement>('#bingo-card');
+    const status = document.querySelector('#bingo-status');
+    function createCard() {
+      if (!card) return;
+      const values = [...prompts];
+      for (let i = values.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [values[i], values[j]] = [values[j]!, values[i]!];
+      }
+      const selected = values.slice(0, 24);
+      selected.splice(12, 0, 'Free Space');
+      card.replaceChildren();
+      selected.forEach((value, index) => {
+        const square = document.createElement('button');
+        square.type = 'button';
+        square.className = 'bingo-square';
+        square.textContent = value;
+        square.setAttribute('aria-pressed', String(index === 12));
+        if (index === 12) {
+          square.classList.add('free-space', 'marked');
+          square.setAttribute('aria-disabled', 'true');
+        }
+        square.addEventListener('click', () => {
+          if (index === 12) return;
+          square.classList.toggle('marked');
+          square.setAttribute(
+            'aria-pressed',
+            String(square.classList.contains('marked')),
+          );
+        });
+        card.append(square);
+      });
+      if (status)
+        status.textContent = 'Fresh card ready. Tap squares as you spot them.';
+    }
+    document.querySelector('#new-card')?.addEventListener('click', createCard);
+    document.querySelector('#clear-card')?.addEventListener('click', () => {
+      card
+        ?.querySelectorAll('.bingo-square:not(.free-space)')
+        .forEach((square) => {
+          square.classList.remove('marked');
+          square.setAttribute('aria-pressed', 'false');
+        });
+      if (status)
+        status.textContent = 'Marks cleared. Free Space stays selected.';
+    });
+    createCard();
+  </script>
+</Base>

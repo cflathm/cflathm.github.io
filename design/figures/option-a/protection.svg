@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none" role="img" aria-labelledby="FIGURE-title" aria-describedby="FIGURE-desc" class="system-diagram work-figure technical-figure" data-figure="protection">
+  <title id="FIGURE-title">AI blocks cognitive risks before they disrupt teamwork</title>
+  <desc id="FIGURE-desc">Red crosses labeled Overload and Manipulation illustrate cognitive risks. Both incoming routes end at a large blue shield labeled AI, with a protective check mark. No risk route continues through the shield to the team. Behind it, three people stand in a spaced triangular formation: one at the front, with two evenly placed behind. Direct green connections link the teammates inside a drawn team boundary. The shield and formation share a central axis. The shield represents the intended blocking function of AI protection, not a measured guarantee of complete prevention or a particular implementation.</desc>
+  <defs>
+    <symbol id="FIGURE-person" viewBox="0 0 52 64"><circle cx="26" cy="16" r="9" fill="var(--f-paper,#f5f6f3)" stroke="var(--f-ink,#283b50)" stroke-width="2.1"/><path d="M8 59V48c0-11 7-17 18-17s18 6 18 17v11H8Z" fill="var(--f-paper,#f5f6f3)" stroke="var(--f-ink,#283b50)" stroke-width="2.1" stroke-linejoin="round"/></symbol>
+    <marker id="FIGURE-risk-arrow" viewBox="0 0 14 14" refX="10" refY="7" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="m3 2 7 5-7 5" stroke="var(--f-risk,#a84b3e)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <text x="300" y="45" text-anchor="middle" class="cf-title">Block cognitive risks</text>
+  <text x="115" y="115" text-anchor="middle" class="cf-small">Cognitive risks</text>
+  <path d="m34 154 18 19m0-19-18 19m0 91 18 19m0-19-18 19" class="cf-risk"/>
+  <text x="73" y="173" class="cf-label">Overload</text><text x="73" y="283" class="cf-label">Manipulation</text>
+  <g class="cf-risk-link" marker-end="url(#FIGURE-risk-arrow)"><path d="M186 168q28 0 43 30"/><path d="M216 278q15 0 27-16"/></g>
+  <path d="m285 165 46 16v41c0 33-20 58-46 73-26-15-46-40-46-73v-41l46-16Z" class="cf-ai-badge" style="stroke-width:2.4px"/>
+  <text x="285" y="215" class="cf-ai-label">AI</text><path d="m267 237 13 13 24-29" class="cf-route"/>
+  <path d="M482 128c59-1 98 46 98 101 0 59-41 110-98 111-58 0-102-48-102-109 0-58 43-103 102-103Z" class="cf-network"/>
+  <path d="M441 219 497 187M441 246l56 31M520 210v42" class="cf-connection"/>
+  <use href="#FIGURE-person" x="398" y="203" width="44" height="54"/><use href="#FIGURE-person" x="498" y="149" width="44" height="54"/><use href="#FIGURE-person" x="498" y="259" width="44" height="54"/>
+  <text x="482" y="380" text-anchor="middle" class="cf-label">Team relationships</text>
+</svg>

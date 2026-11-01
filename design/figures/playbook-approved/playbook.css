@@ -1,0 +1,160 @@
+.playbook-figure {
+  --pb-board: #15372e;
+  --pb-chalk: #f1f0dc;
+  --pb-muted: #bdccbd;
+  --pb-grid: #416252;
+  --pb-ai: #9ecdfc;
+  --pb-ai-fill: #1c4351;
+  --pb-risk: #ffa68f;
+  --pb-note: #e8d08a;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.playbook-figure .pb-board {
+  fill: var(--pb-board);
+  stroke: #638170;
+  stroke-width: 1;
+}
+.playbook-figure .pb-rule {
+  stroke: var(--pb-grid);
+  stroke-width: 1;
+}
+.playbook-figure .pb-field {
+  stroke: var(--pb-grid);
+  stroke-width: 1;
+  fill: none;
+}
+.playbook-figure .pb-index {
+  fill: none;
+  stroke: var(--pb-note);
+  stroke-width: 1.5;
+}
+.playbook-figure .pb-number {
+  fill: var(--pb-note);
+  font: 600 15px monospace;
+  text-anchor: middle;
+}
+.playbook-figure .pb-title {
+  fill: var(--pb-chalk);
+  font:
+    400 28px 'Kalam',
+    cursive;
+}
+.playbook-figure .pb-tag {
+  fill: var(--pb-muted);
+  font: 400 13px monospace;
+  letter-spacing: 1.5px;
+  text-anchor: end;
+}
+.playbook-figure .pb-route {
+  stroke: var(--pb-chalk);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+.playbook-figure .pb-link {
+  stroke: var(--pb-chalk);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+.playbook-figure .pb-return {
+  stroke: var(--pb-note);
+  stroke-width: 2.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+.playbook-figure .pb-ai-line {
+  stroke: var(--pb-ai);
+  stroke-width: 2;
+  stroke-dasharray: 4 6;
+  stroke-linecap: round;
+  fill: none;
+}
+.playbook-figure .pb-coach-ring {
+  stroke: var(--pb-ai);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  fill: none;
+}
+.playbook-figure .pb-badge {
+  fill: var(--pb-ai-fill);
+  stroke: var(--pb-ai);
+  stroke-width: 1.7;
+}
+.playbook-figure .pb-ai {
+  fill: var(--pb-ai);
+  font: 600 23px var(--body, 'Source Sans 3 Variable', Arial, sans-serif);
+  text-anchor: middle;
+}
+.playbook-figure .pb-label {
+  fill: var(--pb-chalk);
+  font: 400 23px var(--body, 'Source Sans 3 Variable', Arial, sans-serif);
+  paint-order: stroke;
+  stroke: var(--pb-board);
+  stroke-width: 5;
+  stroke-linejoin: round;
+}
+.playbook-figure .pb-heading {
+  fill: var(--pb-chalk);
+  font: 600 24px var(--body, 'Source Sans 3 Variable', Arial, sans-serif);
+  paint-order: stroke;
+  stroke: var(--pb-board);
+  stroke-width: 5;
+}
+.playbook-figure .pb-small {
+  fill: var(--pb-muted);
+  font: 400 18px var(--body, 'Source Sans 3 Variable', Arial, sans-serif);
+}
+.playbook-figure .pb-note {
+  fill: var(--pb-note);
+  font:
+    400 26px 'Kalam',
+    cursive;
+  paint-order: stroke;
+  stroke: var(--pb-board);
+  stroke-width: 5;
+  stroke-linejoin: round;
+}
+.playbook-figure .pb-work {
+  fill: var(--pb-board);
+  stroke: var(--pb-chalk);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.playbook-figure .pb-team {
+  fill: none;
+  stroke: var(--pb-muted);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+}
+.playbook-figure .pb-risk {
+  stroke: var(--pb-risk);
+  stroke-width: 3.6;
+  stroke-linecap: round;
+  fill: none;
+}
+.playbook-figure .pb-risk-route {
+  stroke: var(--pb-risk);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-dasharray: 5 6;
+  fill: none;
+}
+.playbook-figure .pb-block {
+  stroke: var(--pb-ai);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+@media print {
+  .playbook-figure {
+    print-color-adjust: exact;
+  }
+}

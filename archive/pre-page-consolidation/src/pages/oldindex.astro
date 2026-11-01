@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Home"
+  description="Christopher Flathmann’s website has moved to its new homepage."
+  noindex
+>
+  <meta slot="head" http-equiv="refresh" content="0;url=/" />
+  <div class="container redirect-note">
+    <h1>Find me at the homepage.</h1>
+    <p>
+      <a href="/">Continue to Christopher Flathmann’s website.</a>
+    </p>
+  </div>
+</Base>

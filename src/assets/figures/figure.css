@@ -1,0 +1,173 @@
+.technical-figure {
+  --f-paper: #f5f6f3;
+  --f-ink: #283b50;
+  --f-line: #426355;
+  --f-muted: #74877c;
+  --f-faint: #dbe3e9;
+  --f-tint: #eaf0eb;
+  --f-accent: #2469b8;
+  --f-ai-fill: #e6effc;
+  --f-risk: #a84b3e;
+  --f-risk-fill: #f7e7e2;
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.technical-figure.hero-diagram {
+  --f-paper: #101d30;
+  --f-ink: #e4e9df;
+  --f-line: #bdccbf;
+  --f-muted: #5c7490;
+  --f-faint: #273a50;
+  --f-tint: #182c32;
+  --f-accent: #a7ccff;
+  --f-ai-fill: #203d60;
+  --f-risk: #eaa799;
+  --f-risk-fill: #3c2d36;
+}
+.technical-figure .cf-region {
+  fill: var(--f-tint);
+}
+.technical-figure .cf-connection {
+  stroke: var(--f-line);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.technical-figure .cf-network {
+  stroke: var(--f-muted);
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.technical-figure .cf-network-dot {
+  fill: var(--f-muted);
+}
+.technical-figure .cf-route {
+  stroke: var(--f-accent);
+  stroke-width: 2.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.technical-figure .cf-route-dot {
+  fill: var(--f-accent);
+  stroke: var(--f-paper);
+  stroke-width: 2;
+}
+.technical-figure .cf-ai-link {
+  stroke: var(--f-accent);
+  stroke-width: 1.8;
+  stroke-dasharray: 4 6;
+  stroke-linecap: round;
+}
+.technical-figure .cf-ai-badge {
+  fill: var(--f-ai-fill);
+  stroke: var(--f-accent);
+  stroke-width: 1.4;
+}
+.technical-figure .cf-ai-label {
+  fill: var(--f-accent);
+  font: 600 23px var(--body, 'Source Sans 3 Variable', Arial, sans-serif);
+  text-anchor: middle;
+}
+.technical-figure .cf-ai-token {
+  fill: var(--f-accent);
+  font: 600 20px var(--body, 'Source Sans 3 Variable', Arial, sans-serif);
+  text-anchor: middle;
+}
+.technical-figure .cf-action-label {
+  fill: var(--f-accent);
+  font: 600 24px var(--body, 'Source Sans 3 Variable', Arial, sans-serif);
+}
+.technical-figure .cf-play-ring {
+  stroke: var(--f-accent);
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.technical-figure .cf-label {
+  fill: var(--f-ink);
+  font: 400 24px var(--body, 'Source Sans 3 Variable', Arial, sans-serif);
+  paint-order: stroke;
+  stroke: var(--f-paper);
+  stroke-width: 4;
+  stroke-linejoin: round;
+}
+.technical-figure .cf-small {
+  fill: var(--f-line);
+  font: 400 21px var(--body, 'Source Sans 3 Variable', Arial, sans-serif);
+}
+.technical-figure .cf-heading {
+  fill: var(--f-ink);
+  font: 600 25px var(--body, 'Source Sans 3 Variable', Arial, sans-serif);
+}
+.technical-figure .cf-title {
+  fill: var(--f-ink);
+  font:
+    400 30px 'Kalam',
+    cursive;
+}
+.technical-figure .cf-note {
+  fill: var(--f-line);
+  font:
+    400 25px 'Kalam',
+    cursive;
+  paint-order: stroke;
+  stroke: var(--f-paper);
+  stroke-width: 4;
+  stroke-linejoin: round;
+}
+.technical-figure .cf-leader {
+  stroke: var(--f-line);
+  stroke-width: 1.1;
+  stroke-linecap: round;
+}
+.technical-figure .cf-work {
+  fill: var(--f-paper);
+  stroke: var(--f-line);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+.technical-figure .cf-bubble {
+  fill: var(--f-paper);
+  stroke: var(--f-muted);
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+}
+.technical-figure .cf-risk-link {
+  stroke: var(--f-risk);
+  stroke-width: 1.8;
+  stroke-dasharray: 3 6;
+  stroke-linecap: round;
+}
+.technical-figure .cf-risk {
+  stroke: var(--f-risk);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.technical-figure .cf-risk-card {
+  fill: var(--f-risk-fill);
+  stroke: var(--f-risk);
+  stroke-width: 1.4;
+}
+.technical-figure .cf-risk-text {
+  fill: var(--f-risk);
+  font: 600 23px var(--body, 'Source Sans 3 Variable', Arial, sans-serif);
+}
+@media print {
+  .technical-figure,
+  .technical-figure.hero-diagram {
+    --f-paper: #ffffff;
+    --f-ink: #283b50;
+    --f-line: #5b6e82;
+    --f-muted: #738697;
+    --f-faint: #dbe3e9;
+    --f-tint: #edf1f3;
+    --f-accent: #2469b8;
+    --f-ai-fill: #e6effc;
+    --f-risk: #a84b3e;
+    --f-risk-fill: #f7e7e2;
+  }
+}

@@ -1,0 +1,177 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Downloads from '../components/Downloads.astro';
+import ContactBand from '../components/ContactBand.astro';
+import Arrow from '../components/Arrow.astro';
+import portrait from '../assets/portrait.webp';
+import { site } from '../data/site';
+import funding from '../data/funding.json';
+const piTotal = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumFractionDigits: 0,
+}).format(funding.totals.piProjects);
+---
+
+<Base
+  title="About"
+  active="About"
+  description="Christopher Flathmann is an Assistant Professor at Clemson, director of BIG CAT, and co-director of Clemson’s Center for Human-AI Interaction, Collaboration, and Teaming."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">About me</p>
+      <h1>
+        I lead research on AI
+        <br />
+        <em>and how people work together.</em>
+      </h1>
+      <p class="page-lead">
+        I’m Christopher Flathmann, an Assistant Professor at Clemson University.
+        I direct the BIG CAT Research Group and co-direct Clemson’s Center for
+        Human-AI Interaction, Collaboration, and Teaming.
+      </p>
+      <Downloads />
+    </div>
+  </section>
+  <section class="section">
+    <div class="container about-body-grid">
+      <div>
+        <section class="about-section">
+          <h2>What I’m responsible for.</h2>
+          <div class="prose">
+            <p>
+              I set research and development direction, lead project teams, and
+              build AI systems hands-on. That includes work on organizational
+              knowledge networks, adaptive AI, educator coaching, and cognitive
+              protection.
+            </p>
+            <p>
+              I also design and study how people work with those systems. My
+              research includes controlled experiments, interviews, and work on
+              how to evaluate human-AI teams.
+            </p>
+            <p>
+              Projects on which I serve as principal investigator account for
+              {piTotal} in total awards. My individual allocation is reported
+              separately in the funding record. I received an AFOSR Young
+              Investigator Award in 2025.
+            </p>
+          </div>
+          <div class="about-evidence-links">
+            <a class="text-link" href="/work.html">
+              Systems and research
+              <Arrow />
+            </a>
+            <a class="text-link" href="/funding.html">
+              Funding and roles
+              <Arrow />
+            </a>
+          </div>
+        </section>
+        <section class="about-section">
+          <h2>Why I work on this.</h2>
+          <div class="prose">
+            <p>
+              AI should disrupt the processes that need to change. But
+              human-human collaboration is getting caught in the crossfire.
+            </p>
+            <p>
+              My research shows how workplace relationships can worsen because
+              of AI, knowledge can become harder to manage, and teams can break
+              down. Those are problems we have to account for when we build
+              these systems.
+            </p>
+            <p>
+              I build AI and train teams to preserve and improve those
+              relationships. I want people to be better able to work together
+              because the technology is there.
+            </p>
+          </div>
+          <a class="text-link" href={site.lab}>
+            BIG CAT Research Group
+            <Arrow diagonal />
+          </a>
+        </section>
+        <section class="about-section">
+          <h2>At Clemson.</h2>
+          <ul class="appointment-list">
+            <li>
+              <time>2024–present</time>
+              <div>
+                <strong>Assistant Professor</strong>
+                <span>Human-Centered Computing, School of Computing</span>
+              </div>
+            </li>
+            <li>
+              <time>2024–present</time>
+              <div>
+                <strong>Director, BIG CAT Research Group</strong>
+                <span>
+                  Building Intelligent Goals for Collaborative AI Technologies
+                </span>
+              </div>
+            </li>
+            <li>
+              <time>2024–present</time>
+              <div>
+                <strong>Co-Director, CU-CHAI</strong>
+                <span>
+                  Center for Human-AI Interaction, Collaboration, and Teaming
+                </span>
+              </div>
+            </li>
+            <li>
+              <time>2023–2024</time>
+              <div>
+                <strong>Research Assistant Professor</strong>
+                <span>Human-Centered Computing</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="about-section">
+          <h2>Education.</h2>
+          <ul class="appointment-list">
+            <li>
+              <time>2023</time>
+              <div>
+                <strong>Ph.D., Human-Centered Computing</strong>
+                <span>Clemson University · Advisor: Nathan J. McNeese</span>
+              </div>
+            </li>
+            <li>
+              <time>2018</time>
+              <div>
+                <strong>B.S., Computer Science</strong>
+                <span>Clemson University</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <aside class="portrait-wrap">
+        <Image
+          src={portrait}
+          alt="Christopher Flathmann"
+          widths={[360, 540, 900]}
+          sizes="(max-width: 600px) 90vw, 380px"
+          loading="eager"
+          class="portrait"
+        />
+        <span class="portrait-note">Christopher Flathmann · Clemson, SC</span>
+        <div class="credential-line">
+          <a href="/Resume.pdf">
+            Resume <Arrow diagonal />
+          </a>
+          <a href="/CV.pdf">
+            Full academic CV <Arrow diagonal />
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+  <ContactBand />
+</Base>

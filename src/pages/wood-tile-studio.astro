@@ -1,0 +1,34 @@
+---
+import woodTileStudio from '../tools/wood-tile-studio.html?raw';
+
+const canonical = new URL('/wood-tile-studio.html', Astro.site).href;
+const application = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'Wood Tile Studio',
+  url: canonical,
+  applicationCategory: 'MultimediaApplication',
+  operatingSystem: 'Web browser',
+  creator: { '@type': 'Person', name: 'Christopher Flathmann' },
+};
+// Preserve the standalone editor and its viewport, controls, and export code.
+const studioDocument = woodTileStudio
+  .replace('href="fun-tools.html">← Fun Tools', 'href="/tools.html">← Tools')
+  .replace(
+    '<strong>Wood Tile Studio</strong>',
+    '<strong role="heading" aria-level="1">Wood Tile Studio</strong>',
+  )
+  .replace(
+    '</head>',
+    `<link rel="canonical" href="${canonical}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wood Tile Studio | Christopher Flathmann">
+<meta property="og:description" content="Plan square image crops and export exact-size print files.">
+<meta property="og:url" content="${canonical}">
+<meta property="og:image" content="${new URL('/social.jpg', Astro.site).href}">
+<script type="application/ld+json">${JSON.stringify(application)}</script>
+</head>`,
+  );
+---
+
+<Fragment set:html={studioDocument} />

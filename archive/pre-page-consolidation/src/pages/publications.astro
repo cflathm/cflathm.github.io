@@ -1,0 +1,131 @@
+---
+import Base from '../layouts/Base.astro';
+import AcademicNav from '../components/AcademicNav.astro';
+import Arrow from '../components/Arrow.astro';
+import publications from '../data/publications.json';
+import { site } from '../data/site';
+const count = publications.reduce((sum, g) => sum + g.items.length, 0);
+const years = [
+  ...new Set(publications.flatMap((g) => g.items.map((item) => item.year))),
+].sort((a, b) => b.localeCompare(a));
+---
+
+<Base
+  title="Publications"
+  active="Research"
+  description="The complete publication record of Christopher Flathmann, covering human-AI collaboration, teaming, adaptive autonomy, and human factors."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">Academic record / Publications</p>
+      <h1>The papers.</h1>
+      <p class="page-lead">
+        Research on how people work with AI, what changes when they do, and how
+        to build better human-AI teams.
+      </p>
+      <div class="hero-actions">
+        <a class="hero-contact" href={site.scholar}>
+          Google Scholar
+          <Arrow diagonal />
+        </a>
+        <a class="hero-contact" href="/CV.pdf">
+          Academic CV <span class="file-label">PDF</span>
+          <Arrow diagonal />
+        </a>
+      </div>
+    </div>
+  </section>
+  <AcademicNav active="Publications" />
+  <section class="section">
+    <div class="container narrow">
+      <form class="search-controls" role="search" onsubmit="return false">
+        <div>
+          <label class="field-label" for="publication-search">
+            Search publications
+          </label>
+          <input
+            id="publication-search"
+            type="search"
+            placeholder="Title, author, topic, or venue"
+            autocomplete="off"
+          />
+        </div>
+        <div>
+          <label class="field-label" for="publication-year">
+            Year / status
+          </label>
+          <select id="publication-year">
+            <option value="">All years</option>
+            {years.map((year) => (
+              <option value={year}>{year}</option>
+            ))}
+          </select>
+        </div>
+      </form>
+      <p
+        class="search-status"
+        id="publication-status"
+        role="status"
+        aria-live="polite"
+      >
+        {count} entries across the complete publication record.
+      </p>
+      <div class="no-results" id="no-results" hidden>
+        No publications match. Try another search or select all years.
+      </div>
+      {publications.map((group) => (
+        <section class="academic-section publication-group">
+          <h2>{group.title}</h2>
+          <ul class="publication-list">
+            {group.items.map((item) => (
+              <li
+                data-publication
+                data-year={item.year}
+                data-search={item.text.toLowerCase()}
+                set:html={item.citationHtml}
+              />
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </section>
+  <script>
+    const search = document.querySelector<HTMLInputElement>(
+      '#publication-search',
+    );
+    const year = document.querySelector<HTMLSelectElement>('#publication-year');
+    const status = document.querySelector('#publication-status');
+    const empty = document.querySelector<HTMLElement>('#no-results');
+    const entries = [
+      ...document.querySelectorAll<HTMLElement>('[data-publication]'),
+    ];
+    function filterPublications() {
+      const terms = (search?.value.trim().toLowerCase() ?? '')
+        .split(/\s+/)
+        .filter(Boolean);
+      let visible = 0;
+      entries.forEach((entry) => {
+        const matches =
+          terms.every((term) => entry.dataset.search?.includes(term)) &&
+          (!year?.value || entry.dataset.year === year.value);
+        entry.hidden = !matches;
+        if (matches) visible++;
+      });
+      document
+        .querySelectorAll<HTMLElement>('.publication-group')
+        .forEach((group) => {
+          group.hidden = !group.querySelector(
+            '[data-publication]:not([hidden])',
+          );
+        });
+      if (status)
+        status.textContent = `${visible} of ${entries.length} entries shown.`;
+      if (empty) empty.hidden = visible !== 0;
+    }
+    search?.addEventListener('input', filterPublications);
+    year?.addEventListener('change', filterPublications);
+    document.querySelector('.search-controls')?.classList.add('ready');
+  </script>
+</Base>

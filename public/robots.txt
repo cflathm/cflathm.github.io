@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://chrisflathmann.com/sitemap-index.xml

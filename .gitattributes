@@ -1,0 +1,4 @@
+# Preserve course decks, downloads, and archived tool bytes on every platform.
+public/** -text -diff
+archive/pre-page-consolidation/public/** -text -diff
+src/tools/wood-tile-studio.html -text -diff

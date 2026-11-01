@@ -1,0 +1,7 @@
+.tool-toolbar[hidden] {
+  display: none;
+}
+.hobby-bingo .bingo-square:disabled {
+  opacity: 1;
+  cursor: default;
+}

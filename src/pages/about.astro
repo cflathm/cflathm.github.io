@@ -1,0 +1,199 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Downloads from '../components/Downloads.astro';
+import ContactBand from '../components/ContactBand.astro';
+import Arrow from '../components/Arrow.astro';
+import portrait from '../assets/portrait.webp';
+import { site } from '../data/site';
+---
+
+<Base
+  title="About"
+  active="About"
+  description="Christopher Flathmann is an Assistant Professor at Clemson, director of BIG CAT, and co-director of Clemson’s Center for Human-AI Interaction, Collaboration, and Teaming."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">About me</p>
+      <h1>
+        I lead research on AI
+        <br />
+        <em>and how people work together.</em>
+      </h1>
+      <p class="page-lead">
+        I’m Christopher Flathmann, an Assistant Professor at Clemson University.
+        I direct the BIG CAT Research Group and co-direct Clemson’s Center for
+        Human-AI Interaction, Collaboration, and Teaming.
+      </p>
+      <Downloads />
+    </div>
+  </section>
+  <section class="section">
+    <div class="container about-body-grid">
+      <div>
+        <section class="about-section">
+          <h2>What I do.</h2>
+          <div class="prose">
+            <p>
+              I lead research on human–AI teamwork. I set the direction for our
+              projects and work with my teams to turn research questions into AI
+              systems and studies. I also build systems hands-on.
+            </p>
+            <p>
+              My work connects AI development with the people who have to work
+              alongside it. We study how an AI’s behavior changes the team, then
+              use what we learn to design AI teammates and train people to work
+              with them.
+            </p>
+          </div>
+          <div class="about-evidence-links">
+            <a class="text-link" href="/work.html">
+              Systems and research
+              <Arrow />
+            </a>
+          </div>
+        </section>
+        <section class="about-section">
+          <h2>Some contributions.</h2>
+          <div class="prose">
+            <p>
+              In my{' '}
+              <a href="https://doi.org/10.1145/3637326">
+                research on social influence
+              </a>
+              , people changed their behavior to complement an AI teammate. I
+              study that influence because an AI’s place in a team can affect
+              how people work with each other, too.
+            </p>
+            <p>
+              With collaborators, I’ve studied{' '}
+              <a href="https://doi.org/10.1080/0144929X.2024.2396476">
+                how AI information-sharing shapes people’s views of their team
+              </a>
+              . In a survey of hypothetical teams, information about the
+              situation and support for team memory most strongly shaped
+              participants’ attitudes and how well they thought the team
+              understood its work.
+            </p>
+            <p>
+              I also co-authored{' '}
+              <a href="/application/Experiment-Design.pdf">
+                guidance for designing human–AI teaming experiments
+              </a>
+              . That work connects the research question with decisions about
+              team composition, the environment, and what to measure.
+            </p>
+            <p>
+              I received a 2025 AFOSR Young Investigator Award for research on
+              managing conflict in human–AI teams. I also helped start Clemson’s
+              Center for Human-AI Interaction, Collaboration, and Teaming, which
+              I now co-direct.
+            </p>
+          </div>
+        </section>
+        <section class="about-section">
+          <h2>Why I work on this.</h2>
+          <div class="prose">
+            <p>
+              AI should disrupt the processes that need to change. But
+              human-human collaboration is getting caught in the crossfire.
+            </p>
+            <p>
+              My research shows how workplace relationships can worsen because
+              of AI, knowledge can become harder to manage, and teams can break
+              down. Those are problems we have to account for when we build
+              these systems.
+            </p>
+            <p>
+              I build AI and train teams to preserve and improve those
+              relationships. I want people to be better able to work together
+              because the technology is there.
+            </p>
+          </div>
+          <a class="text-link" href={site.lab}>
+            BIG CAT Research Group
+            <Arrow diagonal />
+          </a>
+        </section>
+        <section class="about-section">
+          <h2>At Clemson.</h2>
+          <ul class="appointment-list">
+            <li>
+              <time>2024–present</time>
+              <div>
+                <strong>Assistant Professor</strong>
+                <span>Human-Centered Computing, School of Computing</span>
+              </div>
+            </li>
+            <li>
+              <time>2024–present</time>
+              <div>
+                <strong>Director, BIG CAT Research Group</strong>
+                <span>
+                  Building Intelligent Goals for Collaborative AI Technologies
+                </span>
+              </div>
+            </li>
+            <li>
+              <time>2024–present</time>
+              <div>
+                <strong>Co-Director, CU-CHAI</strong>
+                <span>
+                  Center for Human-AI Interaction, Collaboration, and Teaming
+                </span>
+              </div>
+            </li>
+            <li>
+              <time>2023–2024</time>
+              <div>
+                <strong>Research Assistant Professor</strong>
+                <span>Human-Centered Computing</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="about-section">
+          <h2>Education.</h2>
+          <ul class="appointment-list">
+            <li>
+              <time>2023</time>
+              <div>
+                <strong>Ph.D., Human-Centered Computing</strong>
+                <span>Clemson University · Advisor: Nathan J. McNeese</span>
+              </div>
+            </li>
+            <li>
+              <time>2018</time>
+              <div>
+                <strong>B.S., Computer Science</strong>
+                <span>Clemson University</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <aside class="portrait-wrap">
+        <Image
+          src={portrait}
+          alt="Christopher Flathmann"
+          widths={[360, 540, 900]}
+          sizes="(max-width: 600px) 90vw, 380px"
+          loading="eager"
+          class="portrait"
+        />
+        <span class="portrait-note">Christopher Flathmann · Clemson, SC</span>
+        <div class="credential-line">
+          <a href="/Resume.pdf">
+            Resume <Arrow diagonal />
+          </a>
+          <a href="/CV.pdf">
+            Full academic CV <Arrow diagonal />
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+  <ContactBand />
+</Base>

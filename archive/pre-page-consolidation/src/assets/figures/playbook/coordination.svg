@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 540" fill="none" role="img" aria-labelledby="FIGURE-title" aria-describedby="FIGURE-desc" class="system-diagram work-figure technical-figure playbook-figure" data-figure="coordination" data-figure-option="playbook">
+  <title id="FIGURE-title">AI supports handoffs and coordination between teams</title>
+  <desc id="FIGURE-desc">Three team formations each contain two circled people. Direct two-way chalk routes connect the teams across the coach's board. A handoff on one route is circled in blue. AI support beside that route points to both the handoff and a shared plan listing decisions, handoffs, and next steps. Teams retain direct relationships. The playbook routes illustrate coordination goals, not a specified workflow or deployed system.</desc>
+  <defs>
+    <symbol id="FIGURE-player" viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="var(--pb-board,#15372e)" stroke="var(--pb-chalk,#f1f0dc)" stroke-width="2.5"/><circle cx="32" cy="23" r="6" stroke="var(--pb-chalk,#f1f0dc)" stroke-width="1.8"/><path d="M21 46v-5c0-7 4-11 11-11s11 4 11 11v5H21Z" stroke="var(--pb-chalk,#f1f0dc)" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <marker id="FIGURE-arrow" viewBox="0 0 14 14" refX="11" refY="7" markerWidth="13" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="m3 2 8 5-8 5" stroke="var(--pb-chalk,#f1f0dc)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <path d="M22 8H602l30 30v480l-14 14H8V22Z" class="pb-board"/><path d="M28 74h584" class="pb-rule"/>
+  <path d="M30 102v370m580-370v370M30 112h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m562-350h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9" class="pb-field"/>
+  <circle cx="43" cy="41" r="17" class="pb-index"/><text x="43" y="46" class="pb-number">03</text><text x="77" y="51" class="pb-title">Coordinate across teams</text><text x="592" y="46" class="pb-tag">THE HANDOFF</text>
+  <g class="pb-team"><path d="M47 177c5-36 42-52 76-50 42 1 77 21 77 59s-36 59-78 58c-44-1-79-26-75-67Z"/><path d="M47 387c5-36 42-52 76-50 42 1 77 21 77 59s-36 59-78 58c-44-1-79-26-75-67Z"/><path d="M427 177c5-36 42-52 76-50 42 1 77 21 77 59s-36 59-78 58c-44-1-79-26-75-67Z"/></g>
+  <g class="pb-route" marker-start="url(#FIGURE-arrow)" marker-end="url(#FIGURE-arrow)"><path d="M215 185c61-35 140-35 201 0"/><path d="M120 257v34"/><path d="M212 389h25q20 0 36-25l92-126q15-25 53-27"/></g>
+  <path d="M500 257v46" class="pb-link"/>
+  <use href="#FIGURE-player" x="69" y="160" width="50" height="50"/><use href="#FIGURE-player" x="121" y="160" width="50" height="50"/><use href="#FIGURE-player" x="69" y="370" width="50" height="50"/><use href="#FIGURE-player" x="121" y="370" width="50" height="50"/><use href="#FIGURE-player" x="449" y="160" width="50" height="50"/><use href="#FIGURE-player" x="501" y="160" width="50" height="50"/>
+  <g class="pb-heading" text-anchor="middle"><text x="120" y="114">Team 1</text><text x="120" y="323">Team 2</text><text x="500" y="114">Team 3</text></g>
+  <path d="M410 320h159l21 21v129H410V320Zm159 0v21h21" class="pb-work"/><text x="425" y="353" class="pb-heading">Shared plan</text><path d="M425 365h149" class="pb-rule"/>
+  <path d="M427 384l4 4 8-10M427 412l4 4 8-10M427 440l4 4 8-10" class="pb-link"/><g class="pb-label" style="font-size:21px"><text x="451" y="391">Decisions</text><text x="451" y="419">Handoffs</text><text x="451" y="447">Next steps</text></g>
+  <rect x="310" y="266" width="29" height="38" rx="2" class="pb-work"/><path d="M317 277h15m-15 9h15m-15 9h10" class="pb-link"/><path d="M304 260c-13 9-16 34-4 47 13 14 35 12 46-1 11-13 10-37-3-47-10-8-27-9-39 1" class="pb-coach-ring"/>
+  <text x="385" y="293" class="pb-note">Handoff</text><path d="M357 285h21" class="pb-return"/>
+  <rect x="244" y="400" width="145" height="46" rx="4" class="pb-badge"/><text x="316.5" y="431" class="pb-ai">AI support</text><path d="M317 394v-47q0-17 7-29M393 423h13" class="pb-ai-line"/>
+</svg>

@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/Base.astro';
+import Downloads from '../components/Downloads.astro';
+import Arrow from '../components/Arrow.astro';
+import { site } from '../data/site';
+---
+
+<Base
+  title="Contact"
+  active="Contact"
+  description="Contact Christopher Flathmann about AI systems, research, teams, and organizations. Download his resume or full academic CV."
+  dark
+>
+  <section class="page-hero dark">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h1>Let’s talk.</h1>
+      <p class="page-lead">
+        If you’re building AI or thinking about how it should fit into your
+        organization, I’d like to hear from you.
+      </p>
+      <Downloads />
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <section class="contact-item">
+          <p class="eyebrow">Industry + other inquiries</p>
+          <h2>AI, teams, and organizations.</h2>
+          <p>
+            Conversations about building AI systems, research and development
+            leadership, and how people work with AI.
+          </p>
+          <a class="email-link" href={`mailto:${site.email}`}>
+            {site.email}
+            <Arrow diagonal />
+          </a>
+        </section>
+        <section class="contact-item">
+          <p class="eyebrow">Academic inquiries</p>
+          <h2>Research and university matters.</h2>
+          <p>
+            Research collaborations, prospective students, course questions, and
+            other academic matters.
+          </p>
+          <a class="email-link" href={`mailto:${site.academicEmail}`}>
+            {site.academicEmail}
+            <Arrow diagonal />
+          </a>
+        </section>
+      </div>
+      <div class="contact-extra">
+        <div>
+          <p class="eyebrow">Find me elsewhere</p>
+          <div class="social-links">
+            <a href={site.linkedin}>
+              LinkedIn
+              <Arrow diagonal />
+            </a>
+            <a href={site.scholar}>
+              Google Scholar
+              <Arrow diagonal />
+            </a>
+            <a href={site.lab}>
+              BIG CAT
+              <Arrow diagonal />
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Background</p>
+          <Downloads />
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

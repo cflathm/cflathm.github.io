@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 540" fill="none" role="img" aria-labelledby="FIGURE-title" aria-describedby="FIGURE-desc" class="system-diagram work-figure technical-figure playbook-figure" data-figure="knowledge" data-figure-option="playbook">
+  <title id="FIGURE-title">Bring shared knowledge into collective judgement</title>
+  <desc id="FIGURE-desc">On a coach's board, three circled people hold experience, context, and evidence. Their routes join at one clean junction and reach a decision point marked by a clock. AI support links who knows what with when that knowledge is needed. The route continues to a human huddle where people weigh perspectives and form collective judgement. An amber return route sends learning from the outcome back to the knowledge network. The formations and routes are a playbook metaphor, not a fixed workflow or system architecture.</desc>
+  <defs>
+    <symbol id="FIGURE-player" viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="var(--pb-board,#15372e)" stroke="var(--pb-chalk,#f1f0dc)" stroke-width="2.5"/><circle cx="32" cy="23" r="6" stroke="var(--pb-chalk,#f1f0dc)" stroke-width="1.8"/><path d="M21 46v-5c0-7 4-11 11-11s11 4 11 11v5H21Z" stroke="var(--pb-chalk,#f1f0dc)" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <marker id="FIGURE-arrow" viewBox="0 0 14 14" refX="11" refY="7" markerWidth="13" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto"><path d="m3 2 8 5-8 5" stroke="var(--pb-chalk,#f1f0dc)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="FIGURE-return" viewBox="0 0 14 14" refX="11" refY="7" markerWidth="13" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto"><path d="m3 2 8 5-8 5" stroke="var(--pb-note,#e8d08a)" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <path d="M22 8H602l30 30v480l-14 14H8V22Z" class="pb-board"/><path d="M28 74h584M28 494h584" class="pb-rule"/>
+  <path d="M30 102v370m580-370v370M30 112h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m562-350h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9m-9 50h9" class="pb-field"/>
+  <circle cx="43" cy="41" r="17" class="pb-index"/><text x="43" y="46" class="pb-number">01</text><text x="77" y="51" class="pb-title">Shared knowledge</text><text x="592" y="46" class="pb-tag">THE HUDDLE</text>
+  <g class="pb-heading" text-anchor="middle"><text x="137" y="113"><tspan x="137">Who knows</tspan><tspan x="137" dy="27">what</tspan></text><text x="302" y="113"><tspan x="302">When it's</tspan><tspan x="302" dy="27">needed</tspan></text><text x="506" y="113"><tspan x="506">Collective</tspan><tspan x="506" dy="27">judgement</tspan></text></g>
+  <use href="#FIGURE-player" x="33" y="163" width="54" height="54"/><use href="#FIGURE-player" x="33" y="253" width="54" height="54"/><use href="#FIGURE-player" x="33" y="343" width="54" height="54"/>
+  <g class="pb-label"><text x="100" y="198">Experience</text><text x="100" y="288">Context</text><text x="100" y="378">Evidence</text></g>
+  <path d="M220 190h8q14 0 14 14v152q0 14-14 14h-8M220 280h60" class="pb-route"/><circle cx="242" cy="280" r="3" fill="var(--pb-chalk,#f1f0dc)"/>
+  <circle cx="302" cy="190" r="19" class="pb-work"/><path d="M302 178v13l10 6" class="pb-link"/><text x="302" y="226" text-anchor="middle" class="pb-label" style="font-size:21px"><tspan x="302">Decision</tspan><tspan x="302" dy="23">point</tspan></text>
+  <circle cx="302" cy="280" r="19" class="pb-coach-ring"/><circle cx="302" cy="280" r="4" fill="var(--pb-ai,#9ecdfc)"/><path d="M325 280h87" class="pb-route" marker-end="url(#FIGURE-arrow)"/>
+  <use href="#FIGURE-player" x="479" y="198" width="54" height="54"/><use href="#FIGURE-player" x="428" y="275" width="54" height="54"/><use href="#FIGURE-player" x="530" y="275" width="54" height="54"/>
+  <path d="m486 252-16 25m56-25 16 25m-58 36q22 12 44 0" class="pb-link"/>
+  <path d="M489 338h35v22h-13l-9 9 1-9h-14v-22Z" class="pb-work"/><path d="M496 346h21m-21 7h15" class="pb-link"/>
+  <text x="506" y="393" text-anchor="middle" class="pb-note">Weigh perspectives</text>
+  <rect x="210" y="389" width="184" height="43" rx="4" class="pb-badge"/><text x="302" y="418" class="pb-ai">AI: who + when</text><path d="M302 383v-78" class="pb-ai-line"/>
+  <path d="M506 405v53q0 18-18 18H62q-16 0-16-16v-50" class="pb-return" marker-end="url(#FIGURE-return)"/><text x="278" y="462" text-anchor="middle" class="pb-note">Learn from the outcome</text>
+  <text x="43" y="520" class="pb-small">Knowledge stays with people.</text><text x="592" y="520" text-anchor="end" class="pb-small">Concept sketch</text>
+</svg>

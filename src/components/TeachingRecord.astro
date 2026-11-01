@@ -1,0 +1,38 @@
+---
+import decks from '../data/course-decks.json';
+import Arrow from './Arrow.astro';
+---
+
+<div class="record-groups">
+  <details class="record-group" id="hcc-3030">
+    <summary>
+      <span>HCC 3030 / AI Integrations</span>
+      <span class="record-count">{decks.length} decks</span>
+    </summary>
+    <p class="record-note">
+      Human-centered AI in disciplinary contexts. These lecture decks open as
+      presentations in your browser.
+    </p>
+    <ol class="course-material-list">
+      {decks.map((deck) => (
+        <li>
+          <a href={deck.href}>
+            <span>{deck.week}</span>
+            <strong>{deck.title}</strong>
+            <Arrow diagonal />
+          </a>
+        </li>
+      ))}
+    </ol>
+  </details>
+  <details class="record-group" id="hcc-8600">
+    <summary>
+      <span>HCC 8600 / Human-AI Collaboration</span>
+      <span class="record-count">Graduate</span>
+    </summary>
+    <div class="record-note">
+      <h3>Applications of Human-AI Interaction, Collaboration, and Teaming</h3>
+      <p>Graduate coursework on how people and AI work together.</p>
+    </div>
+  </details>
+</div>

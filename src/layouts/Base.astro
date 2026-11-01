@@ -1,0 +1,163 @@
+---
+import '@fontsource-variable/space-grotesk';
+import '@fontsource-variable/source-sans-3';
+import '../styles/global.css';
+import { site } from '../data/site';
+import Downloads from '../components/Downloads.astro';
+import Arrow from '../components/Arrow.astro';
+import nav from '../data/navigation.json';
+interface Props {
+  title?: string;
+  description: string;
+  active?: string;
+  dark?: boolean;
+  noindex?: boolean;
+}
+const {
+  title,
+  description,
+  active,
+  dark = false,
+  noindex = false,
+} = Astro.props;
+const pageTitle = title
+  ? `${title} | ${site.name}`
+  : `${site.name} | Human-AI collaboration & AI research`;
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const canonicalPath =
+  currentPath === '/index.html' || currentPath === '/'
+    ? '/'
+    : currentPath.endsWith('.html')
+      ? currentPath
+      : `${currentPath}.html`;
+const canonical = new URL(canonicalPath, Astro.site);
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  url: Astro.site?.href,
+  image: new URL('/square.jpg', Astro.site).href,
+  jobTitle: 'Assistant Professor, Human-Centered Computing',
+  worksFor: { '@type': 'CollegeOrUniversity', name: 'Clemson University' },
+  sameAs: [site.linkedin, site.scholar, site.github, site.lab],
+  knowsAbout: [
+    'AI research and development',
+    'Human-AI collaboration',
+    'Human-AI teaming',
+    'Human-centered AI',
+    'Adaptive autonomy',
+    'Organizational knowledge networks',
+    'Human-AI team evaluation',
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101d30" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/social.jpg', Astro.site)} />
+    <meta
+      property="og:image:alt"
+      content="Christopher Flathmann. AI, people, and how we work together."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    <header class:list={['site-header', { dark }]}>
+      <div class="container nav-inner">
+        <a class="wordmark" href="/" aria-label="Christopher Flathmann, home">
+          <span class="monogram" aria-hidden="true">
+            cf<span>.</span>
+          </span>
+          <span>
+            Christopher
+            <br />
+            Flathmann
+          </span>
+        </a>
+        <nav aria-label="Main navigation" class="desktop-nav">
+          {nav.map((item) => (
+            <a
+              href={item.href}
+              aria-current={active === item.label ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+        <details class="mobile-menu">
+          <summary>
+            Menu <span aria-hidden="true">＋</span>
+          </summary>
+          <nav aria-label="Mobile navigation">
+            {nav.map((item) => (
+              <a
+                href={item.href}
+                aria-current={active === item.label ? 'page' : undefined}
+              >
+                {item.label}
+                <Arrow />
+              </a>
+            ))}
+          </nav>
+        </details>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <a class="footer-name" href="/">
+            Christopher Flathmann
+            <span>AI, people, and how we work together.</span>
+          </a>
+          <Downloads compact />
+        </div>
+        <div class="footer-bottom">
+          <p>© {new Date().getFullYear()} Christopher Flathmann</p>
+          <nav aria-label="Other links">
+            <a href={site.linkedin}>LinkedIn</a>
+            <a href={site.scholar}>Google Scholar</a>
+            <a href={site.github}>GitHub</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const menu = document.querySelector<HTMLDetailsElement>('.mobile-menu');
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && menu?.open) {
+          menu.open = false;
+          menu.querySelector('summary')?.focus();
+        }
+      });
+      document.addEventListener('click', (event) => {
+        if (
+          menu?.open &&
+          event.target instanceof Node &&
+          !menu.contains(event.target)
+        )
+          menu.open = false;
+      });
+    </script>
+  </body>
+</html>

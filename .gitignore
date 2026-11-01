@@ -1,1 +1,7 @@
 node_modules
+.pnpm-store/
+dist/
+.astro/
+.cache/
+.DS_Store
+test-results/

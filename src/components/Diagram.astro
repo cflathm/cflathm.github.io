@@ -1,0 +1,39 @@
+---
+import '@fontsource/kalam/latin-400.css';
+import knowledge from '../assets/figures/knowledge.svg?raw';
+import protection from '../assets/figures/protection.svg?raw';
+import coordination from '../assets/figures/coordination.svg?raw';
+import overview from '../assets/figures/overview.svg?raw';
+import figureStyles from '../assets/figures/figure.css?raw';
+import playbookOverview from '../assets/figures/playbook/overview.svg?raw';
+import playbookKnowledge from '../assets/figures/playbook/knowledge.svg?raw';
+import playbookProtection from '../assets/figures/playbook/protection.svg?raw';
+import playbookCoordination from '../assets/figures/playbook/coordination.svg?raw';
+import playbookStyles from '../assets/figures/playbook/playbook.css?raw';
+
+interface Props {
+  kind: 'overview' | 'knowledge' | 'protection' | 'coordination';
+  id: string;
+  hero?: boolean;
+  option?: 'current' | 'playbook';
+}
+const { kind, id, hero = false, option = 'playbook' } = Astro.props;
+const sources =
+  option === 'playbook'
+    ? {
+        overview: playbookOverview,
+        knowledge: playbookKnowledge,
+        protection: playbookProtection,
+        coordination: playbookCoordination,
+      }
+    : { overview, knowledge, protection, coordination };
+const markup = sources[kind]
+  .replaceAll('FIGURE', id)
+  .replace('technical-figure', `technical-figure${hero ? ' hero-diagram' : ''}`)
+  .replace(
+    '</defs>',
+    `</defs><style>${option === 'playbook' ? playbookStyles : figureStyles}</style>`,
+  );
+---
+
+<Fragment set:html={markup} />

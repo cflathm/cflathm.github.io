@@ -1,0 +1,18 @@
+---
+import Arrow from './Arrow.astro';
+interface Props {
+  compact?: boolean;
+}
+const { compact = false } = Astro.props;
+---
+
+<div class:list={['downloads', { compact }]}>
+  <a href="/Resume.pdf">
+    Resume <span class="file-label">PDF</span>
+    <Arrow diagonal />
+  </a>
+  <a href="/CV.pdf">
+    Academic CV <span class="file-label">PDF</span>
+    <Arrow diagonal />
+  </a>
+</div>
